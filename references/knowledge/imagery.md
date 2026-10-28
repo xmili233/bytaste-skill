@@ -1,33 +1,33 @@
-# 图标、图像与图形语言
+# Icons, imagery, and graphic language
 
-ID：`knowledge.imagery`。所在层：L3。关联：`visual.imagery`、`visual.scale`、`visual.texture`。性质：品牌设计实践与 ByTaste 推导。
+ID: `knowledge.imagery`. Layer: L3. Related: `visual.imagery`, `visual.scale`, `visual.texture`. Nature: brand-design practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“照片很高级但放进去不对”“图标东拼西凑”“想有杂志感”可能源于素材自身，也可能源于裁切、尺度和文字关系。图像风格是可规定的语言，不能只留一个“以后换图”的空位。
+"The photo is beautiful but does not fit," "the icons look mismatched," or "I want a magazine feel" may concern assets themselves or cropping, scale, and text relationships. Imagery can have a defined language; an "add images later" placeholder is not enough.
 
-可以区分“喜欢照片的光线与色调，还是它在页面里的比例和裁切？”用户给参考图不等于授权复制素材；不把喜欢一种摄影处理推断成必须使用摄影。
+Distinguish whether the user likes photographic lighting and tone or the image's page proportions and crop. A reference image is not permission to copy the asset; liking photographic treatment does not require photography.
 
-## 子概念与候选处理
+## Concepts and candidate approaches
 
-| 概念 | 应明确的关系 | 边界与取舍 |
+| Concept | Relationship to establish | Boundaries and tradeoffs |
 | --- | --- | --- |
-| 资产角色 | 功能图标、说明性图形、摄影、插画、品牌图形或数据图形 | 图标帮助辨认动作，插画可承载表达；并非每个标题都要图标 |
-| 图标家族 | 描边/实心、笔画、端点、拐角、细节量与视觉重量 | 同一尺寸下比较整组；有意混合需有角色依据 |
-| 摄影指导 | 主体、环境、视角、光线、色调、景深和真实感 | 从偏好选择维度；不照抄某品牌对视角或滤镜的禁令 |
-| 插画与抽象图形 | 几何/手绘、平面/立体、轮廓、纹理、透视与比例 | 与文字和表面协调；不是通用 AI 插画填空 |
-| 裁切与焦点 | 宽高比、主体安全区、锚点、可裁内容与替代方式 | 规定容器变化时保留什么，不永远使用居中 cover |
-| 图文关系 | 并列、穿插、图上文字及两者的主次 | 图上文字看实际背景；需要时改变排布，不能只加厚遮罩 |
-| 数据图形（按需） | 标记、轴、网格、标签、图例与色彩编码 | 已有数据关系不能被风格处理扭曲；未要求数据展示时不添图表 |
+| Asset roles | Functional icons, explanatory graphics, photography, illustration, branding, or data graphics | Icons identify actions and illustration may carry expression; not every heading needs an icon |
+| Icon family | Stroke/fill, weight, caps, corners, detail, and optical weight | Compare the set at the same size; intentional mixing needs a role-based reason |
+| Photography | Subject, environment, angle, light, tone, depth of field, realism | Select dimensions from preferences instead of copying a brand's restrictions on angles or filters |
+| Illustration and abstract graphics | Geometric/hand-drawn, flat/spatial, contour, texture, perspective, proportion | Coordinate with text and surfaces; do not use generic AI illustration as filler |
+| Crop and focus | Aspect ratio, subject safety, anchors, removable content, alternatives | Define what to retain as containers change instead of always centering cover crops |
+| Image/text relationships | Side-by-side, interleaved, overlaid text, and relative priority | Check actual backgrounds under text; rearrange when needed instead of only darkening an overlay |
+| Data graphics, as needed | Marks, axes, grids, labels, legends, and color encoding | Style must not distort existing data relationships; do not add unrequested charts |
 
-## 落地与检查
+## Implementation and checks
 
-`design.md` 记录选择及使用规则，关联实际资产路径、来源和许可；尺寸或统一颜色可引用 Token，主体和裁切意图属于规则。素材未知时可以用明确的示意样本探索构图，但不能称作最终图像效果已完成。
+`design.md` records choices and usage, linking real assets, sources, and licenses. Sizes or shared colors can use tokens; subject and crop intent belong in rules. Unknown assets may use clearly labeled specimens to explore composition, but the final image treatment is not complete.
 
-预览查看本次真实采用的代表素材、图标组与实际文字组合；在相关宽度检查主体、图文重心和裁切。不要为覆盖本条目而强制下载照片、生成图像或增加无关插画。
+Inspect representative adopted assets, icon sets, and actual text together. At relevant widths, check subjects, image/text balance, and crops. Do not download photography, generate images, or add unrelated illustration merely to cover this entry.
 
-## 来源与反例
+## Sources and counterexamples
 
-[IBM 摄影指导](https://www.ibm.com/design/language/photography/tips-and-techniques/) 把视角、构图、宽高比、光线、景深纳入品牌表达。[IBM 图形设计](https://www.ibm.com/design/language/iconography/pictograms/design/) 展示笔画、端点和透视等一致性维度。ByTaste 采用这些可讨论的维度，不照搬 IBM 对自然光、色调或几何的偏好。
+[IBM photography](https://www.ibm.com/design/language/photography/tips-and-techniques/) includes angle, composition, aspect ratio, light, depth of field, and tone in brand expression. [IBM pictogram design](https://www.ibm.com/design/language/iconography/pictograms/design/) covers consistency in strokes, caps, and perspective. ByTaste uses these discussable dimensions without adopting IBM's natural-light, color, or geometry preferences.
 
-反例：参考有强烈摄影风格却只提取配色；桌面主体完整但窄屏被裁掉；图标来自不同家族却仅统一外框；图表为了美观截断数值却不说明。
+Misuse: extracting only colors from a reference with a strong photographic language; preserving a desktop subject but cropping it away on mobile; standardizing icon boxes without addressing mismatched families; truncating chart values for beauty without disclosure.

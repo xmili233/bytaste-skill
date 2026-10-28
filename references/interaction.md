@@ -1,66 +1,66 @@
-# 交互规格：interaction.md
+# Interaction specification: interaction.md
 
-建立或维护交互约定时读取。`interaction.md` 是项目产物；本文件说明如何编写它。已有等价交互文档时沿用并在 `design.md` 中明确链接，避免平行维护。
+Read when establishing or maintaining interaction agreements. `interaction.md` is a project artifact; this file explains how to write it. Reuse equivalent existing interaction documentation and link it explicitly from `design.md` to avoid parallel maintenance.
 
-本文档描述用户要求和已有流程中的交互，落实相关的省脑、控制、连续、恢复、响应与无障碍目标，不额外加入可用性研究或效率实验。用户选择引用项目决定 ID，默认品质要求引用基线，现有业务行为保留原依据；用户改变反馈、动效或状态的偏好时，先记录决定，再同步本文件和对应预览。
+Describe interactions in user-requested and existing flows, applying relevant goals for low cognitive effort, control, continuity, recovery, responsiveness, and accessibility without adding usability research or efficiency experiments. User choices cite project decision IDs, default quality cites baselines, and existing business behavior retains its original basis. When the user's preferences for feedback, motion, or states change, record the decision first, then synchronize the interaction document and its preview.
 
-## 职责
+## Responsibilities
 
-记录用户采取操作后会发生什么，以及状态如何转换。`design.md` 保留跨场景的原则和规范条款；Token 来源保留数值。不要将同一状态机、校验规则或颜色值复制到多处。
+Record what happens after an action and how states transition. `design.md` retains cross-context principles and rules; tokens own values. Do not duplicate state machines, validation rules, or color values in several places.
 
-例如，“失败后仍能理解状态并继续处理”属于设计目标；具体场景中选择“保留输入并允许重试”可写成交互约定；反馈色和过渡时长的值属于 Token。候选机制见 [体验品质知识](knowledge/experience-quality.md)，它们不自动成为所有项目的要求。
+For example, "users can understand failure and continue" is a design goal; "retain input and allow retry" may be the chosen interaction for a particular flow; feedback colors and transition durations belong in tokens. Candidate mechanisms in [experience-quality knowledge](knowledge/experience-quality.md) are not automatic requirements for every project.
 
-## 规范展示与业务页面
+## Guidelines previews and business pages
 
-产品未知时，本文件只记录查看规范所需的类别切换、参数复制、布局演示、样本状态和动效播放。通用输入或按钮可展示外观，不因此增加草稿、订单、账号等业务对象和保存流程。
+When the product is unknown, describe only category switching, parameter copying, layout demonstrations, specimen states, and motion playback needed to inspect guidelines. Generic inputs or buttons can demonstrate appearance without adding drafts, orders, accounts, or save workflows.
 
-动态默认按 [动效约定](motion.md) 选择匹配技术栈的实现，记录触发、时序、退出、中断与减少动态的替代。Motion 是 Web 推荐方案；不适配时查找合适能力，不强制替换项目框架。
+By default, choose motion suited to the stack under the [motion agreement](motion.md), documenting triggers, sequencing, exit, interruption, and reduced-motion alternatives. Motion is a web recommendation; research a suitable capability when incompatible instead of replacing the framework.
 
-## 按当前任务覆盖
+## Cover what the task needs
 
-| 维度 | 需要说清的内容 |
+| Dimension | What to explain |
 | --- | --- |
-| 流程与范围 | 用户目标、入口、完成条件、返回与退出；关联页面和设计规则 |
-| 操作契约 | 触发方式、前置条件、系统响应、可见反馈、下一状态 |
-| 状态 | 当前涉及的默认、编辑、处理中、成功、失败、空内容、权限或禁用状态 |
-| 输入与校验 | 接受什么、何时校验、错误显示在哪里、如何修正；区分已有要求与建议 |
-| 恢复与中断 | 重试、取消、撤销、超时、重复操作和未保存退出的处理 |
-| 上下文保留 | 返回列表后的筛选和位置、刷新和导航后的必要状态 |
-| 输入方式 | 键盘、焦点流转、触控或指针行为，必要的替代操作 |
-| 动效与反馈 | 运动说明什么、是否可中断、减少动效时如何仍表达状态；数值引用 Token |
+| Flow and scope | User goal, entry, completion, return, exit, and associated pages/rules |
+| Action contract | Trigger, prerequisites, system response, visible feedback, and next state |
+| States | Relevant default, editing, processing, success, failure, empty, permission, or disabled states |
+| Input and validation | Accepted input, when validation runs, where errors appear, and how to correct them; distinguish existing requirements from recommendations |
+| Recovery and interruption | Retry, cancel, undo, timeout, repeat actions, and leaving with unsaved changes |
+| Context retention | Necessary filter/position state on returning to lists, refreshing, or navigating |
+| Input methods | Keyboard, focus flow, touch/pointer behavior, and appropriate alternatives |
+| Motion and feedback | What movement communicates, whether it is interruptible, and how reduced motion still expresses state; reference tokens for values |
 
-只写实际存在或本次明确设计的流程。静态内容页可以只记录链接、导航及焦点约定，不为凑文档添加表单、弹窗或业务功能。
+Write only flows that exist or are explicitly being designed. A static content page may need only links, navigation, and focus agreements; do not add forms, dialogs, or business functionality to fill a document.
 
-表中的重试、取消、撤销等是可能需要说明的机制，不要求每个产品全部具备。先明确当前场景需要达到的结果，再由真实能力与约束决定做法；不能只在文档或预览中宣称具备尚未实现的恢复能力。
+Retry, cancellation, undo, and similar mechanisms are possibilities to explain, not features every product must have. Define the required outcome first, then choose methods supported by real capability and constraints. Do not claim recovery exists only because it appears in documentation or a preview.
 
-## 一条交互约定的写法
+## Writing an interaction agreement
 
-使用稳定 ID，便于 `design.md`、实现与预览引用。复杂流程用状态表或简图；简单行为用几行文字即可，不强制统一表格。
+Use stable IDs for references from `design.md`, implementation, and previews. Complex flows can use a state table or small diagram; simple behavior may need only a few lines. A uniform table is not mandatory.
 
-以下是格式示例，不是所有项目默认需要的保存功能：
+This is a format example, not a default save feature:
 
 ```text
-INT-SAVE-01：保存偏好
-范围：设置页中的偏好表单
-依据：用户要求；尚待实现
-入口：用户修改至少一个字段后选择“保存”
-校验：提交前检查已定义的必填项；失败时指出字段并将焦点引向错误
-处理中：明确显示保存进度，防止同一内容重复提交
-成功：更新已保存状态，保留当前页面上下文
-失败：保留输入，说明可采取的下一步，允许重试
-退出：有未保存修改时按项目约定提示，不自行推断业务策略
-关联：DESIGN-FEEDBACK-01；反馈外观引用现有语义 Token
-预览：可模拟上述状态；不代表真实保存接口已经完成
+INT-SAVE-01: Save preferences
+Scope: Preference form on the settings page.
+Basis: User request; implementation pending.
+Entry: User changes at least one field and selects Save.
+Validation: Check defined required fields before submission; identify failures and move focus to the error.
+Processing: Show actual save progress and prevent duplicate submissions of the same content.
+Success: Update saved state and retain page context.
+Failure: Preserve input, explain a feasible next step, and allow retry.
+Exit: Follow project rules for unsaved changes; do not infer business policy.
+Related: DESIGN-FEEDBACK-01; feedback appearance references existing semantic tokens.
+Preview: May simulate these states; does not prove a real save API is complete.
 ```
 
-已有产品先检查当前实现和已确认行为。未知业务规则标为待定；新建议标为建议，不把合理猜测写成现有能力。
+For an existing product, inspect actual behavior and confirmed agreements first. Mark unknown business rules undecided and new recommendations as recommendations; plausible guesses are not existing capabilities.
 
-## 状态的外观与组合
+## State appearance and combinations
 
-按 [组件语法](knowledge/component-grammar.md) 分开记录变体、状态和主题。当前组件确实支持选中、焦点等叠加时，说明组合后哪些外观保持、哪些反馈叠加；不是把每个组合都做成新组件。外观约束留在 design.md，转换与响应在本文件维护。
+Under [component grammar](knowledge/component-grammar.md), separate variants, states, and themes. When selection, focus, and other states can coexist, explain which visual cues remain and which are added. Do not create a new component for every combination. Appearance constraints belong in design.md; transitions and responses belong here.
 
-## 与预览及实现的关系
+## Relationship to previews and implementation
 
-样式预览展示代表性的组件状态，以及判断交互反馈所必需的轻量演示。真实数据修改、支付、消息发送等操作不应被预览触发；演示使用本地状态并明确其范围。
+A style preview shows representative component states and lightweight demonstrations needed to judge feedback. It must not trigger real data changes, payments, or messages. Use local state and make the demonstration scope clear.
 
-预览可证明状态能够被展示，不能证明真实接口、权限、数据一致性或完整流程可用。交互实现和检查状态仍按 [验证流程](verification.md) 分开记录。
+A preview can show that a state is presentable, not that real APIs, permissions, data consistency, or complete flows work. Keep implementation and verification status separate under the [verification agreement](verification.md).

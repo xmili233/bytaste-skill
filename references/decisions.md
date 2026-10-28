@@ -1,130 +1,133 @@
-# 用户设计决策记录
+# User design decision record
 
-用于建立项目设计记忆、接收反馈、处理冲突和恢复上下文。记录的是会影响后续设计的意图与决定，不是聊天流水账，也不替用户生成一个永久审美人格。
+Use this agreement to establish project design memory, receive feedback, resolve conflicts, and restore context. Record intent and decisions that affect subsequent design, not a transcript or a permanent aesthetic personality profile.
 
-## 文件职责与创建时机
+## File responsibilities and when to create it
 
-默认在 `design.md` 旁维护 `design.decisions.md`。项目已有等价决策记录时沿用；同一设计体系下的多份规范共享记录，通过作用域区分。真正独立的子项目可各自维护，在各自的 Agent 入口指明路径。
+By default, maintain `design.decisions.md` beside `design.md`. Reuse an equivalent existing record. Specifications within one design system share a record and distinguish scope; genuinely independent subprojects may keep separate records linked from their own agent entry points.
 
-建立设计规范时一并创建或关联记录；已有记录的项目收到设计选择后直接更新。只讨论术语或进行独立研究时，不自动创建完整设计系统。若用户只要求保存一个决定，可以仅保存记录和读取入口，后续建立规范时再关联。
+Create or link the record when establishing design guidelines. In projects with a record, update it when design choices arrive. Terminology discussions and standalone research do not automatically require a complete design system. If the user only asks to save one decision, save just the record and reading entry point, linking guidelines when they are later created.
 
-- 决策记录：用户选了什么、为什么、影响哪里、什么已被替代。
-- `design.md`：当前决定如何落实为执行规则；摘要引用决策 ID。
-- Token 来源：当前具体视觉值。
-- `interaction.md`：当前行为与状态约定。
-- 预览与实现：这些决定实际呈现成什么。
+- Decision record: what the user chose, why, where it applies, and what has been replaced.
+- `design.md`: how current decisions become executable rules; its summary cites decision IDs.
+- Token source: current concrete visual values.
+- `interaction.md`: current behavior and state agreements.
+- Preview and implementation: how those decisions actually appear.
 
-用户明确指定某个色值或字体时，决定可以保留该原话；实际取值仍在 Token 来源维护。不复制整张 Token 表或全部规范。一个结果尚未实现，不会让已选决定失效；应记录落实缺口。
+When a user specifies an exact color or font, retain their statement in the decision; maintain the actual value in the token source. Do not duplicate the full token table or specification. An unimplemented choice remains valid: record the implementation gap.
 
-## 当前交付与授权范围
+## Current deliverable and authorized scope
 
-在有效摘要前写明当前交付对象：设计规范与预览，或具体产品/页面；产品用途未确定时如实写“未知，不阻塞规范展示”。记录用户已经要求的功能范围，不将未提及的业务留给 Agent 自动补齐。
+Before the effective summary, state the deliverable: design guidelines and preview, or a specific product/page. If the product's purpose is unknown, say "Unknown; does not block the guidelines preview." Record the functionality the user has actually requested, rather than leaving unmentioned business features for the agent to invent.
 
-默认质量要求在 design.md 引用“ByTaste 基线 + 版本 + 基线 ID”，不为每条要求制造用户决定或索要批准。具体专业取值仍可标为“ByTaste 实现建议”；参考观察、Agent 建议与用户已选分别处理。默认参数可以完成当前规范样本，但不能推导出用户需要某种业务或已认可该实现。
+In `design.md`, cite default quality as "ByTaste baseline + version + baseline ID." Do not invent a user decision or request approval for every requirement. Concrete professional values may remain "ByTaste implementation recommendations." Keep reference observations, agent recommendations, and user choices separate. Defaults can complete the current specimens, but cannot establish a need for a business feature or imply approval of the implementation.
 
-“先做一版”的范围来自当前任务。规范草案允许通用组件与布局示范，不自动允许新增、编辑、保存业务对象。全局样式参考的认可也不自动决定所有页面架构。
+The meaning of "make a first version" comes from the current task. A guidelines draft may show generic components and layouts; it does not automatically authorize creating, editing, or saving business objects. Approval of an overall visual reference does not settle every page's architecture.
 
-## 让后续 Agent 能发现并恢复
+## Make decisions discoverable and recoverable
 
-建立项目设计记忆时，在当前界面范围生效的 `AGENTS.md` 或项目已有的等价 Agent 指令入口，增补一段简短读取指引。已有入口只增补相关段落，保留其他指令；没有入口时可在相应项目范围建立最小 `AGENTS.md`。路径从该入口出发填写为真实路径。不要修改用户全局配置或为每个子目录复制全文。
+When establishing project design memory, add a short reading instruction to the `AGENTS.md` that governs the interface scope, or to an equivalent existing agent instruction entry point. Add only the relevant section and preserve other instructions. If none exists, you may create a minimal `AGENTS.md` at the appropriate scope. Use real paths relative to that entry point. Do not change global user configuration or duplicate all instructions in every subdirectory.
 
-入口内容可以是以下形式，按实际项目文件名调整：
+Adapt this example to actual filenames:
 
 ```markdown
-## 界面设计上下文
+## Interface design context
 
-进行界面设计、样式调整、生成新页面或修订设计规范前，先读取
-[当前设计决定](design.decisions.md) 的有效摘要，再读取
-[设计规范](design.md) 中与本次范围相关的规则和来源。
-新会话、上下文压缩或交接后重新恢复这些信息。
-用户产生新的设计决定时，先更新记录，再同步相关规范、Token、交互与预览；
-局部决定不得扩大为全局规则，旧决定不得凭代码现状或时间戳覆盖新指令。
-已读取且未变化的内容不反复通读；普通后端工作不触发设计探索。
+Before designing an interface, changing styles, generating a page, or revising guidelines,
+read the effective summary in [Current design decisions](design.decisions.md),
+then the relevant rules and sources in [Design guidelines](design.md).
+Restore this information after a new session, context compaction, or handoff.
+When the user makes a new design decision, update the record first, then synchronize
+affected guidelines, tokens, interactions, and previews.
+Do not expand local decisions into global rules or use existing code or timestamps
+to override new instructions.
+Do not reread unchanged material already loaded; ordinary backend work does not
+trigger design discovery.
 ```
 
-指引只链接实际存在的文件；尚无规范时只链接记录。若项目有多个指令文件，使用确实覆盖相应界面工作的入口，避免放到无关目录。既有指令禁止修改入口或无法写入时，在交付/交接中提供确切读取路径，并说明未建立自动发现入口。
+Link only files that exist. If guidelines do not yet exist, link only the record. Where several instruction files exist, use the entry that actually governs the interface work, not an unrelated directory. If existing instructions prohibit editing that entry or it is unwritable, provide the exact reading path in delivery or handoff notes and state that automatic discovery was not established.
 
-这是持久化与恢复约定，不是技术上的常驻上下文保证。只更新入口文件也不能声称 Agent 已加载记录。当前任务开始、恢复上下文或发现新的记录修订时，实际读取有效摘要；当前修订已在上下文中且没有变化时继续工作，不持续轮询。
+This is a persistence and recovery agreement, not a technical guarantee of permanent context. Updating an entry file does not prove an agent loaded the record. At task start, after context recovery, or on discovering a new revision, actually read the effective summary. If the current revision is already in context and unchanged, continue without polling.
 
-## 当前摘要与历史细节
+## Current summary and historical detail
 
-文件顶部保留简短修订标识（例如 `revision: 3`）和**当前有效摘要**，每次改变决定、状态、范围或落实情况时更新。摘要包含当前已选、明确排除，以及会影响下一步的暂定/待定项，旧历史不混入待执行内容。
+Keep a short revision marker, such as `revision: 3`, and a **current effective summary** at the top. Update them whenever a decision, status, scope, or implementation state changes. Include selected and explicitly excluded choices, plus tentative or undecided items that affect the next step. Do not mix obsolete history into work to be applied.
 
-摘要不是另一套手写规范：用短句和 ID 指向同一文件里的决定细节，以及对应规则。一个决定可涉及多个文件；一个文件也可受多个决定影响。
+The summary is not another handwritten specification. Use short statements and IDs linking to decision details in the same file and to corresponding rules. One decision may affect several files; one file may be affected by several decisions.
 
-建议最小信息：
+Suggested minimum information:
 
-| 信息 | 用途 |
+| Information | Purpose |
 | --- | --- |
-| 稳定 ID | 如 `D-001`；规范、反馈、预览元数据和交接可以引用 |
-| 决定与状态 | 具体选择或明确排除；与暂定、待定分开 |
-| 作用域 | 项目、页面、区域、状态或平台；避免含糊的“以后都这样” |
-| 用户依据 | 关键原话、对应参考/预览位置、选择情境；有真实消息链接时可附上 |
-| 理由与未定项 | 只记录用户表达的理由；Agent 解释单独标明，未知不补写成事实 |
-| 关系与落地 | 替代谁、是否局部例外、关联规则/Token/交互/预览及待同步目标 |
+| Stable ID | For example, `D-001`, referenced by guidelines, feedback, preview metadata, and handoffs |
+| Decision and status | A concrete choice or explicit exclusion, distinguished from tentative and undecided |
+| Scope | Project, page, region, state, or platform; avoid vague statements such as "always do this" |
+| User evidence | Key wording, reference/preview location, and the context of the choice; include a real message link when available |
+| Reasoning and open items | Record only reasons the user expressed; label agent explanations separately and do not fill unknowns with invented facts |
+| Relationships and implementation | What it replaces, whether it is a local exception, linked rules/tokens/interactions/previews, and targets awaiting synchronization |
 
-简单决定可以在一行中写全，不为凑字段制造细节。不必保存每次措辞微调、整段聊天或全部历史截图。一次决定对应的具体预览/参考需要能辨认版本或位置；没有精确标识时诚实记录，不编造链接或时间。
+A simple decision can fit on one line; do not invent details to fill fields. Do not retain every wording change, whole conversations, or every historical screenshot. Make the reference or preview associated with a decision identifiable by version or location. If no exact identifier exists, say so instead of inventing a link or date.
 
-逐版反馈沿用这份记录，不另建一套评分或反馈档案。保留有决策意义的原话、对应版本、喜欢或不满意的部分，以及对当前规则的影响。用户描述的感受是事实；Agent 对原因的解释是待验证判断，不能将“这版太冷”直接写成用户指定了某个暖色值。下一版据此调整并继续听反馈，未被评价的部分不自动转为已选。
+Keep version-specific feedback in this record rather than a separate rating or feedback archive. Preserve meaningful wording, the version, liked or unsatisfactory parts, and the implications for current rules. The user's reported feeling is a fact; the agent's explanation of its cause is a hypothesis. "This feels too cold" must not become a claim that the user specified a particular warm color. Adjust the next version and seek feedback; unmentioned parts do not automatically become selected.
 
-## 状态与执行含义
+## Status and execution meaning
 
-| 状态 | 含义与后续行为 |
+| Status | Meaning and subsequent behavior |
 | --- | --- |
-| 已选 | 用户明确选择或已有明确项目约定；在其范围内沿用 |
-| 明确排除 | 用户明确不要的特征；只排除声明范围与特征 |
-| 暂定 | 倾向、Agent 建议或用户授权代选；写清来源，不能报告为用户认可 |
-| 待定 | 重要但尚无答案；不猜成偏好，必要时才询问 |
-| 已替代 | 有新的明确决定取代；留在历史并链接新 ID，不再执行旧范围 |
-| 已撤销 | 用户撤回且没有替代；不自动恢复更早的决定 |
+| Selected | An explicit user choice or established project agreement; follow it within scope |
+| Explicitly excluded | A feature the user explicitly does not want; exclude only the stated feature and scope |
+| Tentative | A leaning, agent recommendation, or delegated choice; state its source and do not report user approval |
+| Undecided | An important unanswered question; do not invent a preference, and ask only when necessary |
+| Superseded | Replaced by a new explicit decision; retain it in history, link the new ID, and stop applying it in the replaced scope |
+| Withdrawn | Retracted by the user without a replacement; do not automatically restore an earlier decision |
 
-暂定不会自动覆盖同范围的已选决定。用户让 Agent 先决定时，可以在授权范围内实施并展示暂定方案，不另加确认关卡；用户尚未回答关键选择时，只推进不依赖它的工作。试做与已选方向不同的方案时，保留当前正式规范和 Token，使用可区分的草案或预览版本；不能借试做静默替换正式来源。
+Tentative choices do not automatically override selected decisions in the same scope. When the user delegates a choice, implement and show a tentative proposal within authorization without adding an approval gate. If a key choice is still awaiting an answer, proceed only with independent work. When trying a proposal that differs from the selected direction, preserve the official guidelines and tokens and use a distinguishable draft or preview version. A trial must not silently replace the official source.
 
-“这版可以”按当时明确展示与讨论的范围记录。局部字体反馈不等于整页认可；“这个参考很活泼”不等于希望采用；没选不等于排除。不要把年龄、性别、地区或第三方建议变成用户选择。
+Interpret "this version works" within what was actually shown and discussed. Feedback on a heading font is not approval of the whole page; "this reference is lively" is not a request to adopt it; not selecting something is not exclusion. Do not turn age, gender, region, or third-party suggestions into user choices.
 
-## 更新与冲突处理
+## Updates and conflict resolution
 
-收到影响后续风格的明确选择、拒绝、范围调整或纠正后，在继续依赖它的设计前写入记录。不要拖到交付时才凭印象总结，也不要为每次记录要求用户再确认一遍。
+When an explicit choice, rejection, scope adjustment, or correction affects future style, record it before continuing work that depends on it. Do not reconstruct it from memory at delivery, and do not require reconfirmation for every recorded decision.
 
-1. 找到当前范围内相关决定。当前用户的新指令可以修改旧决定；外部参考和 Agent 建议不具备这种效力。
-2. 判断是解释澄清、局部例外、替代、撤销，还是实现偏差。实现没做好就修实现，不伪造新偏好。
-3. 新意图改变原决定时建立新 ID 并显式关联。旧记录保留当时依据；纯笔误修正无需制造新决定。
-4. 更新当前摘要和影响列表，再同步本次范围内的规范、Token、交互、预览和实现。超出本次修改范围的受影响目标标为待同步；下次触及时先处理，不自行扩大为全站重做。
-5. 在完成说明中简短指出实质变化与待同步处，不重复输出整份历史。
+1. Find relevant decisions in the current scope. New user instructions may change earlier decisions; external references and agent suggestions do not have that authority.
+2. Distinguish clarification, local exception, replacement, withdrawal, and implementation deviation. Fix implementation mistakes without inventing a new preference.
+3. When new intent changes a decision, create a new ID and an explicit relationship. Preserve the old evidence; simple typo corrections need no new decision.
+4. Update the effective summary and impact list, then synchronize guidelines, tokens, interactions, previews, and implementation within scope. Mark other affected targets as awaiting synchronization and address them when next touched; do not expand the task into a full-site rebuild.
+5. Briefly report material changes and pending synchronization without repeating the history.
 
-同范围的新旧意图不明时不能只按日期、文件顺序或代码现状选一个；先利用对话证据解决，仅对仍会改变结果的歧义询问。新建议和旧决定冲突不表示用户改变了主意。
+When old and new intent in the same scope is unclear, do not decide solely by date, file order, or current code. Resolve it from conversation evidence first, asking only about remaining ambiguity that would change the result. A new suggestion conflicting with an old decision is not evidence that the user changed their mind.
 
-局部例外记录“在范围 X 覆盖 D-001 的特征 Y”，原决定在其他范围继续生效。仅替代一部分时收窄原决定的有效范围，不能将整条全局决定标成失效。撤销不自动激活已替代的旧决定；如需恢复，记录新的明确选择。
+Record a local exception as "override feature Y of D-001 within scope X"; the original decision remains effective elsewhere. For partial replacement, narrow the original effective scope rather than invalidating the entire global decision. Withdrawal does not automatically reactivate a superseded choice. Restoring one requires a new explicit choice.
 
-## 示例：全局决定与页面例外
+## Example: global decisions and a page exception
 
-下例只演示记录方法，不是本项目或使用者的实际偏好。
+This illustrates the record format; it is not an actual preference of this project or its users.
 
 ```markdown
-# 当前设计决定
+# Current design decisions
 revision: 3
 
-## 当前有效摘要
-| ID | 状态 | 范围 | 决定 | 关系与落实 |
+## Current effective summary
+| ID | Status | Scope | Decision | Relationships and implementation |
 | --- | --- | --- | --- | --- |
-| D-001 | 已选 | 整个产品，D-003 范围除外 | 低装饰，以排版和间距形成秩序 | design.md：VIS-GROUP-01；已落实 |
-| D-002 | 明确排除 | 产品工作界面 | 不使用玻璃材质 | design.md：VIS-SURFACE-01；已落实 |
-| D-003 | 已选 | 活动介绍页顶部 | 允许更鲜明的图像和色彩 | 此区域对 D-001 的局部例外；对应预览待同步 |
-| D-004 | 暂定 | 工作界面正文 | Agent 暂用项目现有字体 | 用户授权先做一版；未取得字体认可 |
+| D-001 | Selected | Entire product, except D-003's scope | Low decoration; use typography and spacing to create order | design.md: VIS-GROUP-01; implemented |
+| D-002 | Explicitly excluded | Product work interfaces | No glass materials | design.md: VIS-SURFACE-01; implemented |
+| D-003 | Selected | Top of the event introduction page | Allow more expressive imagery and color | Local exception to D-001; preview awaiting synchronization |
+| D-004 | Tentative | Body text in work interfaces | Agent temporarily uses the existing project font | User authorized a first version; font not yet approved |
 
-## 决定细节
+## Decision details
 ### D-003
-用户原话：活动页上面可以热闹一点，工作台还是保持现在这样。
-情境：讨论活动介绍页顶部；未讨论正文密度或工作台配色。
-解释：顶部可增加图像与色彩表现；不推导成用户接受全部装饰。
-关系：仅在活动页顶部覆盖 D-001 的表现强度，其余范围继续沿用。
-关联：活动页规范 VIS-HERO-01；活动页预览顶部待同步。
+User wording: The top of the event page can be livelier; keep the workspace as it is.
+Context: Discussion concerned the top of the event page, not body density or workspace colors.
+Interpretation: Add imagery and color at the top; do not infer acceptance of all decoration.
+Relationship: Overrides only D-001's expressive intensity in this region; other scopes retain it.
+Links: Event guideline VIS-HERO-01; top of the event preview awaiting synchronization.
 ```
 
-若稍后用户明确要求全站采用另一种方向，应生成新的全局决定并调整上述范围，而不是继续叠加互相冲突的条目。
+If the user later explicitly chooses another direction for the whole site, create a new global decision and adjust the scopes instead of accumulating conflicting entries.
 
-## 恢复与交接检查
+## Recovery and handoff checks
 
-后续 Agent 开始工作时应能回答：这次涉及哪些有效决定，哪些仍未知，哪些局部例外适用，哪些旧产物尚待同步。交接时给出记录路径、当前修订与相关 ID，不把整段历史重新复制到另一份“记忆”。
+A subsequent agent should be able to identify relevant effective decisions, unknowns, applicable local exceptions, and old artifacts awaiting synchronization. Handoffs give the record path, current revision, and relevant IDs rather than duplicating the entire history in another "memory."
 
-若只有旧 `design.md` 而没有记录，可以继续使用已有明确规则。建立记录时注明“继承项目规范，用户原始讨论不可得”，不伪造原话或声称重新得到确认；只迁移当前工作需要的关键决定。
+If only an old `design.md` exists, continue from its explicit rules. When creating a record, state "Inherited from project guidelines; original user discussion unavailable." Do not fabricate quotes or claim renewed confirmation. Migrate only key decisions needed for the current work.

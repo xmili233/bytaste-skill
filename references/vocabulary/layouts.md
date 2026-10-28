@@ -1,39 +1,39 @@
-# 布局分类
+# Layout categories
 
-按当前歧义读取，不让用户填写完整列表。构图、内容架构与视觉风格是不同轴，可以组合；用户喜欢一个样本也不意味着选中了整套产品架构。
+Read for the current ambiguity; do not ask the user to complete the whole list. Composition, content architecture, and visual style are separate, combinable axes. Liking a specimen does not select an entire product architecture.
 
-## 构图方式
+## Composition approaches
 
-| ID | 名称与可辨认关系 | 可用于表达 | 边界与误用 |
+| ID | Name and recognizable relationship | May express | Boundaries and misuse |
 | --- | --- | --- | --- |
-| `layout.reading` | 单列阅读：沿一个主轴连续组织 | 连贯、平静、聚焦 | 正文不能无限铺满宽屏；不自动减少内容 |
-| `layout.centered` | 居中聚焦：主要对象周围留有空间 | 凝练、稳定、明确 | 不把所有段落居中，也不以空白代替内容 |
-| `layout.editorial` | 编辑式：标题、正文、图形和旁注有跨度变化 | 精致、叙事、节奏 | 不能为变化打乱阅读关系 |
-| `layout.grid` | 等列网格：同类内容共享对齐与尺寸关系 | 秩序、理性、整洁 | 不把不同权重的信息强行等权 |
-| `layout.modular` | 混合跨度 / Bento：基准网格一致，重点跨列跨行 | 丰富、模块化、鲜明 | 不先画卡片再编内容填满 |
-| `layout.split` | 分屏 / 双列：相关内容并置，比例可对等或主次 | 对比、直接、张力 | 无相关内容时不为填满屏幕硬分列 |
-| `layout.asymmetric` | 非对称平衡：位置、面积和留白共同平衡重量 | 灵活、有表现力 | 随机错位不是有意构图 |
-| `layout.immersive` | 满幅媒体：作品或图像为主，界面辅助 | 沉浸、感性、鲜明 | 需要真实素材或明确生成需求，不制造空 hero |
+| `layout.reading` | Single-column reading: continuous organization on one main axis | Continuity, calm, focus | Body text must not stretch indefinitely across wide screens; do not automatically reduce content |
+| `layout.centered` | Centered focus: space around a primary subject | Concentration, stability, clarity | Do not center every paragraph or substitute blank space for content |
+| `layout.editorial` | Editorial: varied spans for headings, body, graphics, and notes | Refinement, narrative, rhythm | Variation must not disrupt reading relationships |
+| `layout.grid` | Equal-column grid: similar content shares alignment and dimensions | Order, rationality, neatness | Do not force differently weighted content into equal emphasis |
+| `layout.modular` | Mixed-span / Bento: a shared base grid with key content spanning rows/columns | Richness, modularity, distinction | Do not draw cards first and invent content to fill them |
+| `layout.split` | Split / two-column: related content side by side at equal or primary/secondary proportions | Comparison, directness, tension | Do not force columns just to fill the screen when content is unrelated |
+| `layout.asymmetric` | Asymmetric balance: position, area, and whitespace balance weight | Flexibility, expression | Random misalignment is not intentional composition |
+| `layout.immersive` | Full-bleed media: work or imagery leads, interface supports | Immersion, emotion, distinction | Needs actual assets or an explicit generation request, not an empty hero |
 
-这些描述是可讨论的倾向，不保证每个人对感觉的理解相同。可以只采用局部关系，例如喜欢编辑式的标题比例，但不采用其图片布局。
+These are discussable tendencies, not a guarantee that everyone interprets feelings the same way. Adopt local relationships if appropriate, such as editorial heading proportions without its image layout.
 
-## 内容与页面架构
+## Content and page architecture
 
-只有真实内容关系或明确页面任务存在时才应用。产品未知时可以在规范中讲解结构，不生成相应业务。
+Apply only when real content relationships or an explicit page task exist. For an unknown product, explain structures in guidelines without generating the corresponding business features.
 
-| ID | 架构 | 使用前提 |
+| ID | Architecture | Prerequisite |
 | --- | --- | --- |
-| `architecture.shell` | 导航外壳＋主内容 | 有真实区域或页面需要切换 |
-| `architecture.list-detail` | 列表—详情 | 从对象集合中选择一项查看详细信息 |
-| `architecture.supporting-pane` | 主区＋辅助面板 | 工具或补充信息依附当前主体 |
-| `architecture.feed` | 信息流 / 集合 | 多个同类内容持续排列或浏览 |
-| `architecture.canvas` | 画布＋工具区 | 存在需要操作的真实编辑对象 |
-| `architecture.steps` | 分步流程 | 明确任务确有阶段关系 |
+| `architecture.shell` | Navigation shell + main content | Real regions or pages to switch among |
+| `architecture.list-detail` | List/detail | Selecting an object from a collection to inspect details |
+| `architecture.supporting-pane` | Main region + supporting pane | Tools or supplementary information attached to the current subject |
+| `architecture.feed` | Feed / collection | Ongoing arrangement or browsing of similar content |
+| `architecture.canvas` | Canvas + tools | A real editable object to operate on |
+| `architecture.steps` | Stepwise flow | An explicit task with actual stage relationships |
 
-列表—详情和主区—辅助面板并不等价：前者的详情往往可以独立成立，后者依赖当前主体。可参考 [Material 衍生的典型布局](https://developer.android.com/develop/ui/compose/layouts/adaptive/canonical-layouts) 的区分，不照搬其平台实现。
+List/detail and main/supporting-pane structures differ: details can often stand alone, while support depends on the current subject. See [Material-derived canonical layouts](https://developer.android.com/develop/ui/compose/layouts/adaptive/canonical-layouts) for the distinction without copying platform implementation.
 
-## 引导与记录
+## Guidance and recording
 
-只有当前任务需要决定构图且用户难以表达时，才呈现相关差异。可以解释“并排对照”与“顺序阅读”，不要求用户先认识专业名字。具体帮助方式由 Agent 判断。
+Present differences only when the task needs a composition choice and the user has difficulty expressing it. Explain side-by-side comparison versus sequential reading without requiring terminology first. The agent chooses the method of help.
 
-采用时记录区域、内容关系与相关 ID。一个规范页展示三种布局，是展示知识，不表示用户的产品同时选用了三种架构。取值和规则写法见 [布局规范](../layout.md)。
+Record region, content relationships, and relevant IDs when adopting a choice. A guidelines page demonstrating three layouts teaches relationships; it does not mean the product adopts three architectures. See [layout rules](../layout.md) for values and rule format.

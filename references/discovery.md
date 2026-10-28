@@ -1,159 +1,159 @@
-# 引导用户辨认并表达偏好
+# Help users recognize and express preferences
 
-当用户只有模糊感觉、不知道设计术语、无法说明喜欢参考的哪里，或不同描述看似冲突时读取。目标是让用户逐渐说清自己想要什么，再形成规范。
+Read this when a user has only a vague feeling, lacks design terminology, cannot explain what they like in a reference, or gives descriptions that seem to conflict. The aim is to help them express what they want and then form guidelines.
 
-以下是可选的引导思路，不是必经流程。由 Agent 判断用户哪里尚未理解，以及什么方式最有帮助；不要求视觉对比、样例制作或固定数量的问答。
+The approaches below are optional, not mandatory stages. The agent decides what the user has yet to understand and what help would be useful. Visual comparisons, sample creation, and a fixed number of questions are not required.
 
-建议从用户喜欢的设计案例开始，帮助指出想保留的部分；用户也可以只用文字描述、现有页面或反例。缺少案例时，利用已有信息先形成可查看的版本，不把找参考变成准入条件。偏好可以在看到实际效果后逐步明确，不必在动手前问出完整答案。
+Suggest starting with references the user likes and identifying the parts to retain. Descriptions, existing pages, and counterexamples also work. Without references, use available information to make a viewable version rather than making reference collection a prerequisite. Preferences can become clearer after seeing results; they need not be complete before work begins.
 
-产品和页面尚未确定时，若当前在建立设计规范，直接推进可查看的标准与 Token，不将缺少业务信息当作必须继续访谈的理由。用户明确要求具体产品或页面时，再补齐完成该任务必需的具体需求。当前任务内的专业默认值可以标为建议，不必逐个确认。
+When the product and pages are unknown and the task is to establish guidelines, proceed with viewable standards and tokens. Missing business context is not a reason to require further interviewing. When the user explicitly requests a product or page, obtain only requirements essential to that task. Professional defaults within scope can be recommendations without individual approval.
 
-## 推荐先了解用途、目标用户与场景
+## Recommended background: purpose, users, and context
 
-在确定整体感觉与视觉风格前，通常值得先了解设计要服务什么人、什么事情。下面是可选择的背景线索，不是必答表，也不要求按顺序询问：
+Before deciding overall feel and visual style, it is usually worth understanding whom the design serves and what they are doing. These are optional background prompts, not a required form or fixed question order:
 
-| 背景 | 可以怎样了解 |
+| Background | Possible question |
 | --- | --- |
-| 主要用途 | 这个产品或页面主要用来做什么，希望帮助用户完成什么？ |
-| 目标用户 | 主要给谁使用，他们对这类任务熟悉吗？ |
-| 使用场景 | 通常在什么情况下、通过什么设备使用，偏偶尔浏览还是持续操作？ |
+| Main purpose | What is this product or page for, and what should it help people do? |
+| Intended users | Who will use it, and how familiar are they with this type of task? |
+| Use context | In what circumstances and on what devices will they use it: occasional browsing or sustained work? |
 
-已有项目说明、对话或界面能回答的部分直接复用。尚不清楚的，只在有助于当前设计时选择性追问；用户不确定、不想展开，或希望先看案例和版本时，可以先推进并保留未知项，不擅自编造用户画像。
+Reuse answers already available in project descriptions, conversation, or the interface. Ask selectively only when missing information would help the current design. If the user is unsure, does not want to elaborate, or wants to see references or a version first, proceed while retaining unknowns. Do not invent personas.
 
-有了相关背景后，可继续了解希望带来的整体感受，再借助用户喜欢的参考或文字描述探索视觉表达。用途与目标用户帮助判断适配性，不直接决定某套字体、颜色或风格；不能由年龄、性别、行业等标签推断审美。引导顺序随用户输入调整，局部修改也不重新开展整套背景访谈。
+With relevant context, explore the desired overall feeling and visual expression through references or descriptions. Purpose and users help judge suitability, but do not determine a font, palette, or style. Do not infer aesthetic preferences from age, gender, industry, or similar labels. Adapt the order to the user's input, and do not restart a full background interview for a local edit.
 
-## 先判断用户卡在哪里
+## Identify where the user is stuck
 
-“说不清”不一定只是缺少术语。以下是选择帮助方式的线索，不是必须诊断或依次询问的分类：
+Difficulty expressing a preference is not always a lack of vocabulary. These are clues for choosing help, not categories that must be diagnosed in sequence:
 
-| 当前困难 | 可采用的帮助 | 避免 |
+| Difficulty | Possible help | Avoid |
 | --- | --- | --- |
-| 有感觉但缺词 | 从用户指向的特征给出日常描述，必要时再命名 | 要求先懂术语 |
-| 尚未理解差异 | 解释可见变化，结合内容举例或尝试 | 反复换近义形容词 |
-| 尚未形成偏好 | 允许暂定，在看到结果后继续修正 | 强迫一次选定整套风格 |
-| 不同要求冲突 | 先检查维度与作用域，再讨论具体取舍 | 把低装饰和高密度等共存特征误判为矛盾 |
+| A feeling without words | Describe the feature they point to in ordinary language; name it if useful | Requiring terminology first |
+| Differences are not yet understood | Explain visible changes, give content-specific examples, or try them | Repeating near-synonymous adjectives |
+| A preference has not formed | Allow tentative choices and revision after seeing results | Forcing a complete style choice at once |
+| Requirements appear to conflict | Check dimensions and scope before discussing a tradeoff | Treating compatible features, such as low decoration and high density, as contradictory |
 
-提问和候选范围可能影响回答。不要预设存在一个等待“测出来”的完整答案；不通过“高级 / 土气”等褒贬诱导，不因用户选择了有限候选就推断对所有其他方向的态度。
+Questions and candidate sets can influence answers. Do not assume a complete preference is waiting to be "measured." Do not steer with labels such as "sophisticated" versus "tacky," or infer attitudes toward every other option from a limited selection.
 
-词库用于降低表达门槛，不按人口属性给人分类，也不测量固定审美人格。用户只想先看一版时，可以在其授权范围内尝试，保留暂定状态。
+Vocabulary lowers the expression barrier; it does not classify people by demographic attributes or measure a fixed aesthetic personality. When the user wants a first version, try one within their authorization and retain tentative status.
 
-## 分类库如何使用
+## How to use the categories
 
-分类同时服务于理解、提问与归档。不要把整个分类库展示成用户必须完成的问卷，也不要把分类结果当作用户的固定审美人格。
+Categories support understanding, questioning, and recording. Do not present the whole library as a required questionnaire or treat its output as a fixed aesthetic profile.
 
-| 需要弄清的内容 | 按需读取 | 用途 |
+| What needs clarification | Read as needed | Purpose |
 | --- | --- | --- |
-| 想获得什么体验 | [体验目标](vocabulary/experience.md) | 从“高效、亲切、安心”等词回到具体任务与感受 |
-| 外观与表达差在哪里 | [视觉感受维度](vocabulary/visual.md) | 通过可观察的差异帮助用户辨认偏好 |
-| 不知道从哪里开始看 | [风格组合](vocabulary/styles.md) | 提供可比较的整体起点，再拆出真正喜欢的部分 |
-| 不知道问题属于哪个设计层面 | [六层概念地图](concepts.md) | 从症状定位内容、空间、视觉、组合或适配；只读相关分支 |
-| 已知道偏好，准备落地 | [候选规则](principles.md)、[规格结构](design-spec.md)、[Token](tokens.md) | 把已表达的偏好转成有条件的实施要求 |
+| Desired experience | [Experience goals](vocabulary/experience.md) | Connect words such as "efficient," "approachable," or "reassuring" to tasks and feelings |
+| Differences in appearance and expression | [Visual dimensions](vocabulary/visual.md) | Help users recognize preferences through observable differences |
+| Where to begin exploring | [Style combinations](vocabulary/styles.md) | Offer comparable starting points, then identify the parts the user actually likes |
+| Which design layer an issue belongs to | [Six-layer concept map](concepts.md) | Locate content, space, visual language, composition, or adaptation issues; read only relevant branches |
+| Turning known preferences into implementation | [Candidate rules](principles.md), [specification structure](design-spec.md), [tokens](tokens.md) | Translate expressed preferences into conditional requirements |
 
-顺序按用户输入决定。有具体参考时先看参考；只有“高级感”时先拆可能含义；已经能描述差异时直接复述，不强迫从风格名称开始选择。
+Follow the user's input. Inspect a concrete reference first; unpack possible meanings of "sophisticated" if that is all you have; directly restate differences the user can already describe. Do not force a style-name selection first.
 
-## 逐步引导的循环
+## The discovery loop
 
-### 1. 保留原话，找出关键歧义
+### 1. Preserve the wording and find the important ambiguity
 
-保留用户的词和反例，例如“不要太空，但看着要干净”。区分未知、含糊和明确冲突：没有谈过颜色是未知；“高级”有多种解释是含糊；同一页面既要求大留白又要求更多条目才可能需要权衡。
+Keep the user's words and counterexamples, such as "not too empty, but still clean." Distinguish unknowns, ambiguity, and actual conflict. Unmentioned colors are unknown; "premium" is ambiguous; wanting both generous whitespace and more entries in the same view may require a tradeoff.
 
-先检查不同要求是否作用于不同维度或页面。低装饰可以与高密度并存；首页有表现力与工作台克制也可以并存。不要急着让用户二选一。
+First check whether requirements concern different dimensions or pages. Low decoration can coexist with high density; an expressive homepage can coexist with a restrained workspace. Do not rush into a forced choice.
 
-### 2. 选一个最值得弄清的问题
+### 2. Choose the most useful question
 
-优先追问答案会明显影响当前设计、而目前证据不足的部分。通常一次聚焦一个差异，必要时搭配一个紧密相关的问题；不依次问完所有维度。
+Prioritize an unanswered issue whose resolution would materially change this design. Usually focus on one difference, with a closely related question if necessary, rather than walking through every dimension.
 
-问题应提供用户能辨认的内容。例如，相同内容下是“信息集中、同屏看到更多”还是“间距更大、分段浏览”，比“你喜欢什么设计风格”更具体。先描述差异，再在需要时介绍“信息密度”等术语。
+Use differences the user can recognize. With the same content, "more information together in one view" versus "more space and browsing in sections" is more concrete than "what style do you like?" Explain the difference before introducing "information density" if needed.
 
-### 3. 让用户辨认，允许不选
+### 3. Help the user distinguish options, including choosing none
 
-如果选择提供选项，使用少量有实质区别的中性描述。用户仍难以理解时，可以换一种解释、举例或采用其他合适的表达方式，不必进入固定的视觉演示步骤。
+If offering options, use a small number of materially different, neutral descriptions. If the user still cannot distinguish them, try another explanation, example, or suitable form of expression. A fixed visual demonstration stage is not required.
 
-- 用中性的可观察差异命名，不用“高级 / 普通”“专业 / 土气”替用户判断好坏。
-- 用户可以说“不确定”“都不是”“取中间”“只喜欢 A 的字体”。不要求完整接受一个组合。
-- 没选某项不等于讨厌该项；没有回复不等于接受默认项。
-- 可以先从不喜欢的部分排除，但只记录明确排除的特征及其范围。
-- 若不断无法区分，换具体内容、局部对比或提问角度，不反复用近义词追问。
+- Name observable differences neutrally; do not rank options as "premium/basic" or "professional/tacky."
+- Accept "not sure," "neither," "between them," and "only A's font." Do not require acceptance of an entire combination.
+- Not choosing an option does not mean disliking it; no reply does not mean accepting a default.
+- You can begin by excluding disliked features, but record only explicit exclusions and their scope.
+- If differences remain unclear, change the content, local comparison, or question rather than repeating synonyms.
 
-### 4. 指出选择意味着什么，再听修正
+### 4. Restate the choice and listen for correction
 
-用一句短话复述已表达的偏好，并补上能复用的称呼。例如：“你要的是低装饰、较高信息密度：内容集中，但少一些卡片边框和背景色块。”
+Briefly restate what has been expressed, with a reusable term if useful. For example: "You want low decoration and relatively high information density: content stays together, with fewer card borders and background blocks."
 
-只有确实仍有歧义时才继续问。不要每次选择后都要求一次形式化确认，也不要把你补充的解释默认记为用户选择。用户的修正优先于分类库中的定义。
+Ask again only if meaningful ambiguity remains. Do not require formal confirmation after every choice or treat your added interpretation as the user's decision. Corrections from the user take precedence over category definitions.
 
-### 5. 在足够清楚时做出版本，再听感受
+### 5. Make a version when enough is clear, then hear how it feels
 
-当前任务、主要体验目标，以及会影响这次方案的关键差异已经清楚时，就可以写规范。尚未涉及的维度留空或标记未知，不能为了“档案完整”继续盘问。
+You can write guidelines once the current task, main experience goals, and differences that affect this proposal are clear enough. Leave untouched dimensions blank or unknown; do not continue questioning just to complete a profile.
 
-若用户明确让 AI 决定或希望先看结果，给出有依据的暂定方向并继续；将其标为建议，而不是已选偏好。若关键选择仍在等待用户回答，只推进不依赖它的工作。
+If the user delegates decisions or wants results first, offer a justified tentative direction and continue. Label it as a recommendation, not a selected preference. While a key choice awaits an answer, proceed only with independent work.
 
-将当前规范用于实际预览或已授权的页面，展示后针对这版询问感受。优先听用户自己的话，再按需定位到字体、密度、层级或交互等具体关系；不要用“是不是更高级了”诱导认可。用户只说“不对”时，结合其指向的区域和本轮变化缩小歧义，不自行把原因归到某个 Token。
+Apply the guidelines to a real preview or authorized page, then ask about that version. Listen to the user's own words before locating specific relationships in typography, density, hierarchy, or interaction. Do not lead with "isn't this more sophisticated?" If they only say "not right," use the indicated area and current changes to narrow the ambiguity instead of assigning the cause to a token without evidence.
 
-把反馈对应的版本与范围写入 [决策记录](decisions.md)，更新相关规范，再用于下一版。每轮都让用户有评价实际结果的机会，但不强求评分、固定轮次或重复确认已经明确的选择。
+Record the version and scope of feedback in the [decision record](decisions.md), update affected guidelines, and use them for the next version. Give the user a chance to respond to actual results each round, without requiring scores, fixed rounds, or repeated confirmation of clear choices.
 
-## 根据理解程度选择表达方式
+## Match the explanation to the user's understanding
 
-优先利用用户已有的案例，并询问具体部分。用户给出的参考是线索，不代表喜欢整个网站。
+Prefer the user's own references and ask about specific parts. A reference is a clue, not approval of an entire website.
 
-“这个案例看起来很活泼”是在描述观察，不等于“我希望自己的产品也活泼”。区分用户在描述什么，以及希望保留或改变什么，不能把反应词直接当作目标偏好。
+"This reference looks lively" is an observation, not necessarily "I want my product to look lively." Distinguish what the user is describing from what they want to retain or change; do not turn reaction words directly into target preferences.
 
-文字解释、场景举例、现有案例、视觉对比或草图都可能帮助理解。是否采用以及具体怎样做，由 Agent 根据用户反应、任务与工具条件决定；没有视觉工具也可以继续引导。
+Text explanations, situational examples, existing references, visual comparisons, and sketches can all help. The agent chooses based on user response, task, and tools. Discovery can continue without visual tools.
 
-无论采用什么方式，都只记录用户实际表达的偏好，不能从对某个例子的局部反馈推断整套设计已获认可。使用参考时说明实际观察范围；自制材料不冒充真实案例。偏好探索不自动扩大为完整网站实现或发布。
+Whatever method you use, record only preferences actually expressed. Partial feedback on an example does not approve the whole design. State what you inspected in references; do not present self-made material as a real external example. Preference discovery does not automatically authorize a complete website implementation or publication.
 
-## 常见含糊词的拆解入口
+## Ways to unpack common ambiguous words
 
-下表是可选假设，不能直接作为用户的真实含义。
+These are possible interpretations, not claims about what the user means.
 
-| 用户说 | 可以区分的含义 | 下一步示例 |
+| User wording | Possible meanings | Example next step |
 | --- | --- | --- |
-| 高级、有质感 | 排版精度、克制表达、材质、尺度、图像质量 | 用“排版很讲究”和“材料与层次很明显”的局部对比开始 |
-| 简洁、干净 | 装饰少、信息少、分组清楚、颜色少 | 先区分“减少装饰”和“减少同屏信息” |
-| 大气 | 更大的标题图像、更开阔的间距、更强的视觉重点 | 比较相同内容的尺度与留白，不先决定配色 |
-| 科技感 | 数据工具感、未来视觉、精密秩序、发光材质 | 用实际构成说明不同方向，不直接套深色霓虹 |
-| 专业 | 操作可靠、表达严谨、信息充分、视觉克制 | 先问用户最希望在哪个使用环节感受到它 |
-| 温暖 | 暖色、自然材料、柔和形状、亲切语言 | 从现有参考中辨认是哪一种，不绑定整套风格 |
-| 活泼 | 鲜明色彩、插画、自由构图、动态反馈 | 先找用户喜欢的表达载体，再讨论强度 |
-| 不要 AI 味 | 重复模板、无关装饰、泛化文案、缺少领域内容 | 让用户指向反例中不喜欢的部分，不把某种字体或渐变全局禁用 |
-| 太乱 | 层级不清、分组弱、强调过多、信息太多 | 先定位难以找到的内容或区域，再判断原因 |
-| 太空 | 间距过大、内容不足、比例失衡、重点太弱 | 对照真实内容判断，不直接添加装饰或虚构信息 |
+| Sophisticated, premium, polished | Typographic precision, restraint, materials, scale, image quality | Compare an emphasis on typography with an emphasis on materials and depth |
+| Simple, clean | Less decoration, less information, clearer groups, fewer colors | First distinguish reducing decoration from reducing visible information |
+| Expansive, bold | Larger type or imagery, more open spacing, stronger focal points | Compare scale and whitespace with the same content before choosing colors |
+| Technological | Data-tool precision, futuristic expression, exact order, luminous materials | Explain different constructions without defaulting to dark neon |
+| Professional | Reliability, precise language, sufficient information, visual restraint | Ask where in use the user most wants to feel this quality |
+| Warm | Warm colors, natural materials, soft shapes, approachable language | Identify the source in a reference without bundling a whole style |
+| Playful | Vivid color, illustration, free composition, motion feedback | Identify the expressive medium first, then its intensity |
+| Avoid the AI look | Repeated templates, irrelevant decoration, generic copy, missing domain content | Ask which parts of a counterexample they dislike; do not globally ban a font or gradient |
+| Too messy | Unclear hierarchy, weak grouping, too much emphasis, too much information | Locate the hard-to-find content or area before diagnosing the cause |
+| Too empty | Excess spacing, insufficient content, unbalanced proportions, weak focal points | Compare with real content instead of adding decoration or invented information |
 
-## 对话示例：从“简洁高级”到可表达
+## Example conversation: from "simple and sophisticated" to an expressible preference
 
-以下是演示对话，不是本项目用户已经作出的设计选择。
+This is an illustrative conversation, not a decision made by this project's user.
 
-> 用户：想要简洁高级，但别做得很空。
+> User: I want it simple and sophisticated, but not too empty.
 >
-> ByTaste：先区分“简洁”指哪里。在保留同样信息和功能时，你更接近：减少边框、背景块等装饰，靠对齐分组；还是保留明显分区，让每组内容有自己的容器？也可以介于两者之间。
+> ByTaste: Let's separate what "simple" means. Keeping the same information and functions, would you rather reduce borders and background blocks and group through alignment, or keep clear regions with a container for each group? Somewhere between is also fine.
 >
-> 用户：少一些装饰，但内容还是要看得多。
+> User: Less decoration, but I still want to see plenty of content.
 >
-> ByTaste：目前明确的是低装饰、较高信息密度。你说的“高级”，更接近文字排版和对齐的精细感，还是表面材质与立体层次？如果文字难判断，可以看局部对比。
+> ByTaste: That establishes low decoration and relatively high information density. Is the sophistication more about precise typography and alignment, or materials and depth? If the words are hard to judge, we can compare a small example.
 >
-> 用户：排版精细一点，别搞玻璃效果。
+> User: More careful typography. No glass effects.
 >
-> ByTaste：可以这样描述：我想要低装饰、紧凑但分组清楚的界面，精致感主要来自排版和对齐，避免玻璃材质。颜色和圆角目前还没决定。
+> ByTaste: You could describe this as low decoration, compact but clearly grouped, with refinement coming mainly from typography and alignment, avoiding glass materials. Colors and corner shapes are still undecided.
 
-随后把已选部分映射到规则和 Token 需求；不能因为这个描述就推断用户一定喜欢黑白、某种字体或方角。
+Map only the selected parts to rules and token needs. This description does not imply monochrome, a particular font, or square corners.
 
-## 保存偏好与后续修订
+## Save preferences and revise them
 
-将影响后续设计的选择及时写入项目决策记录，按 [决策记录约定](decisions.md) 保留原话、选择情境、具体含义、作用域、状态与落地关系。`design.md` 只整理当前方向并引用决策 ID，不另维护一份偏好历史。
+Promptly record choices that affect later design using the [decision agreement](decisions.md). Keep the user's wording, choice context, specific meaning, scope, status, and implementation relationships. `design.md` summarizes the current direction and cites decision IDs; it does not maintain another preference history.
 
-用户纠正时区分澄清、局部例外和替代，更新当前有效摘要并检查受影响规则；不要重新提问已清楚且未受影响的部分。项目内的新称呼可以按原话保存，不必强行匹配分类项。
+For corrections, distinguish clarification, local exception, and replacement. Update the effective summary and check affected rules without reopening clear, unaffected choices. Preserve new project-specific terms in the user's language rather than forcing a category match.
 
-这些分类是可扩展的设计语言。它们不构成心理量表，也不能把选择次数转换成未经验证的“审美得分”。
+These categories are an extensible design vocabulary, not a psychological scale. Do not convert selection counts into an unvalidated "taste score."
 
-## 分类库如何逐渐扩充
+## Extend the categories gradually
 
-每个新概念应有稳定 ID、用户常用说法、可观察或可讨论的含义、辨认问题、与规格或规则的关联，以及容易误用的边界。近义说法优先作为已有概念的别称；一个词确实有多种含义时保留分支，不强行合并。
+Each new concept needs a stable ID, common user expressions, an observable or discussable meaning, a distinguishing question, relationships to specifications or rules, and misuse boundaries. Prefer aliases for synonyms. When a word has several meanings, preserve branches rather than forcing them together.
 
-需要同时支持提问与实施的高频概念，按 [知识条目约定](knowledge/index.md) 补齐适用条件、参考 / 反例、落地关联和验证方法。先完善高频条目的证据，不只扩充标签数量。
+For frequent concepts that support both questioning and implementation, follow the [knowledge entry agreement](knowledge/index.md): include applicability, references/counterexamples, rule and token relationships, and verification. Strengthen evidence for frequent entries before increasing the label count.
 
-新概念必须能改善辨认或设计决策，不能只增加形容词数量。具体案例注明来源和观察范围；没有案例支持的组合仍作为探索建议。库外表达可以先保存在当前项目，未经整理不自动升级成通用分类，也不把项目的个人偏好写成所有用户的默认值。
+New concepts must improve recognition or design decisions, not merely add adjectives. Attribute concrete examples and state observation limits. Combinations without supporting examples remain exploratory suggestions. Expressions outside the library can remain in the project until curated; personal project preferences must not become defaults for everyone.
 
-## 方法依据与边界
+## Method sources and limits
 
-[Slovic 的偏好形成研究](https://bear.warrington.ufl.edu/brenner/mar7588/Papers/slovic-ampsy1995.pdf) 提醒我们引导方式可能影响选择；这是一般决策研究，不证明上述设计引导已经有效。[反应词实践](https://www.nngroup.com/articles/microsoft-desirability-toolkit/) 支持用词汇帮助表达，同时提醒同一词可能有不同理解；对参考的评价仍须与项目意图区分。
+[Slovic's research on preference construction](https://bear.warrington.ufl.edu/brenner/mar7588/Papers/slovic-ampsy1995.pdf) reminds us that elicitation methods can affect choices. This is general decision research, not proof that this design guidance works. [Reaction-word practice](https://www.nngroup.com/articles/microsoft-desirability-toolkit/) supports using vocabulary to aid expression while noting that words can mean different things to different people. Evaluating a reference still differs from stating project intent.
 
-[选择过载元分析](https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf) 提示偏好是否明确、候选是否容易比较等条件值得考虑。它没有规定设计访谈应有固定数量的选项；根据用户理解与当前歧义调整即可。
+[A meta-analysis of choice overload](https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf) suggests considering preference clarity and how easily options can be compared. It does not prescribe a fixed number of options for a design conversation; adapt to understanding and current ambiguity.

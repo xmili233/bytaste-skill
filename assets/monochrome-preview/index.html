@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="ByTaste 黑白灰设计规范预览：排版、色彩、布局、组件与动效。">
+  <meta name="description" content="ByTaste monochrome design guidelines preview: typography, color, layout, components, and motion.">
   <meta name="design-sources" content="design.md; design.decisions.md; tokens.css; interaction.md; proposed preview v1">
-  <title>黑白灰 · ByTaste 设计规范</title>
+  <title>Monochrome · ByTaste Design Guidelines</title>
   <link rel="preload" href="assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="styles.css">
@@ -13,7 +13,7 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳至内容</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <svg class="icon-defs" aria-hidden="true"><defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol>
@@ -26,93 +26,93 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="#main" aria-label="ByTaste 设计规范首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span>ByTaste<span class="header-divider"></span><span class="header-title">设计规范</span></a>
-      <nav aria-label="规范章节">
-        <a href="#typography">排版</a><a href="#colors">色彩</a><a href="#layout">布局</a><a href="#components">组件</a><a href="#motion">动效</a>
+      <a class="wordmark" href="#main" aria-label="ByTaste design guidelines home"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span>ByTaste<span class="header-divider"></span><span class="header-title">Guidelines</span></a>
+      <nav aria-label="Guideline sections">
+        <a href="#typography">Typography</a><a href="#colors">Color</a><a href="#layout">Layout</a><a href="#components">Components</a><a href="#motion">Motion</a>
       </nav>
-      <span class="draft-badge">预览稿</span>
+      <span class="draft-badge">Preview draft</span>
     </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">黑白灰<span>设计语言</span></h1>
-        <p class="hero-description">从文字的轻重，到空间的疏密。<br>查看并体验一套完整的视觉规范。</p>
-        <div class="direction"><span class="direction-label">本次方向</span><span>低装饰</span><span>清楚的层次</span><span>细微动态</span></div>
-        <a class="text-link" href="#typography">开始查看<svg><use href="#i-arrow"/></svg></a>
+        <h1 id="hero-title">Monochrome<span>Design language</span></h1>
+        <p class="hero-description">From type weight to the rhythm of space.<br>Explore a complete set of visual guidelines.</p>
+        <div class="direction"><span class="direction-label">Direction</span><span>Low decoration</span><span>Clear hierarchy</span><span>Subtle motion</span></div>
+        <a class="text-link" href="#typography">Explore<svg><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="hero-specimen" aria-label="Manrope 字体与灰阶样本">
+      <div class="hero-specimen" aria-label="Manrope type and grayscale specimens">
         <div class="type-art">
-          <div class="type-art-top"><span>Manrope</span><button id="change-glyph" class="inverse-icon-button" aria-label="切换字体字样"><svg><use href="#i-replay"/></svg></button></div>
+          <div class="type-art-top"><span>Manrope</span><button id="change-glyph" class="inverse-icon-button" aria-label="Change type specimen"><svg><use href="#i-replay"/></svg></button></div>
           <div class="glyph-baseline" aria-hidden="true"></div>
           <div id="hero-glyph" class="hero-glyph" aria-hidden="true">Aa</div>
           <div class="type-art-bottom"><span>Variable sans</span><span>400 — 800</span></div>
         </div>
         <div class="hero-palette" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="specimen-caption"><span>同一套灰阶，不同层次的表达。</span><a href="#colors">查看色值 <span aria-hidden="true">↗</span></a></div>
+        <div class="specimen-caption"><span>One grayscale palette, distinct layers.</span><a href="#colors">View colors <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
     <section id="typography" class="section wrap" aria-labelledby="type-title">
-      <div class="section-heading"><div><h2 id="type-title">排版</h2><p>用尺度与字重建立主次，保留舒适的阅读节奏。</p></div><span class="technical-label">Manrope / 苹方</span></div>
+      <div class="section-heading"><div><h2 id="type-title">Typography</h2><p>Use scale and weight to establish hierarchy and a comfortable reading rhythm.</p></div><span class="technical-label">Manrope / PingFang</span></div>
       <div class="type-scale">
-        <div class="type-row display-row"><div class="row-label">展示标题<span>Display</span></div><div class="type-sample type-display">让文字有层次。</div><button class="token-copy" data-copy="font-size: 64px; font-weight: 500; line-height: 1.2" aria-label="复制展示标题样式">64 / 500<svg><use href="#i-copy"/></svg></button></div>
-        <div class="type-row"><div class="row-label">章节标题<span>Heading</span></div><div class="type-sample type-heading">清晰的结构，从这里开始</div><button class="token-copy" data-copy="font-size: 28px; font-weight: 600; line-height: 1.3" aria-label="复制章节标题样式">28 / 600<svg><use href="#i-copy"/></svg></button></div>
-        <div class="type-row body-row"><div class="row-label">正文<span>Body</span></div><div class="type-sample type-body">相关的信息彼此靠近，不同的层级留出空间。让字号、行距和段落宽度一起工作，而不只是放大标题。</div><button class="token-copy" data-copy="font-size: 16px; font-weight: 400; line-height: 1.7" aria-label="复制正文样式">16 / 400<svg><use href="#i-copy"/></svg></button></div>
-        <div class="type-row"><div class="row-label">辅助信息<span>Caption</span></div><div class="type-sample type-caption">辅助信息轻一些，必要的信息依然清楚。0123456789</div><button class="token-copy" data-copy="font-size: 12px; font-weight: 400; line-height: 1.7" aria-label="复制辅助信息样式">12 / 400<svg><use href="#i-copy"/></svg></button></div>
+        <div class="type-row display-row"><div class="row-label">Display</div><div class="type-sample type-display">Give type hierarchy.</div><button class="token-copy" data-copy="font-size: 64px; font-weight: 500; line-height: 1.2" aria-label="Copy display type styles">64 / 500<svg><use href="#i-copy"/></svg></button></div>
+        <div class="type-row"><div class="row-label">Heading</div><div class="type-sample type-heading">Clear structure starts here</div><button class="token-copy" data-copy="font-size: 28px; font-weight: 600; line-height: 1.3" aria-label="Copy heading styles">28 / 600<svg><use href="#i-copy"/></svg></button></div>
+        <div class="type-row body-row"><div class="row-label">Body</div><div class="type-sample type-body">Keep related information close and leave space between levels. Let type size, leading, and line length work together, beyond simply enlarging headings.</div><button class="token-copy" data-copy="font-size: 16px; font-weight: 400; line-height: 1.7" aria-label="Copy body styles">16 / 400<svg><use href="#i-copy"/></svg></button></div>
+        <div class="type-row"><div class="row-label">Caption</div><div class="type-sample type-caption">Keep supporting text quiet and essential information clear. 0123456789</div><button class="token-copy" data-copy="font-size: 12px; font-weight: 400; line-height: 1.7" aria-label="Copy caption styles">12 / 400<svg><use href="#i-copy"/></svg></button></div>
       </div>
     </section>
 
     <section id="colors" class="section wrap" aria-labelledby="color-title">
-      <div class="section-heading"><div><h2 id="color-title">色彩与层次</h2><p>点击色块复制色值。色彩通过角色，而不是数量，形成秩序。</p></div><span class="technical-label">Neutral palette</span></div>
+      <div class="section-heading"><div><h2 id="color-title">Color and depth</h2><p>Select a swatch to copy its value. Color roles create order.</p></div><span class="technical-label">Neutral palette</span></div>
       <div class="palette-grid">
-        <button class="color-swatch ink" data-copy="#191919" aria-label="复制墨黑 #191919"><span class="swatch-name">墨黑<small>主要文字 / 主操作</small></span><span class="swatch-value">#191919<svg><use href="#i-copy"/></svg></span></button>
-        <button class="color-swatch graphite" data-copy="#2D2D2D" aria-label="复制石墨 #2D2D2D"><span class="swatch-name">石墨<small>深色表面</small></span><span class="swatch-value">#2D2D2D<svg><use href="#i-copy"/></svg></span></button>
-        <button class="color-swatch secondary" data-copy="#626262" aria-label="复制中灰 #626262"><span class="swatch-name">中灰<small>次要文字</small></span><span class="swatch-value">#626262<svg><use href="#i-copy"/></svg></span></button>
-        <button class="color-swatch silver" data-copy="#BDBDBD" aria-label="复制银灰 #BDBDBD"><span class="swatch-name">银灰<small>图形 / 结构</small></span><span class="swatch-value">#BDBDBD<svg><use href="#i-copy"/></svg></span></button>
-        <button class="color-swatch mist" data-copy="#E9E9E9" aria-label="复制雾灰 #E9E9E9"><span class="swatch-name">雾灰<small>边界 / 分隔</small></span><span class="swatch-value">#E9E9E9<svg><use href="#i-copy"/></svg></span></button>
-        <button class="color-swatch paper" data-copy="#FFFFFF" aria-label="复制纸白 #FFFFFF"><span class="swatch-name">纸白<small>画布 / 浮层</small></span><span class="swatch-value">#FFFFFF<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch ink" data-copy="#191919" aria-label="Copy Ink #191919"><span class="swatch-name">Ink<small>Primary text / actions</small></span><span class="swatch-value">#191919<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch graphite" data-copy="#2D2D2D" aria-label="Copy Graphite #2D2D2D"><span class="swatch-name">Graphite<small>Dark surfaces</small></span><span class="swatch-value">#2D2D2D<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch secondary" data-copy="#626262" aria-label="Copy Gray #626262"><span class="swatch-name">Gray<small>Secondary text</small></span><span class="swatch-value">#626262<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch silver" data-copy="#BDBDBD" aria-label="Copy Silver #BDBDBD"><span class="swatch-name">Silver<small>Graphics / structure</small></span><span class="swatch-value">#BDBDBD<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch mist" data-copy="#E9E9E9" aria-label="Copy Mist #E9E9E9"><span class="swatch-name">Mist<small>Borders / dividers</small></span><span class="swatch-value">#E9E9E9<svg><use href="#i-copy"/></svg></span></button>
+        <button class="color-swatch paper" data-copy="#FFFFFF" aria-label="Copy Paper #FFFFFF"><span class="swatch-name">Paper<small>Canvas / overlays</small></span><span class="swatch-value">#FFFFFF<svg><use href="#i-copy"/></svg></span></button>
       </div>
-      <div class="surface-strip"><div class="surface-visual" aria-hidden="true"><div class="surface-back"></div><div class="surface-front"><span></span><span></span><span></span></div></div><div class="surface-copy"><h3>克制，不等于扁平。</h3><p>相邻表面用轻微的明暗与边界区分。需要浮起时，再使用柔和阴影。</p></div><div class="surface-tokens"><span>圆角 <strong>10 / 18 px</strong></span><span>边界 <strong>1 px</strong></span></div></div>
+      <div class="surface-strip"><div class="surface-visual" aria-hidden="true"><div class="surface-back"></div><div class="surface-front"><span></span><span></span><span></span></div></div><div class="surface-copy"><h3>Subtle depth.</h3><p>Separate adjacent surfaces with subtle tones and borders. Add soft shadows where elevation is needed.</p></div><div class="surface-tokens"><span>Radius <strong>10 / 18 px</strong></span><span>Border <strong>1 px</strong></span></div></div>
     </section>
 
     <section id="layout" class="section wrap" aria-labelledby="layout-title">
-      <div class="section-heading"><div><h2 id="layout-title">布局与空间</h2><p>内容保持相同，体验不同构图中的主次与节奏。</p></div><button id="grid-toggle" class="small-button" aria-pressed="false"><svg><use href="#i-grid"/></svg>显示网格</button></div>
-      <div class="layout-controls" role="group" aria-label="构图方式"><button class="layout-tab selected" data-layout="editorial" aria-pressed="true">编辑式</button><button class="layout-tab" data-layout="split" aria-pressed="false">主次分栏</button><button class="layout-tab" data-layout="modular" aria-pressed="false">模块网格</button><span id="layout-description">让主标题与正文形成错落的阅读节奏。</span></div>
+      <div class="section-heading"><div><h2 id="layout-title">Layout and space</h2><p>Keep the content; explore hierarchy and rhythm across compositions.</p></div><button id="grid-toggle" class="small-button" aria-pressed="false"><svg><use href="#i-grid"/></svg>Show grid</button></div>
+      <div class="layout-controls" role="group" aria-label="Composition"><button class="layout-tab selected" data-layout="editorial" aria-pressed="true">Editorial</button><button class="layout-tab" data-layout="split" aria-pressed="false">Split</button><button class="layout-tab" data-layout="modular" aria-pressed="false">Modular</button><span id="layout-description">Vary the placement of headings and body text to create reading rhythm.</span></div>
       <div id="layout-canvas" class="layout-canvas" data-layout="editorial">
         <div class="layout-grid" aria-hidden="true"></div>
-        <div class="layout-piece layout-lead"><span class="piece-label">主要信息</span><h3>空间，<br>也在表达。</h3><p>用比例分配注意力，<br>用留白连接内容。</p></div>
-        <div class="layout-piece layout-glyph"><span class="piece-label">视觉样本</span><strong>秩</strong><span class="piece-bottom">Type & space</span></div>
-        <div class="layout-piece layout-note"><span class="piece-label">辅助信息</span><h4>相关的，靠近一些。</h4><p>组内紧凑，组间舒展。即使没有边框，关系也可以清晰。</p><span class="piece-bottom">16 px / 1.7</span></div>
+        <div class="layout-piece layout-lead"><span class="piece-label">Primary</span><h3>Space<br>speaks.</h3><p>Guide attention with proportion.<br>Connect content with space.</p></div>
+        <div class="layout-piece layout-glyph"><span class="piece-label">Specimen</span><strong>A</strong><span class="piece-bottom">Type & space</span></div>
+        <div class="layout-piece layout-note"><span class="piece-label">Supporting</span><h4>Keep related things close.</h4><p>Compact within groups, open between them. Relationships stay clear without borders.</p><span class="piece-bottom">16 px / 1.7</span></div>
       </div>
-      <div class="layout-caption"><span>构图示意 · 不代表产品页面</span><span>主次关系 → 比例 → 对齐 → 节奏</span></div>
-      <div class="spacing-row"><div class="spacing-heading"><h3>间距尺度</h3><p>以 4px 为基础</p></div><div class="spacing-values" aria-label="间距尺度样本"><div><i style="--sample-space:4px"></i><span>4</span></div><div><i style="--sample-space:8px"></i><span>8</span></div><div><i style="--sample-space:12px"></i><span>12</span></div><div><i style="--sample-space:16px"></i><span>16</span></div><div><i style="--sample-space:24px"></i><span>24</span></div><div><i style="--sample-space:32px"></i><span>32</span></div><div><i style="--sample-space:48px"></i><span>48</span></div><div><i style="--sample-space:64px"></i><span>64</span></div></div><span class="spacing-unit">px</span></div>
+      <div class="layout-caption"><span>Composition specimen · not a product page</span><span>Hierarchy → proportion → alignment → rhythm</span></div>
+      <div class="spacing-row"><div class="spacing-heading"><h3>Spacing scale</h3><p>Based on 4px</p></div><div class="spacing-values" aria-label="Spacing scale specimens"><div><i style="--sample-space:4px"></i><span>4</span></div><div><i style="--sample-space:8px"></i><span>8</span></div><div><i style="--sample-space:12px"></i><span>12</span></div><div><i style="--sample-space:16px"></i><span>16</span></div><div><i style="--sample-space:24px"></i><span>24</span></div><div><i style="--sample-space:32px"></i><span>32</span></div><div><i style="--sample-space:48px"></i><span>48</span></div><div><i style="--sample-space:64px"></i><span>64</span></div></div><span class="spacing-unit">px</span></div>
     </section>
 
     <section id="components" class="section wrap" aria-labelledby="component-title">
-      <div class="section-heading"><div><h2 id="component-title">组件与状态</h2><p>统一的语言，也体现在每一次细微的反馈里。</p></div><span class="technical-label">Interactive specimens</span></div>
+      <div class="section-heading"><div><h2 id="component-title">Components and states</h2><p>A shared language in every small response.</p></div><span class="technical-label">Interactive specimens</span></div>
       <div class="component-grid">
-        <div class="component-cell"><h3>按钮</h3><div class="button-examples"><button class="button primary" id="sample-button"><span>主要按钮</span><svg><use href="#i-arrow"/></svg></button><button class="button secondary" id="secondary-button">次要按钮</button><button class="button" disabled>禁用状态</button></div><span class="component-footnote">悬停、按压与释放，有一致的反馈。</span></div>
-        <div class="component-cell"><div class="switch-row"><div><h3>开关</h3><p id="switch-description">已开启</p></div><button id="sample-switch" class="switch" role="switch" aria-checked="true" aria-label="切换开关样式"><span></span></button></div><div class="selection-row"><span>选择状态</span><div role="group" aria-label="选择状态样本"><button class="selection selected" aria-pressed="true">选项一</button><button class="selection" aria-pressed="false">选项二</button></div></div></div>
-        <div class="component-cell"><label class="field-label" for="sample-input">输入框</label><div class="input-wrap"><input id="sample-input" placeholder="输入文字，查看焦点样式" autocomplete="off"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div><span class="component-footnote">边界轻一些，焦点清楚一些。</span></div>
-        <div class="component-cell disclosure-cell"><button id="disclosure-toggle" class="disclosure-toggle" aria-expanded="false" aria-controls="disclosure-content"><span>展开与收起</span><svg><use href="#i-plus"/></svg></button><div id="disclosure-content" class="disclosure-content" hidden><p>内容随空间自然展开。再次点击收起，动画从当前状态衔接。</p></div><span class="component-footnote">点击体验空间变化。</span></div>
+        <div class="component-cell"><h3>Buttons</h3><div class="button-examples"><button class="button primary" id="sample-button"><span>Primary</span><svg><use href="#i-arrow"/></svg></button><button class="button secondary" id="secondary-button">Secondary</button><button class="button" disabled>Disabled</button></div><span class="component-footnote">Consistent feedback on hover, press, and release.</span></div>
+        <div class="component-cell"><div class="switch-row"><div><h3>Switch</h3><p id="switch-description">On</p></div><button id="sample-switch" class="switch" role="switch" aria-checked="true" aria-label="Toggle switch specimen"><span></span></button></div><div class="selection-row"><span>Selection</span><div role="group" aria-label="Selection state specimens"><button class="selection selected" aria-pressed="true">Option 1</button><button class="selection" aria-pressed="false">Option 2</button></div></div></div>
+        <div class="component-cell"><label class="field-label" for="sample-input">Input</label><div class="input-wrap"><input id="sample-input" placeholder="Type to inspect focus" autocomplete="off"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div><span class="component-footnote">Subtle borders, clear focus.</span></div>
+        <div class="component-cell disclosure-cell"><button id="disclosure-toggle" class="disclosure-toggle" aria-expanded="false" aria-controls="disclosure-content"><span>Expand and collapse</span><svg><use href="#i-plus"/></svg></button><div id="disclosure-content" class="disclosure-content" hidden><p>Content expands with its space. Select again to collapse; motion continues from the current state.</p></div><span class="component-footnote">Select to explore the transition.</span></div>
       </div>
     </section>
 
     <section id="motion" class="motion-section" aria-labelledby="motion-title"><div class="wrap">
-      <div class="section-heading inverse-heading"><div><h2 id="motion-title">动效</h2><p>快速回应，平稳衔接。有节奏，也有分寸。</p></div><button id="replay-all" class="small-button inverse-button"><svg><use href="#i-replay"/></svg>重播示例</button></div>
+      <div class="section-heading inverse-heading"><div><h2 id="motion-title">Motion</h2><p>Prompt responses, smooth transitions, measured rhythm.</p></div><button id="replay-all" class="small-button inverse-button"><svg><use href="#i-replay"/></svg>Replay examples</button></div>
       <div class="motion-grid">
-        <article class="motion-card"><div class="motion-stage press-stage"><button id="press-demo" class="press-demo">按住试试<svg><use href="#i-arrow"/></svg></button></div><div class="motion-card-foot"><div><h3>按压反馈</h3><p>轻微收缩，释放即回弹。</p></div><span>160 ms</span></div></article>
-        <article class="motion-card"><div class="motion-stage"><div id="enter-demo" class="enter-demo"><span class="demo-check"><svg><use href="#i-check"/></svg></span><span>自然出现<small>从轻微位移中停稳</small></span></div></div><div class="motion-card-foot"><div><h3>进入与退出</h3><p>先快后缓，保持空间感。</p></div><button id="replay-enter" class="inverse-icon-button" aria-label="重播进入与退出"><svg><use href="#i-play"/></svg></button></div></article>
-        <article class="motion-card"><div class="motion-stage"><button id="spring-track" class="spring-track" aria-label="切换弹簧动画位置"><span id="spring-dot"></span><i></i><i></i><i></i><i></i><i></i></button></div><div class="motion-card-foot"><div><h3>弹簧过渡</h3><p>自然停靠，允许中途反向。</p></div><button id="replay-spring" class="inverse-icon-button" aria-label="播放弹簧过渡"><svg><use href="#i-play"/></svg></button></div></article>
+        <article class="motion-card"><div class="motion-stage press-stage"><button id="press-demo" class="press-demo">Press and hold<svg><use href="#i-arrow"/></svg></button></div><div class="motion-card-foot"><div><h3>Press feedback</h3><p>A small scale change, then a spring back.</p></div><span>160 ms</span></div></article>
+        <article class="motion-card"><div class="motion-stage"><div id="enter-demo" class="enter-demo"><span class="demo-check"><svg><use href="#i-check"/></svg></span><span>Ease into view<small>Settle from a small offset</small></span></div></div><div class="motion-card-foot"><div><h3>Entry and exit</h3><p>Start quickly, then settle in place.</p></div><button id="replay-enter" class="inverse-icon-button" aria-label="Replay entry and exit"><svg><use href="#i-play"/></svg></button></div></article>
+        <article class="motion-card"><div class="motion-stage"><button id="spring-track" class="spring-track" aria-label="Toggle spring position"><span id="spring-dot"></span><i></i><i></i><i></i><i></i><i></i></button></div><div class="motion-card-foot"><div><h3>Spring transition</h3><p>Settle naturally; reverse at any point.</p></div><button id="replay-spring" class="inverse-icon-button" aria-label="Play spring transition"><svg><use href="#i-play"/></svg></button></div></article>
       </div>
-      <div class="motion-bottom"><div><span class="motion-source">Motion</span><span>统一曲线与时序 · 实际运行</span></div><label class="reduce-label"><input id="reduce-motion" type="checkbox">减少动态</label></div>
+      <div class="motion-bottom"><div><span class="motion-source">Motion</span><span>Shared easing and timing · live</span></div><label class="reduce-label"><input id="reduce-motion" type="checkbox">Reduce motion</label></div>
       <p id="motion-status" class="motion-status" role="status"></p>
     </div></section>
   </main>
 
-  <footer class="wrap site-footer"><div><strong>ByTaste</strong><span>黑白灰设计规范 · 样式提案</span></div><div><a href="design.md">查看规范 <span aria-hidden="true">↗</span></a><a href="tokens.css" download>下载 Token <svg><use href="#i-arrow"/></svg></a></div></footer>
+  <footer class="wrap site-footer"><div><strong>ByTaste</strong><span>Monochrome guidelines · style proposal</span></div><div><a href="design.md">View guidelines <span aria-hidden="true">↗</span></a><a href="tokens.css" download>Download tokens <svg><use href="#i-arrow"/></svg></a></div></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

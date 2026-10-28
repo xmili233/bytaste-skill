@@ -1,14 +1,14 @@
-# 规范展示交互
+# Guidelines preview interactions
 
-范围：本地规范样本，不接入业务数据或远程服务。
+Scope: local design specimens without business data or remote services.
 
-- 章节导航滚动到对应规范，当前章节保持轻量标记。
-- 字体字样按钮切换 Aa、Ag、Rr、09，展示同一字体的不同字形。
-- 色块和排版参数支持复制；失败时显示实际提示，不假报成功。
-- 三个布局按钮保留相同内容，通过 Motion 衔接位置变化；“显示网格”只展示构图辅助线。
-- 组件按钮、开关、选项、输入框与展开区均为本地视觉状态示例，不保存业务对象。
-- 动效区提供按压、进入退出、弹簧三类样本，允许重新播放与反向操作。
-- 默认尊重系统减少运动设置；页面也提供显式“减少动态”选项以便观察替代状态。
-- 未加载 Motion 时保留可读内容，并明确提示动态未加载。
+- Section navigation scrolls to the corresponding guideline, with a subtle current-section indicator.
+- The type specimen button cycles through Aa, Ag, Rr, and 09 to show different glyphs in the same font.
+- Color swatches and type parameters support copying. Failures show an honest message rather than false success.
+- Three layout buttons retain the same content and use Motion to connect positional changes. Show grid displays only composition guides.
+- Sample buttons, switches, choices, inputs, and disclosures use local visual state and do not save business objects.
+- The motion region demonstrates press, entry/exit, and spring behavior, with replay and reversal.
+- Respect system reduced motion by default. An explicit Reduce motion option lets users inspect the alternative state.
+- If Motion fails to load, retain readable content and clearly report the missing motion.
 
-动画常量从 tokens.css 获取；弹簧细节为本次示例调校。输入和选择在刷新后恢复默认。
+Animation constants come from tokens.css; spring details are tuned for this example. Inputs and choices return to defaults on refresh.

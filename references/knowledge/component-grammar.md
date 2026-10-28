@@ -1,34 +1,34 @@
-# 组件语法与组合模式
+# Component grammar and composition patterns
 
-ID：`knowledge.component-grammar`。所在层：L4。关联：`visual.shape`、`visual.density`、`visual.emphasis`。性质：设计系统实践与 ByTaste 推导。
+ID: `knowledge.component-grammar`. Layer: L4. Related: `visual.shape`, `visual.density`, `visual.emphasis`. Nature: design-system practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“单个组件好看，拼起来不像一套”“所有卡片一个样”“按下后风格变了”说明只规定静态外观还不够。需要共同的部件关系、角色变体和状态表达，再明确如何组合。这里的组件可以是设计对象，不要求任何特定前端框架。
+"Each component looks good but the whole does not," "every card is identical," or "the style changes when pressed" indicates that static appearance alone is insufficient. Define shared part relationships, role variants, and state expression, then how they combine. Components here may be design objects; no specific frontend framework is required.
 
-可区分“希望不同内容共用同样的比例关系，还是每类内容有明确不同的结构？”选择统一语言不代表所有内容都塞进同一种卡片。
+Distinguish shared proportional relationships from different structures for distinct content types. A shared language does not mean putting everything in one kind of card.
 
-## 子概念与候选处理
+## Concepts and candidate approaches
 
-| 概念 | 要写清什么 | 边界 |
+| Concept | What to establish | Boundary |
 | --- | --- | --- |
-| 部件与槽位 | 标签、内容、图标、附加信息、操作的必要性与顺序 | 只有当前对象需要的部件才出现，不给全部组件自动配说明和图标 |
-| 比例与对齐 | 内边距、图标文字关系、内容与操作的伸缩方式 | 共享关系不要求所有容器同高；用真实内容检查 |
-| 角色与变体 | 强/弱强调、紧凑/舒展、不同语义用途 | 每个变体有使用理由，不按页面随意复制一套样式 |
-| 状态 | 默认、选中、悬停、焦点、按下、禁用、处理中等适用状态 | 状态可叠加，如选中+焦点；不是所有组件都支持所有状态 |
-| 组合模式 | 标签与输入、列表与工具条、内容与辅助面板如何协作 | 必须有当前内容或功能依据；规范预览用样本即可 |
-| 时间连续性 | 状态改变时哪些部件保持、出现、退出或变形 | 行为见 interaction.md，具体动态按 motion.md，不另建重复参数 |
+| Parts and slots | Necessity and order of labels, content, icons, supporting information, and actions | Include only needed parts; do not add explanations and icons to every component |
+| Proportions and alignment | Padding, icon/text relationships, and how content/actions expand | Shared relationships do not require equal container heights; inspect real content |
+| Roles and variants | Strong/weak emphasis, compact/spacious treatment, semantic uses | Give each variant a reason; do not duplicate slightly different styles per page |
+| States | Applicable default, selected, hover, focus, pressed, disabled, processing, and other states | States can combine, such as selected plus focused; not every component supports every state |
+| Composition patterns | How labels/inputs, lists/toolbars, and content/supporting panels cooperate | Require current content/functionality; specimens suffice for previews |
+| Temporal continuity | Which parts remain, appear, exit, or transform during state changes | Behavior belongs in interaction.md and motion follows motion.md; do not duplicate parameters |
 
-## 规则与检查
+## Rules and checks
 
-在 `design.md` 描述当前采用组件的部件、变体用途和组合规则；`interaction.md` 描述状态转换及叠加后的响应。Token 保存共享参数，仅当确有独立变化需求时再添加组件专属 Token。
+In `design.md`, describe adopted components' parts, variant purposes, and composition. In `interaction.md`, describe transitions and responses to combined states. Tokens own shared parameters; add component-specific tokens only for actual independent variation needs.
 
-示例建议：“参数复制控件共用标签与反馈的位置；复制成功改变反馈状态，长 Token 名可以换行，不导致相邻行的对齐线漂移。”只说明规范查看功能，不引入保存业务。
+Example recommendation: "Parameter-copy controls share label and feedback placement; successful copying changes feedback state; long token names wrap without shifting adjacent alignment lines." This describes guideline inspection, not a business save feature.
 
-预览至少查看当前相关的组件组合及有影响的状态叠加。检查常态漂亮但焦点、禁用、展开或错误时变成另一套视觉语言的问题；不用穷举全部组件×状态的组合，也不因此新增业务规则。
+Inspect relevant component combinations and consequential state combinations. Look for attractive defaults that turn into a different language on focus, disablement, expansion, or error. Do not exhaust every component × state combination or add business rules to do so.
 
-## 来源与反例
+## Sources and counterexamples
 
-[Spectrum Button](https://spectrum.adobe.com/web/swc/components/button) 将部件、选项、状态、行为及用法分开说明；[Material States](https://m3.material.io/foundations/interaction/states/overview) 说明状态可以组合。ByTaste 借用这种说明结构，不要求采用其组件、主色、尺寸或状态层实现。
+[Spectrum Button](https://spectrum.adobe.com/web/swc/components/button) separates parts, options, states, behavior, and usage. [Material States](https://m3.material.io/foundations/interaction/states/overview) explains combined states. ByTaste borrows the explanatory structure without requiring their components, colors, dimensions, or state-layer implementation.
 
-反例：每个页面都新建稍有差异的按钮；通过变淡同时表达次要、禁用和选中；为使预览显得完整而生成未要求的账户、支付或管理流程。
+Misuse: a slightly different button for every page; dimming to mean secondary, disabled, and selected simultaneously; inventing accounts, payment, or administration flows to make a preview look complete.

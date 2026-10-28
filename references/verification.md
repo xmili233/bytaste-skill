@@ -1,99 +1,99 @@
-# 偏好匹配与设计延续检查
+# Checking preference fit and design continuity
 
-当前检查目标是：落实适用的基础品质、展示实际版本、听取并准确记录用户感受，把有效选择延续到后续页面和修改。这里不要求完整可用性研究、效率提升、转化率或任务成功率实验；基础品质检查仍是当前设计的一部分。已有明确功能要求、标准和用户另外请求的检查，按其原有范围执行。
+The current goals are to meet applicable basic quality, show actual versions, hear and accurately record user feedback, and carry valid choices into later pages and changes. Full usability research and experiments on efficiency, conversion, or task success are not required. Basic quality checks remain part of design work. Follow existing explicit functionality, standards, and separately requested checks within their original scope.
 
-## 三件事分别记录
+## Record three things separately
 
-| 维度 | 记录位置与含义 | 不能据此推断 |
+| Dimension | Where it belongs and what it means | What it cannot establish |
 | --- | --- | --- |
-| 决定与采用 | 决策记录中的状态、范围和依据 | 用户选择一个特征，不等于认可全部参数或整页 |
-| 实现符合度 | 相关规则已落实、未落实或存在偏差 | 文件存在、源码引用 Token，不代表渲染正确 |
-| 实际检查与反馈 | 查看了什么版本和条件，用户评价了什么 | 技术检查与 Agent 自评不代表用户喜欢 |
+| Decision and adoption | Status, scope, and evidence in the decision record | Choosing a feature does not approve all its parameters or the whole page |
+| Implementation conformance | Related rules are implemented, unimplemented, or deviating | File existence and token references do not prove correct rendering |
+| Actual inspection and feedback | The version and conditions inspected, and what the user evaluated | Technical checks and agent self-assessment do not prove the user likes it |
 
-决定状态以 [决策记录](decisions.md) 为准，不在检查报告中维护第二套状态机。检查证据关联相关决定与规则 ID、当前版本、实际内容和条件；变化使旧证据失效时，按 [概念地图的跨层影响](concepts.md#检查跨层影响) 选择需要重查的部分；不要只检查刚修改的 Token，也不要无故重做全部设计。
+Decision status comes from the [decision record](decisions.md), not a second state machine in a check report. Associate evidence with relevant decision/rule IDs, current version, actual content, and conditions. When a change invalidates old evidence, use the [concept map's cross-layer effects](concepts.md#check-cross-layer-effects) to choose what to recheck. Do not inspect only the token just changed or redo the entire design without cause.
 
-## 1. 表达与记录是否忠实
+## 1. Is expression and recording faithful?
 
-- 用户能否用自己的话描述或修正关键偏好？以有效表达为准，不计算必须完成的问答、标签或对比数量。
-- 是否把观察当作意图、未选当拒绝、沉默当认可，或将局部反馈扩大为全局选择？
-- 当前摘要能否找到所有本次相关的已选、明确排除、暂定、待定和局部覆盖？旧决定是否已经正确退出有效范围？
-- Agent 入口能否找到记录？新会话或恢复上下文时是否实际读取，而不是仅凭记忆继续？
+- Can the user describe or correct key preferences in their own words? Judge effective expression, not a required count of questions, labels, or comparisons.
+- Were observations mistaken for intent, unselected options for rejection, silence for approval, or local feedback for a global choice?
+- Does the current summary expose relevant selected, explicitly excluded, tentative, undecided, and local override decisions? Have old choices correctly left their replaced scope?
+- Can agent instructions locate the record? Was it actually read after a new session or context recovery rather than presumed from memory?
 
-没有用户反馈时，可以交付建议与实际结果，但不能写“用户已认可”。无需为验证表达再次要求已明确的用户重复确认。
+Without user feedback, deliver recommendations and actual results without claiming approval. Do not require users to reconfirm clear choices merely to verify their expression.
 
-## 2. 交付范围与默认质量
+## 2. Deliverable scope and default quality
 
-产品未知或只要求规范时，主要交付应是设计标准、Token 与规范展示；检查是否出现未要求的业务对象、导航或新增编辑流程。标为暂定也不能放宽这个边界。
+When the product is unknown or the request is only for guidelines, the main deliverable should be standards, tokens, and their preview. Check for unrequested business objects, navigation, or editing flows. Labeling them tentative does not relax the boundary.
 
-按 [默认质量基线](visual-quality.md) 检查当前适用要求，而不只检查是否忠实实现初始建议。基线无需用户逐项选择，布局要求以 LAY-01 至 LAY-08 为准；初始建议粗糙时，在已选风格内修正。不要把安静风格、并列等权或较多字号本身判为失败，应指出具体不成立的关系。
+Check applicable requirements under the [default quality baseline](visual-quality.md), not merely faithful implementation of an initial recommendation. Baselines need no item-by-item selection; layout follows LAY-01 through LAY-08. Improve rough initial proposals within the chosen style. Do not treat quiet expression, equal peer emphasis, or numerous type sizes as failures in themselves; identify the relationship that does not work.
 
-按目标判断结果，不以某个组件是否存在代替质量：可控不要求每步确认或处处撤销，轻快不等于用了骨架屏，连续不等于永久保存所有数据。针对实际流程查看是否有无谓的记忆与中转、意外失去的工作、无从处理的错误、迟滞或跳位，以及相关输入与环境下的障碍；不为检查制造新功能或无关场景。
+Judge results rather than the presence of a control. Control does not require confirmation at every step or undo everywhere; responsiveness is not equivalent to skeleton screens; continuity is not permanent retention of all data. Inspect actual flows for needless memory demands or detours, lost work, unactionable errors, delays or layout shifts, and barriers in relevant input/environment conditions. Do not invent features or unrelated scenarios to fill a checklist.
 
-核对 [布局规范](layout.md) 的信息主次、区域关系、比例和适配。动态按 [动效约定](motion.md) 检查实际播放、退出、中断和减少动态；不要求所有项目用 Motion，但所选方案必须适配技术栈并实现目标。依赖安装成功不代表动态已完成。
+Check priorities, regional relationships, proportions, and adaptation under the [layout agreement](layout.md). For motion, inspect playback, exits, interruption, and reduced motion under the [motion agreement](motion.md). Not every project needs Motion, but the chosen approach must fit the stack and deliver the goal. A successful dependency installation is not completed motion.
 
-建立完整规范时，按 [六层概念地图](concepts.md) 检查重要缺项：是未定、不适用，还是只有名称而没有关系规则。重点看单项组合后是否仍符合方向，例如色值正确但面积失衡、字体正确但混排不协调、静态组件正确但状态跑偏；不要求穷举所有维度。
+When establishing complete guidelines, use the [six-layer concept map](concepts.md) to find significant omissions: undecided, inapplicable, or merely named without relationship rules. Check combinations especially: correct colors with unbalanced areas, correct fonts with poor mixed-script typography, or correct static components whose states drift. Exhaustive coverage is not required.
 
-## 3. 规范与来源是否一致
+## 3. Are guidelines and sources consistent?
 
-核对基线 ID/版本、决定 ID、设计规则、Token、交互与预览之间的关系。默认基线不能伪装成用户选择，强制质量也不能被标成可选策略而跳过。已选的只是方向时，具体解释和取值不要伪装成已确认。原话和历史在决策记录维护，数值在 Token 来源维护，行为在 interaction.md 维护。
+Check relationships between baseline IDs/versions, decision IDs, design rules, tokens, interactions, and previews. A default baseline must not masquerade as a user choice, and required quality must not be skipped by calling it an optional strategy. If only a direction is selected, do not present interpretations and values as confirmed. Maintain original wording/history in decisions, values in tokens, and behavior in interaction.md.
 
-同范围冲突有明确的解决依据，局部覆盖不泄漏到全局。待同步的预览或页面要列明；不能靠改写用户要求，让现有实现“通过”。
+Conflicts in the same scope need an explicit resolution basis; local overrides must not leak globally. List previews or pages awaiting synchronization. Do not rewrite user requirements to make the current implementation pass.
 
-## 4. 实际样式是否体现选择
+## 4. Does actual styling express the choices?
 
-按 [预览约定](design-preview.md) 打开本次对应页面，或查看本次修改的真实界面：
+Open the corresponding page under the [preview agreement](design-preview.md), or inspect the actual interface being changed:
 
-1. 先核对设计前明确的主信息、支撑信息、分组与操作作用域。
-2. 缩小查看整体重心和分组，再在正常尺寸检查真实文字、背景、边界、图文和组件组合。缩略观察是诊断线索，不是用户注意顺序的实验结果。
-3. 用本次变化可能影响的长短内容、语言、图片、宽度和状态检查；动态实际播放并快速反向或重复触发。不为凑清单测试无关条件。
+1. Check the primary, supporting, and auxiliary information, groups, and action scopes established before layout.
+2. Zoom out to inspect overall balance and grouping, then inspect actual text, backgrounds, boundaries, imagery, and component combinations at normal size. Thumbnail inspection is a diagnostic clue, not experimental evidence of attention order.
+3. Check long/short content, languages, images, widths, and states that the change may affect. Play motion and rapidly reverse or repeat triggers. Do not test irrelevant conditions merely to fill a checklist.
 
-只有具体可观察的偏差才判定未达到对应要求；保留对称/非对称、强弱层级及不同密度的选择空间。
+Only concrete observable deviations justify a failure finding. Preserve choice among symmetry/asymmetry, stronger/weaker hierarchy, and different densities.
 
-| 检查方向 | 观察内容 |
+| Check | Observe |
 | --- | --- |
-| 方向与范围 | 选定的疏密、装饰、强调和素材特征是否出现在正确区域 |
-| 范围与展示 | 规范、Token 和样本是否直接可见，有无用虚构产品代替规范展示 |
-| 动态完成度 | 实际效果与统一规则是否相符，所选引擎是否适配，出入与反向是否连贯 |
-| 实际组合 | 字体、颜色、间距和组件是否协调，视觉语义与实际状态一致，而非仅有正确 Token 名称 |
-| 内容变化 | 长标签、真实数量、换行和相关状态是否造成意外截断、重叠或样式偏移 |
-| 来源同步 | 是否使用当前有效决定、规范与 Token，派生预览是否过期 |
-| 用户反馈 | 用户对这份结果具体喜欢或不喜欢什么，评价范围是什么 |
+| Direction and scope | Whether selected density, decoration, emphasis, and asset characteristics appear in the correct region |
+| Scope and presentation | Whether guidelines, tokens, and specimens are directly visible, without an invented product substituting for them |
+| Motion completeness | Whether effects match shared rules, the engine fits the stack, and entry, exit, and reversal are continuous |
+| Actual composition | Whether type, colors, spacing, and components work together and visual semantics match state, beyond correct token names |
+| Content variation | Whether long labels, actual counts, wrapping, and relevant states cause accidental clipping, overlap, or drift |
+| Source synchronization | Whether current effective decisions, guidelines, and tokens are used and derived previews are current |
+| User feedback | What the user specifically likes or dislikes in this result, and the scope of that judgment |
 
-已知的主次错置、标签归属错误、必要内容截断、状态不可辨、遮挡或变化后错位，列为本次未完成项并先修复；无法修复时说明位置、影响和缺口，不以“页面能运行”消除问题。
+Known misplaced priorities, incorrect label grouping, clipped necessary content, indistinguishable states, occlusion, or misalignment after changes are incomplete work to fix first. If they cannot be fixed, state the location, effect, and gap. "The page runs" does not resolve these issues.
 
-有渲染工具时查看当前结果；工具不可用时记录源码检查与未做视觉检查的范围，不称视觉基线已通过。旧截图不能证明新实现；预览的模拟行为不能证明真实业务流程完成。无需为 ByTaste 单独安装整套研究或测试工具。
+Use rendering tools when available. Otherwise, distinguish source checks from unperformed visual inspection, without claiming baseline success. Old screenshots do not prove a new implementation, and simulated preview behavior does not establish completed business flows. There is no need to install an entire research or testing toolchain solely for ByTaste.
 
-## 5. 展示版本并取得下一轮反馈
+## 5. Show a version and invite the next round of feedback
 
-向用户提供可打开或可查看的当前版本，再围绕本轮实际效果邀请反馈。可以问哪些地方接近期待、哪些还不对，或聚焦本轮变化；不使用诱导褒贬、固定评分或完整分类问卷。已有反馈时直接处理，不重复索取确认。
+Provide a current version the user can open or view, then invite feedback about its actual effect. Ask which parts are close and which are not, or focus on the current changes. Avoid leading praise/disparagement, fixed scoring, or a full category questionnaire. Act directly on feedback already provided instead of requesting confirmation again.
 
-记录反馈指向的版本、区域、原话与范围，区分用户感受、Agent 的原因判断和实际实现偏差。方向变化更新决定与规范，局部意见只影响局部；原因尚不明确时保持假设，通过必要澄清或下一版呈现辨认。不用一次认可推断整套设计、全部参数或所有未来页面都已获批准。
+Record the version, region, wording, and scope. Separate the user's feeling, the agent's causal interpretation, and actual implementation deviations. A direction change updates decisions and guidelines; local feedback stays local. Keep uncertain explanations as hypotheses, distinguishing them through necessary clarification or the next version. One approval does not confirm the entire design, all parameters, or every future page.
 
-用户尚未回复时，本轮可以完成并交付，但不能将建议升级为已选。持续迭代随用户反馈推进，不为了凑轮数自动生成新方向。
+If the user has not replied, this round can still be delivered, but recommendations remain unselected. Iteration follows feedback; do not automatically generate more directions to reach a round count.
 
-## 6. 后续工作是否能延续
+## 6. Can subsequent work continue the direction?
 
-新页面或修改先恢复当前决定，再检查是否沿用相关设计语言。页面可以有合理差异，不能为了表面一致套成同一种布局。
+Restore current decisions before new pages or changes, then check that relevant design language is followed. Pages may differ reasonably; surface consistency does not require identical layouts.
 
-评估 Skill 效果时，值得单独验证：一个没有早期聊天记录的 Agent，能否通过项目读取入口、有效摘要和规范继续设计。记录是否遗漏决定、反复询问已知偏好、误用已替代决定或丢失局部例外；这些是待观察结果，不因文件存在就宣称通过。
+A useful separate evaluation is whether an agent without the early conversation can continue from the project entry point, effective summary, and guidelines. Record missed decisions, repeated questions about known preferences, reuse of superseded choices, and lost local exceptions. These are outcomes to observe, not successes implied by file existence.
 
-用户明确改变方向后检查更新是否传递；用户仅纠正一处实现时检查是否无故改变全局风格。减少重复解释和设计返工可以作为过程记录，不必建立综合审美分。
+After an explicit direction change, check that updates propagate. After a local implementation correction, check that the global style has not changed without cause. Reduced repetition and rework can be tracked without creating a composite taste score.
 
-## 简短问题记录
+## Brief issue record
 
 ```text
-位置：订单列表 / 长备注行
-关联：D-001，VIS-DENSITY-01
-观察：选定的是紧凑但保留字号；当前实现缩小了整行文字。
-证据：当前版本，桌面预览，实际字体与计算后样式。
-结论：实现偏差；不能据此修改 D-001。
-处理：恢复已选字号，再检查该区域；用户尚未评价修复后的结果。
+Location: Order list / row with a long note.
+Related: D-001, VIS-DENSITY-01.
+Observation: The selected direction is compact spacing while retaining type size; the implementation shrinks all text in the row.
+Evidence: Current version, desktop preview, actual fonts and computed styles.
+Conclusion: Implementation deviation; it does not justify changing D-001.
+Action: Restore the selected size and recheck the region. The user has not evaluated the correction.
 ```
 
-这是格式示例，不是实际发现。只报告真实证据；无需复制整份决定历史。
+This is a format example, not an actual finding. Report only real evidence; do not duplicate the entire decision history.
 
-## 完成与更新
+## Completion and updates
 
-本次相关决定与适用基线已落实，且检查范围已说明，才可报告本次设计实现完成；仍有已知偏差或未验证范围时如实限定结论。尚无用户评价不阻塞交付，但保留尚未认可的事实，不索取形式化确认。预览、实现和认可分别报告，任何一项不能代替另一项。
+Report completion only when relevant decisions and applicable baselines are implemented and the inspection scope is stated. Qualify conclusions honestly when known deviations or unverified conditions remain. Missing user feedback does not block delivery, but do not claim approval or demand formal confirmation. Preview, implementation, and approval are separate results; none substitutes for another.
 
-反馈改变意图时先更新决定，再同步受影响的产物。实现偏差只修实现。仅重查变化影响的部分，不额外引入“必须证明用得更好”的流程。
+When feedback changes intent, update decisions before synchronizing affected artifacts. Implementation deviations require implementation fixes only. Recheck only what the change affects, without adding a requirement to prove improved usability.

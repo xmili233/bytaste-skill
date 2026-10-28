@@ -1,53 +1,53 @@
-# 设计规范的可查看页面
+# A viewable page for design guidelines
 
-生成或更新设计规范时读取。预览直接展示该规范的视觉语言、Token、布局、组件状态与动态，不以一个未经要求的产品演示代替它。
+Read when generating or updating guidelines. The preview directly shows their visual language, tokens, layout, component states, and motion. An unrequested product demo must not substitute for it.
 
-## 交付边界
+## Deliverable boundaries
 
-产品用途、页面和业务未确定时，规范本身就是内容。使用通用文字、字形、颜色、区域与组件状态展示关系；不要创建草稿管理、登录系统、订单列表等虚构业务。标注“示例”或“暂定”不能使越界功能变得必要。
+When product purpose, pages, and business requirements are unknown, the guidelines themselves are the content. Use generic text, glyphs, colors, regions, and component states to demonstrate relationships. Do not create invented draft management, authentication, order lists, or other business features. Calling them "examples" or "tentative" does not make scope expansion necessary.
 
-用户明确要求具体页面时，可额外用真实内容展示该页的规范效果。规范展示仍应能被直接找到，不隐藏在无关产品页面的说明中。
+When a user explicitly requests a page, you may additionally show its guidelines using real content. The guideline presentation must remain easy to find, not hidden in explanations inside an unrelated product page.
 
-前期是否用视觉比较帮助用户表达仍由 Agent 决定；本文件不是固定的 A/B 选择流程。
+The agent decides whether early visual comparisons help express preferences; this is not a fixed A/B selection process.
 
-## 内容应当直接可见
+## Content should be directly visible
 
-| 内容 | 展示方式 |
+| Content | Presentation |
 | --- | --- |
-| 设计语言 | 用页面自身的排版、构图与细节体现方向，简短标出当前采用与建议范围 |
-| 排版 | 展示实际语言的标题、正文、辅助信息、数字与长文本；对应字体和参数可查 |
-| 色彩与层次 | 色值、语义角色、文字背景配对、表面和必要边界的真实效果 |
-| 布局与间距 | 展示对齐、比例、分组和间距关系；需要时可切换通用构图，不假定产品架构 |
-| 组件与状态 | 适量的按钮、输入、选择、展开等样本，表现一致的控件语言 |
-| 动态 | 能实际观看和重复播放的反馈、进入退出或布局变化；有减少动态的替代 |
+| Design language | Let the page's own typography, composition, and details express the direction; briefly distinguish adopted choices from recommendations |
+| Typography | Show headings, body, secondary text, numerals, and long text in relevant languages, with inspectable fonts and parameters |
+| Color and layers | Show values, semantic roles, text/background pairs, surfaces, and necessary boundaries in use |
+| Layout and spacing | Demonstrate alignment, proportions, grouping, and spacing; optionally switch generic compositions without assuming product architecture |
+| Components and states | Use enough button, input, selection, and disclosure specimens to show a coherent control language |
+| Motion | Viewable, replayable feedback, entry/exit, or layout changes, with reduced-motion alternatives |
 
-按当前范围选择足够说明规范的样本，不凑成组件百科。采用了摄影、插画、材质或特定组合规则时，让代表性资产和组合也出现在预览里；未采用时不为覆盖概念强加这些内容。宽度、长短文字和状态样本按 [情境适配](knowledge/adaptation.md) 选择。关键样本与参数不统一隐藏在折叠说明中；长解释、来源和开发信息可按需展开。首屏应让人知道在看什么规范，并能进入主要内容。
+Choose enough specimens to explain the current guidelines, not a component encyclopedia. If photography, illustration, materials, or specific composition rules are adopted, include representative assets and combinations. Do not add them merely to cover concepts. Choose widths, content lengths, and state samples under [adaptation](knowledge/adaptation.md). Essential specimens and parameters must not all be collapsed. Long explanations, sources, and implementation details may be disclosed as needed. The first screen should identify the guidelines and provide access to the main content.
 
-类别导航、Token 复制、布局切换和动效重播直接服务于看规范，可以提供。样本按钮只改变演示状态；不维护虚构的业务对象或伪装真实操作。
+Category navigation, token copying, layout switching, and motion replay directly support inspection. Sample buttons change demonstration state only, without maintaining fictional business objects or pretending to perform real operations.
 
-## 参考与质量
+## Reference and quality
 
-[随附黑白灰预览](../assets/monochrome-preview/index.html) 是可打开的质量参考，包含本地字体和 Motion 资源。可按需查看 [Token](../assets/monochrome-preview/tokens.css)、[样式](../assets/monochrome-preview/styles.css) 与 [脚本](../assets/monochrome-preview/app.js)，不必将全部源码读入上下文。
+The [bundled monochrome preview](../assets/monochrome-preview/index.html) is a viewable quality reference with local fonts and Motion assets. Consult its [tokens](../assets/monochrome-preview/tokens.css), [styles](../assets/monochrome-preview/styles.css), and [script](../assets/monochrome-preview/app.js) as needed without loading all source into context.
 
-有现成预览体系时优先复用。没有时可借鉴样本的组织、组件与动态方式，复制到用户项目后替换品牌、内容、Token、布局与来源。不要继承其历史决定或把黑白灰、Manrope 和固定尺寸当通用要求。保留使用到的第三方许可证。
+Prefer an existing preview system. Otherwise, you may borrow the example's organization, components, or motion. If reusing it, copy it into the user project before replacing branding, content, tokens, layout, and sources. Do not inherit its historical decisions or treat monochrome, Manrope, and fixed dimensions as universal requirements. Retain third-party licenses for resources used.
 
-生成前执行 [默认质量基线](visual-quality.md)，布局落实 [LAY-01 至 LAY-08](layout.md)，动态按 [动效约定](motion.md)。先明确本页样本、参数、说明和查看操作的主次，再排版；让规范样本直接可见，不用放大的品牌或无关业务代替主体。
+Before generation, apply the [default quality baseline](visual-quality.md), [LAY-01 through LAY-08](layout.md), and the [motion agreement](motion.md). First establish priorities among specimens, parameters, explanations, and inspection controls, then lay out the page. Show specimens directly instead of foregrounding oversized branding or unrelated business features.
 
-## 对应关系与运行
+## Correspondence and running
 
-- 默认 `design.md` 对应同目录的 `design.preview.html`；现有命名和专用路由可沿用。
-- 多份规范各有能定位其作用域的入口，可共享同一站点与 Token，不得都链接同一个无区分页面。
-- 规范链接实际文件及启动方法。预览开发元数据关联规范、有效决定和 Token 来源，不将这些元数据堆在主画面。
-- 优先复用项目主题与组件。独立 HTML 可直接引用 CSS Token；JSON/TS 来源使用项目转换方式或生成派生样式，保留来源版本。
-- 不假定 `file://` 能 fetch 相邻 JSON 或 Markdown；直开需求使用生成时嵌入的必要数据或本地可用资源。需要服务器时给出验证过的启动方式。
-- 动态实现先匹配技术栈。已有可用方案优先复用；新 Web 预览推荐 Motion，不兼容时查询并选取合适库或原生能力。实际使用，不只是声明依赖。
+- By default, `design.md` corresponds to `design.preview.html` in the same directory; existing naming and dedicated routes may be reused.
+- Each specification needs an entry that identifies its scope. Specifications may share a site and tokens, but must not all link to one undifferentiated page.
+- Guidelines link real files and startup instructions. Preview development metadata connects the specification, effective decisions, and token source; do not put this metadata all over the main interface.
+- Prefer project themes and components. Standalone HTML may directly load CSS tokens. For JSON/TS sources, use the project's conversion mechanism or generate derived styles and retain the source version.
+- Do not assume `file://` can fetch adjacent JSON or Markdown. Direct-open previews need necessary data embedded at generation or locally usable resources. If a server is required, provide verified startup instructions.
+- Match motion to the stack. Reuse a suitable implementation; Motion is recommended for new web previews, with compatible libraries or native capabilities researched when needed. Actually use the approach, not merely declare a dependency.
 
-## 同步与检查
+## Synchronization and checks
 
-维护方向是：有效决定 → 规范、Token 与交互约定 → 预览。反馈先更新相应来源，再更新预览，不在预览里养一套独立值。
+Maintenance flows from effective decisions to guidelines, tokens, and interaction agreements, then to the preview. Update relevant sources before the preview; do not maintain independent values inside it.
 
-每次相关变化后核对当前来源与实际展示。来源版本或内容指纹可放在开发元数据中，时间戳本身不能证明同步。仅修改无关历史说明不要求重建全部页面。待同步的结果不得称为最新设计。
+After relevant changes, compare current sources and actual presentation. A source version or content fingerprint may live in development metadata; a timestamp alone cannot prove synchronization. Unrelated historical edits do not require rebuilding every page. Pending synchronization means the result cannot be called the latest design.
 
-交付前按 [验证顺序](verification.md#4-实际样式是否体现选择) 打开页面，先看整体层级，再看正常尺寸的排版与归属，最后用相关内容、宽度和状态检查变化；实际播放动态并检查退出和中断。已知基线偏差未修复时不能报告设计完成。复制值应与适用条件一致，示例行为和真实业务实现状态分开说明。工具不可用时明确未查看项，不虚报结果。
+Before delivery, follow the [visual verification sequence](verification.md#4-does-actual-styling-express-the-choices): inspect overall hierarchy, normal-size typography and grouping, then relevant content, widths, and states. Play motion and check exit and interruption. Known unresolved baseline deviations prevent a claim of completed design. Copied values must match their conditions; distinguish demonstration behavior from business implementation. If tools are unavailable, state what was not viewed.
 
-完成规范交付需要有实际预览，不能只承诺以后制作；没有环境完成时保留已做产物并说明该项未完成。
+Delivering guidelines requires an actual preview, not a promise to make one later. If the environment prevents completion, retain finished artifacts and identify the missing preview as incomplete.

@@ -1,72 +1,72 @@
-# 体验品质：目的、取舍与可选案例
+# Experience quality: goals, tradeoffs, and optional examples
 
-ID：`knowledge.experience-quality`。跨 L1 内容、L4 组合与 L5 延续。关联：`goal.clarity`、`goal.low-friction`、`goal.control`、`goal.confidence`。性质：设计指南、标准解释与 ByTaste 推导。
+ID: `knowledge.experience-quality`. Spans L1 Content, L4 Composition, and L5 Continuity. Related: `goal.clarity`, `goal.low-friction`, `goal.control`, `goal.confidence`. Nature: design guidance, standards explanations, and ByTaste interpretation.
 
-[默认基线](../visual-quality.md) 规定要达到的结果；这里帮助判断如何实现。案例不构成功能清单或唯一答案，模型可以根据当前任务采用更合适的方法。具体实现一旦选定，再写入项目规则、Token 或交互约定。
+The [default baseline](../visual-quality.md) defines required outcomes; this entry helps choose how to achieve them. Examples are not a feature checklist or the only answers. The model may use better methods for the current task. Once selected, concrete implementations belong in project rules, tokens, or interaction agreements.
 
-## 省脑与低打扰
+## Low cognitive effort and interruption
 
-目标是让用户把注意力用在自己的判断和工作上，减少为理解界面额外付出的记忆、猜测、重复和中断。容易找到不等于全部摊开，步骤少也不必然更轻松。
+Help users spend attention on their own judgments and work by reducing extra remembering, guessing, repetition, and interruption caused by the interface. Discoverability does not mean showing everything, and fewer steps do not always mean less effort.
 
-可选案例：需要跨处比较时让相关信息可同时获得；不熟悉的图标配合可理解的名称；简单选择就近完成；低频说明按需出现。保留信息直接可见、在上下文中展开、专门页面等做法都有适用情境，按信息量、频率与误操作后果判断。
+Optional examples: make related information available together for comparison; pair unfamiliar icons with understandable names; complete simple choices in place; reveal infrequent explanations on demand. Direct visibility, contextual expansion, and dedicated pages each have uses depending on amount, frequency, and consequences of mistakes.
 
-反例是为了层次多而增加设置中转，为了极简隐藏关键入口，或为了“解释清楚”重复堆放说明。必要的提示与有意义的确认并不是多余打扰；先理解用户为什么需要它们。
+Counterexamples include unnecessary settings detours, hiding essential entries for minimalism, and repeating explanations to seem clear. Necessary hints and meaningful confirmations are not inherently intrusive; understand why users need them.
 
-## 掌控、连续与恢复
+## Control, continuity, and recovery
 
-三者目的不同：掌控关乎谁决定变化；连续关乎工作能否接着进行；恢复关乎出问题后能否回到可继续的状态。不要统一翻译成“加一个撤销”。
+Control concerns who directs change; continuity concerns continuing work; recovery concerns returning to a usable state after a problem. Do not translate all three into "add undo."
 
-| 情境 | 可选案例 | 取舍 |
+| Situation | Optional examples | Tradeoffs |
 | --- | --- | --- |
-| 有明显后果的变化 | 就地调整、预览、延迟生效、取消、撤销或明确后果 | 根据可逆性、风险和真实能力选择；低风险频繁动作不一定需要确认，不可逆操作不能假装可撤销 |
-| 返回或暂时中断 | 延续输入、筛选、选择或阅读位置；恢复到可辨认的节点 | 只保留仍有效且有价值的状态，考虑隐私、权限、时效与用户主动重置的意图 |
-| 输入有歧义或失败 | 接纳无歧义的常用写法，指出可修正的位置，保留有效工作，提供可行的继续路径 | 容错不能悄悄猜测重要含义或放宽真实约束；错误恢复不等于掩盖失败或无限自动重试 |
+| Changes with meaningful consequences | In-place adjustment, preview, deferred application, cancellation, undo, or explicit consequences | Choose according to reversibility, risk, and real capability. Frequent low-risk actions may not need confirmation; irreversible actions cannot pretend to offer undo |
+| Return or temporary interruption | Retain input, filters, selections, or reading position; restore a recognizable point | Keep only valid, valuable state, accounting for privacy, permissions, expiry, and intentional reset |
+| Ambiguous input or failure | Accept unambiguous common formats, identify correctable locations, preserve valid work, and provide a feasible continuation | Do not silently guess important meaning or relax real constraints. Recovery is not hiding failure or retrying indefinitely |
 
-观察正常操作、一次代表性失误及返回后的结果，判断用户是否知道发生了什么、还能做什么。不必为静态页制造表单，也不为规范预览实现后台保存系统。
+Inspect normal operation, a representative mistake, and the result of returning to see whether users understand what happened and what remains possible. Do not create forms for static pages or backend persistence for a guidelines preview.
 
-## 轻快与稳定
+## Responsiveness and stability
 
-目标是及时回应意图，让等待可理解，让用户正在阅读或准备操作的对象保持可靠。需要区分操作响应、数据完成、动画流畅与内容稳定；一个漂亮的等待动画不能证明操作足够快。
+Respond to intent promptly, make waiting understandable, and keep the objects users read or intend to act on reliable. Distinguish action response, data completion, animation smoothness, and content stability. A beautiful loader does not prove responsiveness.
 
-可选案例包括减轻不必要的工作、按需要加载内容、为异步内容安排合适空间、复用已有结果，以及让反馈与实际进度相符。乐观反馈只适合能够正确处理失败的场景；显示成功不能早于真实能力允许的时机。
+Optional methods include removing unnecessary work, loading when needed, reserving suitable space for asynchronous content, reusing results, and matching feedback to actual progress. Optimistic feedback is appropriate only when failure can be handled correctly; success must not appear before real capability permits it.
 
-在代表性内容与当前平台条件下体验操作、加载和过渡，必要时测量实际瓶颈。动画、预加载、缓存、占位等都是手段，不为使用它们而引入额外依赖。Web 指标可帮助定位问题，不能直接作为所有平台和操作的统一门槛。
+Experience operations, loading, and transitions with representative content on the current platform, measuring actual bottlenecks where needed. Animation, preloading, caching, and placeholders are means, not reasons to add dependencies. Web metrics can help diagnose issues but are not universal thresholds for all platforms and actions.
 
-## 基础无障碍
+## Basic accessibility
 
-目标是必要信息和已有能力不因感知、动作或输入方式而无故缺失。键盘、辅助技术、缩放和减少运动等检查用于发现障碍；它们不是一套固定视觉皮肤。
+Necessary information and existing capabilities should not disappear because of perception, movement, or input method. Keyboard, assistive technology, zoom, and reduced-motion checks reveal barriers; they are not a fixed visual theme.
 
-可选案例：选用带有合适语义与行为的控件；为视觉表达提供有意义的等价信息；在相关情况下让状态不只依靠颜色；为精细拖动提供可完成同一任务的方式。原生或自定义实现都应以实际可感知、可操作的结果判断，而非控件名称。
+Optional methods: controls with appropriate semantics and behavior; meaningful equivalent information for visual expression; state cues beyond color when relevant; alternatives to precise dragging that accomplish the same task. Judge actual perceivability and operability in native or custom implementations, not control names.
 
-结合平台与项目采用的标准检查真实页面。不要为“无障碍”堆放冗余播报、无意义描述或专用设置面板，也不能拿外观偏好当作省略基本可操作性的理由。完整合规评价需要其相应范围与证据，不能由几项检查推断。
+Inspect real pages under applicable platform and project standards. Do not add redundant announcements, meaningless descriptions, or dedicated settings panels in the name of accessibility. Visual preference does not excuse basic operation barriers. Full conformance requires appropriate scope and evidence; a few checks cannot establish it.
 
-## 环境适应
+## Environmental adaptation
 
-目标是环境变化后仍保留必要意义、能力与用户认可的设计关系；具体展开见 [情境适配](adaptation.md)。自动匹配环境是可选策略，不是全部答案。
+Retain meaning, capability, and approved design relationships when environments change; see [adaptation](adaptation.md). Automatic environment matching is an optional strategy, not the entire answer.
 
-例如，已有多语言站点可以参考语言偏好并保留可发现的手动选择；已有主题能力可以尊重相关系统偏好。是否保存选择、如何解决来源冲突由实际需求决定。未要求多语言或多主题的项目，不为完成基线而新增它们。
+For example, an existing multilingual site may use language preferences while preserving a discoverable manual choice. An existing theme feature may respect system preferences. Actual needs determine persistence and source precedence. Do not add languages or themes to otherwise single-language or single-theme projects merely to satisfy a baseline.
 
-## 清楚表达与可信透明
+## Clear expression and trustworthy transparency
 
-目标是让用户形成与真实能力相符的预期，并具备做当前判断需要的信息。标签、说明、状态与实际后果应一致；只补充影响理解和决策的内容，先用结构和命名消除歧义。展开见 [内容组织与表达](content-expression.md)。
+Help users form expectations consistent with real capability and obtain information needed for current judgments. Labels, explanations, states, and consequences should agree. Add only decision-relevant content and first resolve ambiguity through structure and naming; see [content expression](content-expression.md).
 
-AI 参与时，按当前场景区分建议、生成中、已执行和失败；说明会影响使用的重要限制，并在需要时让用户修正或接管。不能编造置信分、来源、完成状态或恢复能力。无需每屏重复“AI 可能出错”，也不自动增加解释面板、确认步骤或功能。
+When AI is involved, distinguish recommendations, generation in progress, execution, and failure as relevant. Explain material limitations and allow correction or takeover when needed. Do not fabricate confidence scores, sources, completion, or recovery capability. Repeating "AI can make mistakes" on every screen is unnecessary, as are automatic explanation panels, confirmation steps, or new features.
 
-## 写成项目规则
+## Write project rules
 
-先写对象、希望改善的处境和可观察结果，再在现有约束下选择实现。目的不能只停留在“更省心”，也不能被某个案例替代。
+First state the object, the situation to improve, and an observable outcome, then choose an implementation within existing constraints. A goal must be more concrete than "make it easier," without being replaced by a particular example.
 
-例如，列表详情返回场景可以写“返回后能辨认并接续刚才的浏览位置，不必重新寻找目标”。保留滚动位置、突出刚查看的对象或其他恢复方式应由具体列表与平台决定。只有选定实现后才将该行为落入 [交互约定](../interaction.md)；用户没有要求列表时，这条示例不适用。
+For a list/detail return flow, for example: "After returning, the user can recognize and resume the prior browsing position without finding the target again." Retaining scroll position, highlighting the last-viewed object, or another approach depends on the actual list and platform. Put behavior into the [interaction agreement](../interaction.md) only after selection. This example does not apply when no list is requested.
 
-结果检查与偏好反馈分开：实际操作可以发现工作丢失、入口难以辨认等问题；用户对这版的感受用于修订设计方向。两者都不靠控件数量、特定组件是否存在或综合审美分来代替。
+Keep outcome checks separate from preference feedback. Actual operation may reveal lost work, unclear entries, and other problems; user reactions help revise design direction. Neither is measured by control count, presence of a particular component, or a composite taste score.
 
-## 来源与证据边界
+## Sources and evidence boundaries
 
-- [NN/g：识别与回忆](https://www.nngroup.com/articles/recognition-and-recall/) 和 [渐进披露](https://www.nngroup.com/articles/progressive-disclosure/) 支持减少记忆负担、按情境安排信息；不证明隐藏内容或减少步骤总是更好。
-- [NN/g：用户控制](https://www.nngroup.com/articles/user-control-and-freedom/) 与 [状态可见](https://www.nngroup.com/articles/visibility-system-status/) 提供控制和反馈的原则；案例中的撤销、取消等手段按情境选择。
-- [GOV.UK：校验](https://design-system.service.gov.uk/patterns/validation/) 与 [界面写作](https://www.gov.uk/service-manual/design/writing-for-user-interfaces) 提供容错、修正与清楚表达的实践；不照搬政务服务的所有流程。
-- [W3C：重复输入](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html)、[WCAG 2.2 新增条款](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) 与 [语言协商](https://www.w3.org/International/questions/qa-when-lang-neg.en) 提供适用范围及例外；标准要求和解释建议需要区分。
-- [web.dev：Web Vitals](https://web.dev/articles/vitals) 区分加载、响应和视觉稳定；这些 Web 指标不是原生界面或所有交互的统一数值要求。
-- [Microsoft：人机 AI 交互指南](https://www.microsoft.com/en-us/research/articles/guidelines-for-human-ai-interaction-eighteen-best-practices-for-human-centered-ai-design/) 提供能力预期、修正与控制的设计建议；只在涉及 AI 的场景参考，不保证模型结果可靠。
+- [NN/g: recognition rather than recall](https://www.nngroup.com/articles/recognition-and-recall/) and [progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/) support reducing memory demands and contextual information placement; they do not prove hiding content or reducing steps is always better.
+- [NN/g: user control](https://www.nngroup.com/articles/user-control-and-freedom/) and [state visibility](https://www.nngroup.com/articles/visibility-system-status/) provide principles of control and feedback; choose undo, cancellation, and other examples by context.
+- [GOV.UK: validation](https://design-system.service.gov.uk/patterns/validation/) and [interface writing](https://www.gov.uk/service-manual/design/writing-for-user-interfaces) offer error-tolerance, correction, and clarity practices without requiring government-service workflows.
+- [W3C: redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html), [new WCAG 2.2 criteria](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/), and [language negotiation](https://www.w3.org/International/questions/qa-when-lang-neg.en) provide scope and exceptions; distinguish normative requirements from explanations.
+- [web.dev: Web Vitals](https://web.dev/articles/vitals) distinguishes loading, responsiveness, and visual stability. These web metrics are not universal numerical requirements for native interfaces or all interactions.
+- [Microsoft human-AI interaction guidelines](https://www.microsoft.com/en-us/research/articles/guidelines-for-human-ai-interaction-eighteen-best-practices-for-human-centered-ai-design/) offer capability expectations, correction, and control guidance only for AI-relevant contexts; they do not guarantee model reliability.
 
-上述材料支持目的和候选方法。ByTaste 将它们组织成默认品质目标，不声称这套组合已经在每个产品或模型上验证，也不要求因此开展完整用户研究。
+These sources support goals and candidate methods. ByTaste organizes them into default quality goals without claiming this combination has been validated in every product or model, or requiring a full user-research program.

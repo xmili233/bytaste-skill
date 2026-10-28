@@ -1,73 +1,73 @@
-# 设计概念地图：从感觉到规则
+# Design concept map: from feelings to rules
 
-需要判断设计规范缺了什么、解释模糊反馈或组织一份新规范时读取。这里的六层是 ByTaste 为便于检索而建立的工作分类，不是行业唯一分类、心理量表或固定执行顺序。层之间有依赖和交叉；只进入影响当前设计的分支。
+Read this to identify gaps in guidelines, interpret vague feedback, or organize a new specification. The six layers are ByTaste's working classification for retrieval, not the only industry taxonomy, a psychological scale, or a fixed execution order. Layers overlap and depend on one another; enter only branches relevant to this design.
 
-## 六层结构
+## Six layers
 
-| 层 | 要回答的问题 | 概念分支与读取入口 |
+| Layer | Question | Concepts and reading entry points |
 | --- | --- | --- |
-| L0 表达意图 | 想呈现怎样的性格，哪些已选、哪些只是建议？ | 用户原话、视觉性格、表达强度、主导特征与陪衬、适用范围；[引导](discovery.md)、[风格组合](vocabulary/styles.md)、[决定](decisions.md) |
-| L1 内容组织 | 要表达什么，内容之间是什么关系？ | 内容角色、语义分组、信息主次、叙述顺序、语气、内容长度；[内容表达](knowledge/content-expression.md)。已有产品才涉及导航与页面架构；[架构分类](vocabulary/layouts.md) |
-| L2 空间构图 | 这些内容怎样占据空间？ | 视觉入口、重心、图底、比例、网格、对齐、负空间、密度、重复与节奏；[布局](layout.md)、[密度](knowledge/density.md)、[分组](knowledge/grouping.md) |
-| L3 视觉语言 | 用什么视觉手段表达？ | [排版系统](knowledge/typography.md)、[色彩关系](knowledge/color.md)、[形状与表面](knowledge/shape-surface.md)、[图标与图像](knowledge/imagery.md)；数据图形按实际内容启用 |
-| L4 组合与时间 | 元素组合后、发生变化时，还是同一种语言吗？ | 部件、槽位、变体、状态叠加、组合模式；[组件语法](knowledge/component-grammar.md)。触发、编排、连续性、退出与中断；[动效](motion.md)、[交互](interaction.md) |
-| L5 情境与延续 | 换内容、尺寸、主题或页面后，什么保持，什么变化？ | 不变量、响应式重组、长短内容、语言与字体回退、已需主题、输入方式、局部覆盖；[适配与延续](knowledge/adaptation.md) |
+| L0 Expressive intent | What character should the design convey, and which choices are selected versus recommended? | User wording, visual character, expressive intensity, leading and supporting features, scope; [discovery](discovery.md), [style combinations](vocabulary/styles.md), [decisions](decisions.md) |
+| L1 Content organization | What is being expressed, and how is the content related? | Content roles, semantic groups, priorities, narrative order, tone, length; [content expression](knowledge/content-expression.md). Navigation and page architecture apply only to an existing product; see [architecture categories](vocabulary/layouts.md) |
+| L2 Spatial composition | How does this content occupy space? | Visual entry, center of gravity, figure/ground, proportions, grids, alignment, negative space, density, repetition, rhythm; [layout](layout.md), [density](knowledge/density.md), [grouping](knowledge/grouping.md) |
+| L3 Visual language | Which visual means carry the expression? | [Typography](knowledge/typography.md), [color relationships](knowledge/color.md), [shape and surfaces](knowledge/shape-surface.md), [icons and imagery](knowledge/imagery.md); data graphics only when the content requires them |
+| L4 Composition and time | Does the same language hold when elements combine or change? | Parts, slots, variants, combined states, composition patterns; [component grammar](knowledge/component-grammar.md). Triggers, choreography, continuity, exits, interruptions; [motion](motion.md), [interaction](interaction.md) |
+| L5 Context and continuity | What stays and what changes with content, size, theme, or page? | Invariants, responsive reorganization, content length, language/font fallback, required themes, input methods, local overrides; [adaptation and continuity](knowledge/adaptation.md) |
 
-[默认质量基线](visual-quality.md) 贯穿这六层，相关要求默认落实，不是新增的概念层或待用户选择的风格。用户偏好的采用状态由决定记录管理；基线引用版本与 ID，具体实施建议保留建议状态，三者不互相冒充。
+The [default quality baseline](visual-quality.md) spans all six layers. Apply relevant requirements by default; it is not another layer or a style the user must select. Decision records own preference adoption status; baselines cite versions and IDs; implementation recommendations remain recommendations. These must not impersonate one another.
 
-## 区分经常混在一起的概念
+## Distinguish concepts often conflated
 
-| 容易混淆 | 区别及后果 |
+| Concepts | Difference and implication |
 | --- | --- |
-| 感觉、风格、概念 | “温暖”是感受，“编辑式”是可能的组合，“行长、色温、材质”才是可操作概念；前两者不唯一决定后者 |
-| 信息架构、布局 | 架构描述内容/页面的关系，布局描述其空间呈现。未确定产品时可以做规范布局，不能发明产品架构 |
-| 语义层级、视觉强调 | 前者说明内容的重要和从属关系，后者是实现手段；HTML 标题等级又是实现语义，三者不可机械等同 |
-| 排版、字体 | 字体是材料；角色、尺度、行长、行距、换行及语言适配共同组成排版 |
-| 色板、色彩系统 | 色板列出值；色彩系统还定义角色、配对、使用面积、强调范围和状态 |
-| 视觉深度、叠放顺序 | 阴影/表面制造深度感；实际遮挡由布局和平台叠层机制决定，二者需协调但不能互相替代 |
-| 变体、状态、主题 | 变体表达角色差异；状态表达当前情况；主题表达环境映射，不把每种组合都做成独立组件 |
-| Token、规则 | Token 存可复用值；“哪种内容共用对齐线”是关系规则，不能只用数值表达 |
+| Feeling, style, concept | "Warm" is a feeling; "editorial" is a possible combination; line length, color temperature, and material are actionable concepts. The first two do not uniquely determine the latter |
+| Information architecture, layout | Architecture describes content/page relationships; layout describes their spatial presentation. An unknown product still allows guideline layouts, but not invented product architecture |
+| Semantic hierarchy, visual emphasis | The first expresses importance and parent/child relationships; the second is a means of expression. HTML heading levels are implementation semantics; do not map all three mechanically |
+| Typography, font | A font is material. Roles, scale, line length, leading, wrapping, and language adaptation together form typography |
+| Palette, color system | A palette lists values. A color system also defines roles, pairs, area distribution, emphasis, and states |
+| Visual depth, stacking order | Shadows and surfaces suggest depth; layout and platform layering control actual occlusion. Coordinate them without treating them as interchangeable |
+| Variant, state, theme | Variants express role differences; states express current conditions; themes map to environments. Do not make a separate component for every combination |
+| Token, rule | Tokens store reusable values. A relationship such as "these content types share an alignment line" cannot be expressed by values alone |
 
-## 整体风格来自配合
+## Overall style comes from coordination
 
-确定本次用哪些特征承载表达、哪些特征负责陪衬，以及这些关系出现在哪里。可以由排版主导、图像主导、色块主导，也可以有意采用丰富的多重表达；不设“一页只能一个强特征”或固定风格配额。
+Identify which features carry the expression, which support it, and where these relationships appear. Typography, imagery, or color fields may lead; rich combinations can also be intentional. Do not impose "one strong feature per page" or a fixed style quota.
 
-例如“画面热烈、文字仍沉稳”可以表现为大面积鲜明图像与规则排版；不必把全部文字、边框、图标也变得跳跃。“低装饰但不空”可以通过明确分组、合适行长和有节奏的密度实现；不能靠虚构内容填满。
+For example, "energetic imagery with calm text" can use vivid, large images and orderly typography without making every label, border, and icon equally animated. "Low decoration without emptiness" can come from clear groups, suitable line lengths, and rhythmic density, not invented filler.
 
-记录的是当前项目的主导关系与例外，不给用户贴永久标签。不同参考可以分别提供字体、构图或图像方向；合并后需检查它们是否争抢同一重点。
+Record the project's leading relationships and exceptions, not a permanent label for the user. Different references may supply type, composition, and imagery; check whether the combination competes for the same focus.
 
-## 按症状定位，而不遍历清单
+## Locate issues by symptoms rather than traversing a checklist
 
-| 用户反馈 | 优先检查的分支 | 不应直接下的结论 |
+| User feedback | Inspect first | Do not jump to |
 | --- | --- | --- |
-| 字体换了还是廉价 | 排版角色、行长、字重、混排、节奏 | 再换一款昂贵字体 |
-| 颜色是对的但还是不像 | 色彩配对、面积、背景关系；图像色调 | 色值必须全换 |
-| 都是同样的组件却很拼凑 | 部件比例、变体、图标重量、表面、组合间距 | 必须重写组件库 |
-| 首页好看，其他页面跑偏 | 主导特征、不变量、局部覆盖 | 所有页面复制首页布局 |
-| 桌面好看，手机变挤 | 内容重组、换行、裁切、层级保留 | 等比例缩小整页 |
-| 很精致但没有我喜欢的感觉 | L0 的选择来源和表达载体 | 技术检查通过就等于用户认可 |
+| The new font still looks cheap | Type roles, line length, weight, mixed scripts, rhythm | Another expensive font |
+| The colors are right, but it still does not resemble the reference | Color pairing, area, backgrounds, image tones | Replacing every color value |
+| The same components still look patched together | Part proportions, variants, icon weight, surfaces, composition spacing | Rewriting the component library |
+| The homepage works, but other pages drift | Leading features, invariants, local overrides | Copying the homepage layout everywhere |
+| Desktop looks good, but mobile is cramped | Content reorganization, wrapping, cropping, retained hierarchy | Scaling the entire page down |
+| It is polished, but not the feeling I like | L0 choice evidence and expressive means | Treating technical checks as user approval |
 
-## 从概念到本次规范
+## From concepts to the current guidelines
 
-1. **定位对象和来源。** 恢复有效决定，确认当前是规范展示、已明确的页面，还是局部修改。区分用户选择、已有约束、默认质量和待定项。
-2. **选择相关层。** 建立完整规范时检查六层是否有重要遗漏；局部任务从症状进入相关分支。原有规则足够时直接复用，未知的业务架构继续待定。
-3. **组合关系规则。** 从相关条目选择适用策略，说明对象、关系、条件和例外；必要时明确主导表达与陪衬。已选方向内的实现取值可作为建议推进，改变用户方向的选择不能伪装成纯实现。
-4. **连接来源与样本。** 在 design.md 中用规则 ID 关联真实来源（基线、用户决定或项目约束）及知识依据，指向实际 Token、资产或交互约定，再用代表性组合检查。格式见 [规格结构](design-spec.md)，不另建概念档案或重复决定状态。
+1. **Locate the subject and sources.** Restore effective decisions; establish whether this is a guidelines preview, an explicit page request, or a local change. Separate user choices, existing constraints, default quality, and unknowns.
+2. **Choose relevant layers.** Check important omissions across six layers for complete guidelines; enter relevant branches from symptoms for local tasks. Reuse sufficient existing rules and leave unknown business architecture undecided.
+3. **Form relationship rules.** Choose applicable strategies from entries and state objects, relationships, conditions, and exceptions. Identify leading and supporting expression when helpful. Concrete values within a chosen direction can be recommendations; changes to user direction cannot masquerade as implementation details.
+4. **Connect sources and samples.** Use rule IDs in design.md to link real bases (baseline, user decision, or project constraint) and knowledge sources to actual tokens, assets, or interactions. Check representative combinations. Use the [specification format](design-spec.md), without a separate concept archive or duplicate decision statuses.
 
-例如，用户明确要求“强调色只用于重点”，可以形成“当前选中项及其指示使用强调角色，普通面板保留基础表面”的候选规则。色值由 Token 管，选中行为由 interaction.md 管；预览检查实际用色面积和状态，而非只展示色卡。上述处理仍是实现建议，不代表用户指定了全部细节。
+For example, an explicit request to "reserve the accent color for emphasis" could lead to a candidate rule: "The current selection and its indicator use the accent role; ordinary panels retain base surfaces." Tokens own color values; interaction.md owns selection behavior. The preview checks actual colored area and states, not just swatches. This remains an implementation recommendation, not proof that the user specified every detail.
 
-完整规范应简短说明各相关层已有规则、当前建议、待定或本次不适用；已有文档能表达时沿用，不强制新的六段标题。概念和知识条目只提供解释与取舍依据，采用状态继续由 [决定记录](decisions.md) 管理。
+Complete guidelines briefly indicate whether relevant layers have rules, recommendations, undecided items, or no application. Reuse existing structure rather than forcing six new headings. Concepts and entries provide explanations and tradeoff support; the [decision record](decisions.md) continues to own adoption status.
 
-## 检查跨层影响
+## Check cross-layer effects
 
-只复查实际受到影响的关系；下表是定位线索，不是每次必须执行的测试矩阵。
+Recheck only relationships actually affected. This table is a diagnostic aid, not a mandatory test matrix for every task.
 
-| 本次变化 | 可能连带影响 | 对应检查样本 |
+| Change | Possible effects | Relevant sample |
 | --- | --- | --- |
-| 字体、字号或字重 | 行长、换行、组件宽高、页面节奏 | 当前语言的长短标题、段落与控件组合 |
-| 强调色或表面 | 文字背景配对、面积分布、状态辨认、深度 | 实际容器与状态；仅在已需主题中对照 |
-| 图像或裁切 | 视觉重心、文字对比、图文比例、窄屏构图 | 当前资产与相关容器宽度 |
-| 密度或布局 | 分组、阅读顺序、主次、组件组合 | 相同内容在目标区域中的排列 |
-| 组件状态或动效 | 叠层、焦点/选中线索、占位和连续性 | 相关状态叠加、进入退出及中断 |
+| Font, size, or weight | Line length, wrapping, component dimensions, page rhythm | Short and long headings, paragraphs, and controls in the actual language |
+| Accent color or surface | Text/background pairs, area distribution, state recognition, depth | Actual containers and states; compare only required themes |
+| Image or crop | Visual balance, text contrast, image/text ratio, narrow-screen composition | Current assets at relevant container widths |
+| Density or layout | Grouping, reading order, priority, component composition | The same content arranged in the target region |
+| Component state or motion | Layers, focus/selection cues, occupied space, continuity | Relevant combined states, entries/exits, and interruptions |
 
-发现冲突时回到有效决定与规则适用范围处理；不要为了修复布局，静默改掉用户已选的字体、颜色或内容。新偏好先记录，再同步相关来源。变更超出本次范围的部分标记待同步。
+Resolve conflicts through effective decisions and rule scope. Do not silently undo selected fonts, colors, or content to fix layout. Record new preferences first, then synchronize affected sources. Mark changes outside the current scope as awaiting synchronization.

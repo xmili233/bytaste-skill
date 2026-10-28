@@ -1,7 +1,7 @@
-# 规范预览参考
+# Guidelines preview reference
 
-本目录是 ByTaste 随附的质量参考，已获得项目作者对整体效果的认可。先读 design.decisions.md 和 design.md。它不是所有使用者的默认视觉风格。
+This directory is ByTaste's bundled quality reference. The project author approved its overall result. Read design.decisions.md and design.md first. It is not a default visual style for every user.
 
-为用户项目复用时，复制到该项目的合适目录，替换品牌、Token、样本、规则与决定来源；不要把本示例的作者反馈写成用户的选择。不要在技能安装目录内替用户修改本参考。
+To reuse it in a user project, copy it to an appropriate project directory and replace branding, tokens, specimens, rules, and decision sources. Do not record this example's author feedback as the user's choice. Do not modify this reference in the skill installation directory for a user project.
 
-保持本例只展示设计标准、Token、布局、组件状态和动效，不添加业务功能。
+Keep the example focused on design standards, tokens, layout, component states, and motion. Do not add business features.

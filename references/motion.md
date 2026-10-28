@@ -1,69 +1,69 @@
-# 动效语言与技术选型
+# Motion language and technology selection
 
-生成规范预览或设计包含动态的界面时读取。默认提供精致、实际可观看的动效；用户明确要求静态或运行环境限制时，记录边界并采用适当替代。动效质量是目标，Motion 是推荐，不绑定所有项目的技术栈。
+Read when generating a guidelines preview or designing an interface with motion. By default, provide polished motion that can actually be viewed. If the user explicitly requests static output or the environment limits motion, record the boundary and use an appropriate alternative. Motion quality is the goal; the Motion library is recommended, not mandatory for every stack.
 
-## 按需使用专业动效 Skill
+## Use specialist motion skills as needed
 
-ByTaste 保留偏好、规范、预览与反馈的主流程。涉及具体动效实现、诊断或审查时，按任务读取下列专业 Skill 的相关内容；不要求每次设计都加载全部资料。
+ByTaste owns the preference, guideline, preview, and feedback workflow. For concrete motion implementation, diagnosis, or review, read relevant parts of these specialist skills. Do not load every resource for every design.
 
-这些是 [Emil Kowalski 的开源 Skills](https://github.com/emilkowalski/skills) 中的可选协作入口，上游采用 [MIT 许可](https://github.com/emilkowalski/skills/blob/main/LICENSE)。此处仅提供引用，不复制其正文，不把它们声明为会自动安装的工具依赖。
+These optional collaboration entry points belong to [Emil Kowalski's open-source skills](https://github.com/emilkowalski/skills), whose upstream uses the [MIT license](https://github.com/emilkowalski/skills/blob/main/LICENSE). They are references, not copied content or automatically installed dependencies.
 
-| 当前需要 | 优先读取的 Skill / 上游入口 |
+| Need | Preferred skill / upstream entry |
 | --- | --- |
-| 实现 Web 微交互、进入退出或布局过渡 | [animate](https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md) |
-| 实现 React Native / Expo 手势、弹簧与触觉反馈 | [animate-expo](https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md) |
-| 检查一段动效或本次修改 | [review-animations](https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md) |
-| 用户要求系统审查现有动效并规划改进 | [improve-animations](https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md) |
-| 定位卡顿、掉帧或动画执行成本 | [animation-performance](https://github.com/emilkowalski/skills/blob/main/skills/animation-performance/SKILL.md) |
-| 用户希望寻找值得增加动效的位置 | [find-animation-opportunities](https://github.com/emilkowalski/skills/blob/main/skills/find-animation-opportunities/SKILL.md) |
-| 将用户描述的效果对应到动效名称 | [animation-vocabulary](https://github.com/emilkowalski/skills/blob/main/skills/animation-vocabulary/SKILL.md) |
+| Implement web microinteractions, entry/exit, or layout transitions | [animate](https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md) |
+| Implement React Native / Expo gestures, springs, and haptics | [animate-expo](https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md) |
+| Review an animation or current change | [review-animations](https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md) |
+| Systematically audit existing motion and plan improvements when requested | [improve-animations](https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md) |
+| Diagnose stutter, dropped frames, or animation cost | [animation-performance](https://github.com/emilkowalski/skills/blob/main/skills/animation-performance/SKILL.md) |
+| Find places worth adding motion when requested | [find-animation-opportunities](https://github.com/emilkowalski/skills/blob/main/skills/find-animation-opportunities/SKILL.md) |
+| Map a described effect to motion terminology | [animation-vocabulary](https://github.com/emilkowalski/skills/blob/main/skills/animation-vocabulary/SKILL.md) |
 
-优先使用当前环境已提供的对应 Skill，读取其实际 `SKILL.md`；需要具体案例或标准时，再读取它链接的资料。未安装时，可通过上游入口按需读取所需内容与相对引用，不自动安装整套 Skills，也不假装已经调用本机 Skill。网络或资料不可用时，继续使用本文件与目标平台的可用文档，说明未能参考的部分；这不阻塞 ByTaste 的核心流程。
+Prefer an available local skill and read its actual `SKILL.md`; read linked examples or standards only as needed. If uninstalled, you may consult the relevant upstream entry and relative references as needed. Do not automatically install the whole collection or claim to have invoked a nonexistent local skill. If sources or networking are unavailable, continue with this file and available platform documentation, stating what could not be consulted. This does not block ByTaste's core workflow.
 
-使用专业资料时遵循以下协作约定：
+When using specialist material:
 
-- 带着当前目标、作用范围、有效用户决定、项目 Token 和技术栈进入；结果回到已有 `interaction.md`、Token 和预览，不形成另一套设计来源。
-- 区分技术约束与作者经验。参数表、风格偏好和诸如“所有键盘操作都不能有动画”的绝对建议，按情境判断，不覆盖用户明确选择或变成 ByTaste 的通用禁令。
-- 读取的是相关专业方法，不整体继承独立 Skill 的固定开场白、报告格式或额外流程。普通实现不升级为全站审计；需要修复时不止步于一份未执行的建议。
-- 采用的数值与策略仍需在当前内容、平台和交互中验证。记录实际采用的 Skill / 来源、可辨认的版本或修订；上游更新不会自动改写项目已确认的规范。
+- Bring the current goal, scope, effective decisions, project tokens, and stack. Return results to existing `interaction.md`, tokens, and previews rather than creating another design source.
+- Distinguish technical constraints from practitioner experience. Evaluate parameter tables, style preferences, and absolute advice such as "keyboard actions must never animate" in context. They do not override explicit user choices or become universal ByTaste bans.
+- Read relevant methods without inheriting a standalone skill's fixed opening, report format, or extra process wholesale. Ordinary implementation does not become a full-site audit; required fixes must not stop at an unimplemented recommendation.
+- Validate adopted values and strategies with actual content, platform, and interaction. Record the skill/source used and an identifiable version or revision. Upstream changes do not automatically revise confirmed project guidelines.
 
-本机 Skill 与上游文档是可选知识来源，不是授权来源；需要安装软件、修改外部状态或引入新功能时，仍按当前任务的授权范围执行。
+Local skills and upstream documents are optional knowledge sources, not authorization sources. Installing software, changing external state, or adding features remains subject to the current task's authorization.
 
-## 先检查技术栈，再选择实现
+## Check the stack before selecting an implementation
 
-1. 查看目标平台、框架、已有组件与动效能力，优先复用能满足需求的方案。
-2. 新的 Web 预览可以推荐 Motion；普通 HTML 使用 JavaScript 入口，React 项目可使用 `motion/react`。不为使用动画库而强制换框架。
-3. 如果不适配，围绕当前需要的状态过渡、弹簧、布局变化、进入退出、中断与减少动态能力，查阅目标平台或库的官方文档，选择兼容方案。原生框架已有能力时可以直接使用；不要给原生界面硬塞 Web 库。
-4. 将所选方案、适配理由和版本/来源记录在交互约定。安装或引入时固定版本并保留必要许可证，不依赖漂移的 `latest`。已有合适引擎时不无故叠加第二套。
+1. Inspect the platform, framework, existing components, and motion capabilities. Reuse a suitable existing approach first.
+2. Motion is recommended for a new web preview: use its JavaScript entry for plain HTML or `motion/react` in React. Do not change frameworks merely to use an animation library.
+3. If incompatible, consult official platform/library documentation for the required state transitions, springs, layout changes, entry/exit, interruption, and reduced-motion behavior. Native capabilities may suffice; do not force a web library into a native interface.
+4. Record the approach, suitability, and version/source in interaction documentation. Pin versions and retain required licenses rather than depending on floating `latest`. Do not add a second engine without reason when a suitable one exists.
 
-[Motion JavaScript](https://motion.dev/docs/quick-start) 与 [React](https://motion.dev/docs/react) 是 Web 参考入口，不是所有平台的强制依赖。默认方案不依赖付费服务、专有样例或额外账户。
+[Motion JavaScript](https://motion.dev/docs/quick-start) and [React](https://motion.dev/docs/react) are web references, not universal dependencies. The default approach does not require paid services, proprietary samples, or additional accounts.
 
-## 三层动态
+## Three layers of motion
 
-| 层次 | 作用与示例 | 完成要求 |
+| Layer | Purpose and examples | Completion requirement |
 | --- | --- | --- |
-| 微反馈 | 按压、选中、悬停、复制等即时反馈 | 快速、统一、不过度放大；输入方式有适当替代 |
-| 组件过渡 | 展开收起、面板与浮层进入退出 | 出入方向一致，中途反向从当前状态衔接 |
-| 整体编排 | 规范类别、布局样本变化、主要内容首次进入 | 与信息层级有关系，不给每个区域套相同的淡入 |
+| Microfeedback | Press, selection, hover, copy, and other immediate feedback | Fast, consistent, restrained, with appropriate alternatives for input methods |
+| Component transitions | Expand/collapse, panels, and overlays entering/exiting | Consistent entry/exit direction; reversal continues from the current state |
+| Overall choreography | Guideline categories, layout specimen changes, initial main-content entry | Connected to information hierarchy, rather than identical fades on every region |
 
-规范页应有可交互的状态和可重复播放的动态样本。单纯安装依赖、只写时长，或仅有即时 hover 变色，都不构成完成的动效语言。已有页面的局部修改只处理相关动态，不借此重做全站。
+A guidelines page should have interactive states and replayable motion specimens. Installing a dependency, listing durations, or providing only instant hover-color changes is not a complete motion language. Local edits address related motion only, without a full-site overhaul.
 
-纯色过渡可以使用 CSS，复杂时序、弹簧和布局变化使用选定库或平台能力。无需让所有效果都经过同一个 API，但它们共享同一套时间与表现规则。
+CSS may handle color transitions; use the chosen library or platform for complex sequencing, springs, and layout changes. Not every effect needs one API, but all should share timing and expressive rules.
 
-## 起始预设
+## Starting presets
 
-随附 [黑白灰参考](../assets/monochrome-preview/index.html) 使用 160ms 按压、240ms 状态变化、420ms 进入、450ms 布局变化，以及可中断的弹簧。这些是可观看的起点，不是行业阈值；按实际距离、元素尺度、平台与用户偏好调校。
+The bundled [monochrome reference](../assets/monochrome-preview/index.html) uses 160ms press feedback, 240ms state changes, 420ms entries, 450ms layout changes, and interruptible springs. These are viewable starting points, not industry thresholds. Tune them for distance, element scale, platform, and preferences.
 
-每条采用的动效写清：触发、起止状态、属性、时间或弹簧、缓动、顺序、退出、中断、减少动态时的替代。数值放在 Token 来源，时序与行为放在 interaction.md，不额外制造第二套参数文件。核对当前 API 的时间单位与能力，不盲抄跨库参数。
+For each adopted effect, state trigger, start/end states, properties, duration or spring, easing, order, exit, interruption, and reduced-motion alternative. Values belong in tokens; sequencing and behavior belong in interaction.md. Do not create a second parameter file. Verify the current API's units and capabilities rather than copying values across libraries blindly.
 
-以轻微位移、适量缩放、透明度和自然停稳建立质感；不是靠无限循环、整页漂浮或长时间遮住正文。更强的表达由用户风格与当前对象决定。
+Small translations, modest scaling, opacity, and natural settling can create refinement. Endless loops, whole-page floating, and long transitions covering content are not substitutes. Stronger expression depends on user style and the current subject.
 
-## 实际检查
+## Actual checks
 
-- 播放正常进入和退出，再快速重复、反向触发，观察是否跳回起点、闪烁或留下中间状态。
-- 检查动态结束后内容可见、布局稳定，文字与主要操作不被动画阻塞。
-- 查看实际设备/相关宽度下的平滑程度；不要仅凭用了某个库就宣称流畅。
-- 尊重系统减少运动偏好，并提供适当的弱化或静态状态。Motion React 需要显式配置相应策略，不假定默认启用。
-- 加载失败时保留可读的静态内容并报告动态未完成，不把降级称作完整动效交付。
+- Play normal entry and exit, then rapidly repeat or reverse triggers. Watch for resets to the start, flicker, or stranded intermediate states.
+- Ensure content is visible and layout stable after motion, without blocking text or primary actions.
+- Inspect smoothness on relevant devices/widths; using a library does not establish fluidity.
+- Respect the system's reduced-motion preference and provide suitable reduced or static states. Configure Motion React explicitly where needed; do not assume this is enabled by default.
+- On load failure, retain readable static content and report motion as incomplete. Degradation is not a complete motion delivery.
 
-[Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview) 提供反馈与表现的分层思路；[Emil 的实践](https://emilkowal.ski/ui/7-practical-animation-tips) 提供按压、缩放和缓动的具体观察。采用条件和目的，不将作者偏好变成所有项目的禁令。
+[Carbon Motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview) distinguishes feedback and expressive motion. [Emil's practice](https://emilkowal.ski/ui/7-practical-animation-tips) offers observations on press, scale, and easing. Adopt purposes and applicable conditions without turning author preferences into bans for every project.

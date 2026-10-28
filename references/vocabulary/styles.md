@@ -1,28 +1,28 @@
-# 常见风格组合：探索起点
+# Common style combinations: starting points for exploration
 
-当用户不知道从哪些差异开始辨认时，从下表选少量与任务有关的方向，用具体构成或参考展示。以下 12 项是 ByTaste 组织的示例组合，不是互斥风格、现成皮肤或行业统一分类。
+When users do not know which differences to explore, choose a few task-relevant directions and show their concrete ingredients or references. These 12 examples are ByTaste's combinations, not mutually exclusive styles, ready-made themes, or an industry standard.
 
-名称只是交流入口。用户喜欢一个方向后，需要拆出喜欢的部分；不要自动采用该行全部构成。没有看过对应参考或样稿时，不能把一个风格名称当作充分确认。
+Names are conversation entry points. If a user likes a direction, identify the parts they like rather than adopting the entire row. A style name alone is insufficient confirmation without a corresponding reference or specimen.
 
-| ID / 便于交流的名称 | 可以展示的构成 | 适合继续辨认的部分 |
+| ID / conversational name | Possible ingredients | What to distinguish next |
 | --- | --- | --- |
-| `style.quiet-product` 克制产品 | 较少装饰、稳定层级、有限强调色、明确操作区 | 喜欢低装饰、低彩度，还是稳定秩序？密度另行判断 |
-| `style.editorial` 编辑书刊 | 字体层级主导、段落节奏、图文编排、清楚的阅读路径 | 喜欢字体气质、内容节奏，还是留白与图片比例？ |
-| `style.grid-led` 网格排版 | 明确对齐、可见的比例关系、规则化构图、排版建立重点 | 喜欢网格秩序，还是大尺度与强对比？ |
-| `style.precision-tool` 精密工具 | 同屏信息充分、行列对齐、操作集中、状态区分准确 | 喜欢比较能力、信息密度，还是细致控件？ |
-| `style.human-warmth` 人文亲切 | 自然语言、温和色彩、真实人物或材料、适度柔和形状 | 亲切感来自文字、图像、颜色，还是形状？ |
-| `style.playful-illustration` 趣味插画 | 角色或插图参与表达、鲜明色彩、轻松语气、局部动态 | 喜欢插画本身、色彩，还是轻松表达？ |
-| `style.bold-graphic` 鲜明图形 | 强对比、图形与大字形成重点、直接的分区和边界 | 喜欢强调强度、图形语言，还是粗边界？ |
-| `style.glass-layers` 玻璃叠层 | 半透明表面、背景透出、模糊与前后关系 | 喜欢通透层次还是光色效果？模糊程度和可读性需单独验证 |
-| `style.tactile-material` 材质触感 | 纸张、颗粒或其他材料线索，图像与表面形成触感 | 哪种材料在表达什么？喜欢材质还是相应配色？ |
-| `style.retro-digital` 复古数字 | 特定时期的像素、终端或早期界面线索，受控的图像和字体表达 | 想保留哪个时期的哪些特征？不用整套照搬旧交互限制 |
-| `style.gallery` 画廊作品 | 作品主导、界面退居辅助、图像尺度和展示节奏明确 | 喜欢作品占比、安静控件，还是空间感？ |
-| `style.technical-console` 技术控制台 | 数据与状态主导、精确标签、网格或等宽信息组织 | 喜欢结构和信息表达，还是明暗与色彩？不默认深色霓虹 |
+| `style.quiet-product` Restrained product | Low decoration, stable hierarchy, limited accents, clear action regions | Low decoration, low chroma, or stable order? Decide density separately |
+| `style.editorial` Editorial | Type-led hierarchy, paragraph rhythm, image/text composition, clear reading paths | Type character, content rhythm, or whitespace/image proportions? |
+| `style.grid-led` Grid-led | Explicit alignment, visible proportions, regular composition, type-led emphasis | Grid order, large scale, or contrast? |
+| `style.precision-tool` Precision tool | Ample information in one view, aligned rows/columns, concentrated actions, precise states | Comparison, density, or detailed controls? |
+| `style.human-warmth` Human warmth | Natural language, gentle colors, real people/materials, modestly soft shapes | Does warmth come from language, imagery, color, or shape? |
+| `style.playful-illustration` Playful illustration | Characters/illustrations, vivid colors, light tone, local motion | The illustration itself, color, or playful expression? |
+| `style.bold-graphic` Bold graphic | Strong contrast, graphics and large type, direct regions/boundaries | Intensity, graphic language, or heavy boundaries? |
+| `style.glass-layers` Glass layers | Translucent surfaces, visible backgrounds, blur, foreground/background relationships | Transparency/depth or light/color effects? Check blur and readability separately |
+| `style.tactile-material` Tactile material | Paper, grain, or other material cues across imagery and surfaces | Which material expresses what? The material or its palette? |
+| `style.retro-digital` Retro digital | Period-specific pixel, terminal, or early-interface cues with controlled imagery/type | Which period and features, without inheriting old interaction limitations wholesale? |
+| `style.gallery` Gallery | Work leads, interface supports, deliberate image scale and display rhythm | Share of space given to work, quiet controls, or spatial feeling? |
+| `style.technical-console` Technical console | Data/state-led content, precise labels, grid or monospaced organization | Structure/information expression or lightness/color? Do not default to dark neon |
 
-## 使用方式
+## Usage
 
-选项描述保持中性和相近的完成度，不把某个方向叫“高级版”。可以跨行组合，例如用编辑书刊的排版处理产品介绍，用精密工具的密度处理工作台，并共享同一色彩与组件体系。
+Describe options neutrally and at comparable finish levels; do not label one "premium." Combine across rows when useful: editorial typography for a product introduction and precision-tool density for a workspace can share colors and components.
 
-最终用 [视觉感受维度](visual.md) 记录明确的选择，以 [体验目标](experience.md) 检查它是否服务当前任务。风格名称可以保留为交流简称，但不能代替具体规则和验收。
+Record explicit choices through [visual dimensions](visual.md) and use [experience goals](experience.md) to check relevance to the task. A style name may remain shorthand, but cannot replace concrete rules and checks.
 
-用户给出库外术语时，先理解其参考与实际含义，保留原词；不要把它强行归入最近的一个名称。新增通用分类应提供可辨认特征、提问示例和适用边界，而不只是增加一个标签。
+For a term outside the library, understand the user's reference and intended meaning and preserve their wording rather than forcing the nearest category. New general categories need recognizable features, example questions, and applicability boundaries, not just another label.

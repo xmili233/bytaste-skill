@@ -1,64 +1,64 @@
-# UI Token 约定
+# UI token agreement
 
-建立或修改视觉参数时使用。Token 表达可复用值；布局意图、组件选择和交互规则仍放在设计规范中。
+Use when establishing or changing visual parameters. Tokens express reusable values; layout intent, component choices, and interaction rules remain in design guidelines.
 
-未知产品用途不妨碍建立视觉 Token。按当前方向提供可查看的默认建议，区分基础值、语义与布局规则；不借此假定业务架构。
+An unknown product purpose does not prevent establishing visual tokens. Offer viewable default recommendations based on the current direction, distinguishing primitive values, semantics, and layout rules without assuming business architecture.
 
-辨认出“暖色、低饱和、紧凑”等方向，只说明偏好范围，不代表具体数值已被选择。将据此推导的数值标为候选，结合内容验证；未讨论的维度不能因分类结果被自动填成已采用值。
+Recognizing "warm, low-saturation, compact" establishes a preference direction, not selected numerical values. Label derived values as candidates and validate with content. Untouched dimensions cannot automatically become adopted values through classification.
 
-## 先确定维护来源
+## Establish the maintained source first
 
-1. 有主题、CSS 变量、组件库 Token 或原生设计资源时，先读取并复用它们。把路径及使用方式写入 `design.md`，不为格式统一另建一份平行数据。
-2. 没有来源时建立独立的 Token 文件，格式跟随项目技术栈；需要跨工具交换时默认使用 `design.tokens.json`，采用 [DTCG Format Module 2025.10](https://www.designtokens.org/TR/2025.10/format/) 的类型化表示。
-3. 记录产品代码和设计预览分别如何使用 Token。若 JSON 是维护来源，CSS 等输出应从它生成或有明确同步方式；尚未接入产品时标记“待接入”，不因预览已经使用就声称产品也已使用。
+1. If a theme, CSS variables, component-library tokens, or native design resources exist, read and reuse them. Document paths and usage in `design.md`; do not create parallel data just to standardize a format.
+2. Otherwise, create a separate token file suited to the stack. For cross-tool exchange, default to `design.tokens.json` with typed values following the [DTCG Format Module 2025.10](https://www.designtokens.org/TR/2025.10/format/).
+3. Record how product code and the preview each consume tokens. If JSON is maintained, generate CSS or other outputs from it or define a clear synchronization method. Mark product integration as pending when absent; preview usage does not establish product usage.
 
-用户关于取值或风格的决定先按 [决策记录](decisions.md) 保存，并关联受影响的 Token 角色；不将全部值表复制进决定历史。`design.md` 记录这些值的使用规范，`interaction.md` 记录相关行为；二者不重复维护色板、排版数值或完整样式表。预览页直接引用同源 CSS / 主题，或使用生成时派生的快照，并按 [预览约定](design-preview.md) 记录来源与更新状态。
+Record decisions about values or style under the [decision agreement](decisions.md), linking affected token roles without copying the entire value table into history. `design.md` owns usage rules and `interaction.md` owns behavior; neither duplicates palettes, typography values, or complete stylesheets. Previews reference the same CSS/theme source or a snapshot derived at generation time, recording source and update status under the [preview agreement](design-preview.md).
 
-DTCG 定义交换格式，不决定设计是否合适。它是 Design Tokens Community Group 发布的规范，不是 W3C Recommendation。采用部分类型的文件也不意味着我们已经实现了完整兼容的转换工具。
+DTCG specifies an exchange format, not design suitability. It is published by the Design Tokens Community Group, not a W3C Recommendation. Using some of its types does not mean a fully compatible conversion tool has been implemented.
 
-## 按需分层
+## Layer only as needed
 
-- **基础值**：已有色板、尺寸或字体等可复用值。
-- **语义角色**：正文、辅助文字、页面背景、主要操作、错误状态、相关内容间距等。界面优先使用语义角色。
-- **组件值**：当具体组件需要稳定、独立的调整契约时才引入，如表格行高。不要为每个 CSS 属性自动生成组件 Token。
+- **Primitive values:** reusable palette, dimension, or font values.
+- **Semantic roles:** body text, secondary text, page background, primary action, error state, spacing between related content, and similar roles. Interfaces should prefer semantic roles.
+- **Component values:** introduce only when a component needs a stable, independently adjustable contract, such as table row height. Do not automatically create a token for every CSS property.
 
-基础值相同，不意味着语义相同。错误颜色与品牌色当前恰好相同，也不应被当作同一语义角色；反过来，也不要为没有独立变化需求的细节创建大量别名。
+Identical primitive values do not imply identical meaning. An error color and brand color that happen to match still have different roles. Conversely, avoid many aliases for details that have no independent variation needs.
 
-## 需要考虑的参数族
+## Parameter families to consider
 
-| 参数族 | 需要表达的关系 |
+| Family | Relationships to express |
 | --- | --- |
-| 色彩 | 文字与背景配对、操作与状态、边界与焦点；避免用颜色单独承担含义 |
-| 排版 | 正文、标题、说明、数据等角色；字体回退、字重、字号、行高、字距按实际需要记录 |
-| 空间与布局 | 组内 / 组间间距、页边距、列间隔、阅读宽度、主次区域目标与最小宽度；比例和适配条件由 [布局规范](layout.md) 表达 |
-| 尺寸与形状 | 控件尺寸、命中区域、边框、圆角；视觉尺寸与可操作区域分开考虑 |
-| 层次 | 遮罩、浮层顺序、阴影或表面差异，只有实际存在的层级才定义 |
-| 动效 | 默认包含反馈、状态、进入与布局变化所需的时长、曲线或弹簧值；实际采用项按 [动效约定](motion.md)，触发、退出和替代行为在 interaction.md |
+| Color | Text/background pairs, actions/states, boundaries/focus; color must not carry meaning alone |
+| Typography | Body, headings, explanations, data, and other roles; fallback fonts, weight, size, leading, and tracking as needed |
+| Space and layout | Within/between-group gaps, gutters, column gaps, reading width, primary/secondary target and minimum widths; [layout rules](layout.md) own proportions and adaptation conditions |
+| Size and shape | Control size, hit area, border, and radius; distinguish visual size from operable area |
+| Layers | Scrims, stacking order, shadows, or surface differences; define only layers that exist |
+| Motion | By default, timing, curves, or springs needed for feedback, state, entry, and layout changes; choose under [motion guidance](motion.md), with triggers, exits, and alternatives in interaction.md |
 
-图标和图像通常记录资产来源、风格及使用规则，不必强行转换为 Token。响应式、明暗主题和品牌变体只按当前需求建立，不预置未被请求的组合。
+Icons and images usually need asset sources, style, and usage rules rather than conversion into tokens. Create responsive, light/dark, or brand variants only for current needs, without predefining unrequested combinations.
 
-## 保留不能由 Token 表达的关系
+## Preserve relationships that tokens cannot express
 
-[概念地图](concepts.md) 中的概念不必一一生成 Token。字号可参数化，“长标题优先换行”“强调色集中在哪些区域”“图片保留哪个主体”“主导特征在哪些页面延续”应写成规范。资产记录来源与使用方式，状态转换写入 interaction.md。
+Concepts in the [concept map](concepts.md) do not each need a token. Font size can be parameterized; "long headings should wrap," "where the accent color is concentrated," "which image subject must remain visible," and "which pages retain the leading expression" belong in rules. Assets need sources and usage; state transitions belong in interaction.md.
 
-相反，只有抽象原则而没有实际字体、色彩、间距等取值也无法稳定呈现。检查规则是否引用了真实来源，以及相应值是否有明确用途。
+Conversely, abstract principles without actual type, color, and spacing values cannot reliably produce a design. Check that rules reference real sources and that values have clear uses.
 
-## 数值与标准边界
+## Numerical values and standards
 
-[默认质量基线](visual-quality.md) 要求可辨认、关系清楚、内容完整；它不规定所有项目的字号数量、8px 网格、黄金比例或统一行高。参数结合字体、内容、平台和已有约束确定，不能凭常见经验声称是行业强制标准。
+The [default quality baseline](visual-quality.md) requires recognizability, clear relationships, and complete content, not a universal type-size count, 8px grid, golden ratio, or line height. Choose parameters based on fonts, content, platform, and existing constraints; common practice is not automatically a mandatory industry standard.
 
-项目采用 WCAG 2.2 时，按相应级别和条款范围检查。除下文的文本对比与指针目标外，注意：
+When a project adopts WCAG 2.2, check the applicable level and criterion scope. In addition to text contrast and pointer targets below, note:
 
-- [1.4.11 非文本对比](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) 针对识别控件、状态与理解图形所需的视觉信息，通常与相邻色达到 3:1，并有例外；不能套用于所有装饰边框，或要求不相邻的两个状态互相达到 3:1。
-- [1.4.12 文本间距](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing) 要求支持相应属性的内容，在用户覆盖行高 1.5 倍、段后间距 2 倍、字距 0.12 倍、词距 0.16 倍字号时不丢失内容或功能，并考虑语言例外；它不要求作者默认使用这些值。
-- [1.4.10 重排](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) 对纵向滚动内容使用等效 320 CSS 像素宽、横向滚动内容使用等效 256 CSS 像素高检查，不丢失信息或功能且无需二维滚动；保留使用或意义必需二维布局的例外，不能因此拆坏表格或画布。
-- [2.4.11 焦点不被遮挡](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) 的 AA 最低要求是键盘焦点组件不被作者内容完全遮住，不等于完全无遮挡。布局应尽量减少遮挡，但不要混淆最低与增强要求。
+- [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) applies to visual information needed to identify controls/states and understand graphics, generally requiring 3:1 against adjacent colors with exceptions. It does not apply to every decorative border or require 3:1 between nonadjacent states.
+- [1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing) requires no loss of content/function when supported properties are overridden to line height 1.5 times font size, paragraph spacing 2 times, letter spacing 0.12 times, and word spacing 0.16 times, accounting for language exceptions. It does not require these as author defaults.
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) checks vertically scrolling content at an equivalent width of 320 CSS pixels and horizontally scrolling content at an equivalent height of 256 CSS pixels, without information/function loss or two-dimensional scrolling. Preserve exceptions for content whose use or meaning requires two dimensions; do not break tables or canvases.
+- [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) at AA requires that the focused component not be entirely hidden by author-created content, not that it be completely unobscured. Minimize occlusion without confusing minimum and enhanced requirements.
 
-正式条款以 [WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) 为准，Understanding 页面是解释资料。这些检查不构成完整合规验收。
+The [WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) is normative; Understanding pages provide explanations. These checks do not constitute a complete conformance evaluation.
 
-## 最小格式示例
+## Minimal format example
 
-以下值只演示数据结构，**不是 ByTaste 默认配色或间距**。完整项目必须根据自己的内容、参考和采用状态确定值。
+These values illustrate structure only. **They are not ByTaste's default palette or spacing.** A complete project determines its own values from content, references, and adoption status.
 
 ```json
 {
@@ -86,22 +86,25 @@ DTCG 定义交换格式，不决定设计是否合适。它是 Design Tokens Com
     }
   },
   "space": {
-    "group": { "$type": "dimension", "$value": "{primitive.space.regular}" }
+    "group": {
+      "$type": "dimension",
+      "$value": "{primitive.space.regular}"
+    }
   }
 }
 ```
 
-例如，规范可以写“正文使用 `color.text.primary`，页面背景使用 `color.surface.page`，组间间距使用 `space.group`”，并指向真实文件。这里的点号是引用路径分隔符，不是单个 Token 名的一部分。
+For example, a rule could use `color.text.primary` for body text, `color.surface.page` for the canvas, and `space.group` between groups, pointing to real files. Dots separate reference-path segments; they are not part of individual token names.
 
-## 检查方式
+## Checks
 
-- JSON 能解析；Token 类型、值与单位匹配；引用目标存在且无循环。
-- 每个新增 Token 都有实际语义或使用者；删除重复值前先检查语义是否不同。
-- 预览展示的 Token 名称、值与实际渲染应对应；响应式取值注明适用宽度，复制参数不冒充当前值。
-- 文字与背景按实际配对检查，包含必要状态与主题；不能只看色板。
-- 把规范、Token 和代码绑定对照起来，确认没有只写了文件却未接入的情况。
-- 尺寸阈值按平台和项目采用的标准处理，避免将 CSS 像素、原生点与物理像素混用。
+- JSON parses; types, values, and units match; reference targets exist without cycles.
+- Every new token has a real semantic role or consumer. Check semantic differences before deleting equal values.
+- Preview names, values, and actual rendering correspond. State the applicable width for responsive values; copied parameters must not masquerade as current values.
+- Check actual text/background pairs, including necessary states and themes, not just the palette.
+- Compare guidelines, tokens, and code bindings to detect files that exist but are not integrated.
+- Apply size thresholds according to platform and adopted standards; do not mix CSS pixels, native points, and physical pixels.
 
-对于采用 WCAG 2.2 AA 的 Web 项目，普通文字对比度通常至少为 4.5:1，符合大文本定义的文字至少为 3:1，具体范围和例外见 [SC 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)。指针目标的最低要求是 24 × 24 CSS 像素，或满足规定的例外，见 [SC 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)。不能把任意一套控件尺寸建议冒充这些标准。
+For web projects adopting WCAG 2.2 AA, ordinary text usually needs at least 4.5:1 contrast, and qualifying large text at least 3:1; see [SC 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) for scope and exceptions. Pointer targets need at least 24 × 24 CSS pixels or a specified exception; see [SC 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html). Do not present arbitrary control-size recommendations as these standards.
 
-这些只是与 Token 直接相关的检查，不构成完整的可访问性验收。键盘、焦点、语义、反馈与内容重排等还需要检查真实页面。
+These checks concern tokens directly, not full accessibility conformance. Keyboard use, focus, semantics, feedback, and reflow still require inspection of real pages.

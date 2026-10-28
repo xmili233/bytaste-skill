@@ -1,33 +1,33 @@
-# 色彩关系与角色
+# Color relationships and roles
 
-ID：`knowledge.color`。所在层：L3。关联：`visual.palette`、`visual.saturation`、`visual.temperature`、`visual.brightness`、`visual.emphasis`。性质：设计系统实践与 ByTaste 推导。
+ID: `knowledge.color`. Layer: L3. Related: `visual.palette`, `visual.saturation`, `visual.temperature`, `visual.brightness`, `visual.emphasis`. Nature: design-system practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“颜色都选对了但不像参考”“喜欢鲜艳但不想整页刺眼”“深色不够有层次”不一定需要换色板。颜色的观感与它所在的背景、面积、相邻颜色及角色有关；单独色块不能代表整页效果。
+"The colors are right but it does not resemble the reference," "I like vivid color but not a glaring whole page," or "the dark design lacks depth" need not mean changing the palette. Color perception depends on background, area, adjacent colors, and roles; an isolated swatch does not represent a whole page.
 
-可帮助用户区分：“喜欢少量鲜明重点，还是让大片背景也带颜色？”这个选择说明使用方式，不自动说明喜欢哪一个色相。
+Help distinguish: "Do you prefer a few vivid accents, or large colored backgrounds too?" This establishes usage, not a particular hue.
 
-## 子概念与候选处理
+## Concepts and candidate approaches
 
-| 概念 | 需要明确的关系 | 边界 |
+| Concept | Relationship to establish | Boundary |
 | --- | --- | --- |
-| 色相、明度、彩度/饱和感、温度 | 哪种变化在承载偏好 | 使用工具时说明颜色空间，避免把不同模型中的参数当作同一感知刻度 |
-| 色板关系 | 单色变化、相近色、互补对比、多色表达 | 提供组合入口，不规定某种和谐方案天然高级 |
-| 语义角色 | 画布、表面、文字、边界、操作、状态、强调 | 品牌色不是所有角色的替代；同值也可以有不同语义 |
-| 配对与上下文 | 文字/图标在什么背景上，叠层后如何变化 | 不从孤立色卡判断对比；透明色还需看底层 |
-| 面积与分布 | 哪些区域大面积用色，哪里点缀，何处重复 | 比较整页构图，不机械采用 60/30/10 等固定配额 |
-| 主题映射 | 已需明暗主题中相同角色怎样对应 | 语义保持，值可变化；深色模式不等于反相 |
-| 数据用色（按需） | 无序类别、顺序强弱、围绕中点的两向差异 | 先保留数据含义，再选择配色；不因审美偏好混用编码 |
+| Hue, lightness, chroma/saturation, temperature | Which change carries the preference | Name the color space when using tools; parameters from different models are not one perceptual scale |
+| Palette relationships | Monochromatic variation, analogous color, complementary contrast, multiple colors | Offer combinations without claiming one harmony is inherently sophisticated |
+| Semantic roles | Canvas, surface, text, border, action, state, emphasis | Brand color cannot replace every role; identical values may have different semantics |
+| Pairing and context | Backgrounds behind text/icons and the effect of layering | Do not judge contrast from isolated swatches; transparent colors depend on underlying content |
+| Area and distribution | Large color fields, accents, and repetition | Compare whole-page composition without mechanically applying 60/30/10 or another quota |
+| Theme mapping | Equivalent roles across required light/dark themes | Preserve semantics while changing values; dark mode is not inversion |
+| Data color, as needed | Unordered categories, sequential magnitude, diverging values around a midpoint | Preserve data meaning before choosing colors; aesthetic preference does not justify mixing encodings |
 
-## 规则、Token 与检查
+## Rules, tokens, and checks
 
-规范定义使用区域、角色、配对和强调范围；Token 保存实际色值与别名。比如“强调色集中在当前选中项及相关指示，不把每个容器铺满”是项目候选规则，不是全局禁令；具体颜色仍由当前决定约束。
+Guidelines define regions, roles, pairings, and emphasis scope; tokens hold actual values and aliases. For example, "concentrate accent color on current selections and related indicators rather than filling every container" is a project candidate, not a global ban. Current decisions still constrain the actual colors.
 
-预览同时呈现色卡与实际文字、表面、状态的组合。按已采用标准检查实际配对；主题未被要求时不顺手建立第二套主题。相关数据图形应标明演示数据，检查系列映射，不虚构统计结论。
+Show swatches alongside real text, surfaces, and state combinations. Check actual pairs under adopted standards. Do not add a second theme unless needed. Label demonstration data in graphics, check series mapping, and do not fabricate statistical conclusions.
 
-## 来源与反例
+## Sources and counterexamples
 
-[Spectrum 色彩系统](https://spectrum.adobe.com/foundations/color/color) 把色彩放在角色、背景和主题关系中；其“只使用 Spectrum 色值”属于该品牌内部规则，不适用于所有 ByTaste 项目。[Carbon 数据色板](https://v10.carbondesignsystem.com/data-visualization/color-palettes/) 区分不同数据关系的色板；这是旧版文档的概念参考，实施时查当前组件文档。
+[Spectrum color](https://spectrum.adobe.com/foundations/color/color) treats color as relationships among roles, backgrounds, and themes. Its restriction to Spectrum values is a brand rule, not a requirement for every ByTaste project. [Carbon data palettes](https://v10.carbondesignsystem.com/data-visualization/color-palettes/) distinguish data relationships; this older documentation is a conceptual reference, with current component documentation needed for implementation.
 
-反例：参考只在按钮上使用亮色，却据此做整页荧光底；为了统一品牌把错误、选中、成功全部变成无法区分的一种表达；用色板截图宣称整个页面已匹配。
+Misuse: turning a reference's bright buttons into a fluorescent whole-page background; making error, selection, and success indistinguishable in the name of brand consistency; claiming whole-page preference fit from a palette screenshot.

@@ -1,35 +1,35 @@
-# 文字层级
+# Text hierarchy
 
-ID：`knowledge.hierarchy`。性质：有条件的经验建议。分类：`visual.emphasis`、`visual.scale`、`goal.clarity`。
+ID: `knowledge.hierarchy`. Nature: conditional practitioner guidance. Categories: `visual.emphasis`, `visual.scale`, `goal.clarity`.
 
-## 辨认与提问
+## Recognition and questions
 
-用户可能说“重点不突出”“太夸张”“每块都在抢”。先确定当前最重要的内容，再比较它与其他内容之间的层级强度。
+Users may say "the focus is weak," "too exaggerated," or "everything is competing." Establish what matters most, then compare its emphasis with other content.
 
-可以用“主数字适度突出，还是更醒目”解释层级强度。如何让用户理解，由 Agent 根据实际内容判断；用户对整体处理的反馈，不能直接归因于某一个字号或字重。
+A useful distinction is a moderately emphasized main figure versus a more prominent one. The agent chooses how to explain it using actual content. Feedback on the whole treatment cannot be attributed automatically to one size or weight.
 
-## 适用条件与取舍
+## Applicability and tradeoffs
 
-- 需要快速定位关键结果时，明确的层级有帮助，但主结果必须来自真实任务。
-- 需要并列比较时，过强的单个重点可能遮蔽其他重要信息。
-- 信息层级也可以来自位置、分组和顺序，不能把一切问题都归结为“再放大标题”。
+- Clear hierarchy can help locate important results, but those results must come from a real task.
+- Excessive emphasis on one object can obscure other information needed for comparison.
+- Position, grouping, and sequence also create hierarchy; not every issue calls for a larger heading.
 
-## 机制与候选策略
+## Mechanism and candidate strategies
 
-视觉主次可由尺度、字重、色彩对比、位置和留白共同表达。可以增强主信息，也可以弱化辅助信息；不默认每次都增大标题。结合当前决定选择表现强度，用户只评价整体时不把结果归因于某一个参数。
+Scale, weight, color contrast, position, and whitespace can jointly establish priority. Strengthen primary information or reduce supporting emphasis; do not always enlarge headings. Choose intensity based on current decisions. Whole-design feedback does not isolate a single parameter.
 
-## 参考与反例
+## References and counterexamples
 
-本条目是对文字层级的设计推导，不预设产品应以标题、主数字或指标卡为入口；重点由实际任务决定。
+This entry is design reasoning about text hierarchy. It does not assume a heading, main figure, or metric card should lead every product; the task determines the focus.
 
-误用反例：把次要营销数字放大成主角；同时改变位置与颜色却宣称用户只喜欢某个字号；在移动端截断重要文字以保持视觉比例。
+Misuse: making a secondary marketing statistic dominant; changing position and color together but claiming the user chose only a font size; clipping important mobile text to maintain visual proportions.
 
-## 落地关联
+## Implementation relationships
 
-可影响标题、主值、正文和说明的排版角色，以及焦点与阅读顺序规则。复用已有排版体系；字号、字重与行高在实际字体和最长内容下选择，保留语义标题结构。
+May affect type roles for headings, primary values, body text, and explanations, plus focus and reading-order rules. Reuse existing typography; choose size, weight, and leading with actual fonts and longest content, preserving semantic headings.
 
-## 验证
+## Verification
 
-对照用户选定的主次与表现强度，查看实际字体、长标签和数值变化后的呈现；有反馈时记录用户注意和喜欢的部分。布局无溢出只属于实现证据，不等于用户认可，也不额外测量查找效率。
+Compare actual fonts, long labels, and changing values against the selected priorities and intensity. Record what users notice and like when feedback is available. No overflow is implementation evidence, not approval, and no additional search-efficiency study is required.
 
-证据状态：设计推导，具体效果尚待项目验证；不提供固定字号比例或通用优胜方案。
+Evidence status: design reasoning; concrete effects need project validation. No fixed type ratio or universal winner is provided.

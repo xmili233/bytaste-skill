@@ -1,64 +1,64 @@
-# 默认设计与体验质量基线
+# Default design and experience quality baseline
 
-生成或修改规范预览、产品界面前读取。本文件是 ByTaste 默认质量要求的统一入口：在当前任务范围内主动追求适用的品质目标，不需要用户先要求清楚、精致、流畅或可控。局部修改只处理相关部分，不触发全站重设计。
+Read before generating or modifying a guidelines preview or product interface. This is the unified entry point for ByTaste's default quality requirements. Proactively pursue applicable quality goals within scope; the user need not first request clarity, polish, fluidity, or control. Local changes concern only relevant parts and do not trigger a full-site redesign.
 
-## 质量、策略与偏好
+## Quality, strategies, and preferences
 
-| 类型 | 执行含义 | 示例 |
+| Type | Execution meaning | Example |
 | --- | --- | --- |
-| 默认质量基线 | 相关对象存在时落实目标，交付前判断实际效果 | 关系可理解、操作有把握、失误可处理、变化后仍能继续工作 |
-| 有条件的策略 | 根据内容、平台、已有规范与偏好自主选择，可采用库外方法 | 留白或边界分组、是否采用撤销、如何表达进度、选择哪个动效引擎 |
-| 用户风格选择 | 按有效决定及作用域表达 | 层级的强弱、疏密、字体性格、色彩、形状、材质、动态强度 |
+| Default quality baseline | Meet the goal where the relevant object exists, and judge actual results before delivery | Understandable relationships, confidence in actions, recoverable mistakes, and continuity after changes |
+| Conditional strategy | Choose based on content, platform, existing guidelines, and preferences; methods outside the library are allowed | Grouping with space or boundaries, whether to offer undo, how to show progress, which motion engine to use |
+| User style choice | Express it according to effective decisions and scope | Hierarchy strength, density, font character, color, shape, material, and motion intensity |
 
-默认要求约束结果，不固定风格。“安静”可以采用细微的层级差异，但不解释为主次混乱；“自由构图”不解释为意外重叠；“低装饰”不解释为删除必要状态。默认质量基线的适用性不等于用户已认可某套具体实现。
+Defaults constrain results, not style. A quiet design may use subtle hierarchy without confusing priorities; free composition does not justify accidental overlap; low decoration does not justify missing necessary states. Applicability of a baseline does not mean the user has approved a particular implementation.
 
-以下条目写品质目的和判断线索，不构成控件、技术或功能清单。模型结合用户意图与约束选择做法；只有无法从上下文解决、且会实质改变结果的取舍才向用户澄清。参考中的实现案例供借鉴，不是唯一方案，也不限制模型提出更合适的实现。
+These entries describe quality goals and judging cues, not a list of controls, technologies, or features. The model chooses methods based on intent and constraints. Clarify only unresolved tradeoffs that materially affect results. Implementation examples are references, not the only solution or a limit on proposing better approaches.
 
-先在已选方向内修复质量问题，不借此更换用户的字体、色彩、布局方向或内容。用户明确要求实验性偏离时，记录具体意图、范围与取舍；不把宽泛的风格形容词当作豁免，也不把局部例外扩大到其他页面。确有冲突时说明冲突，按当前用户指令处理，不伪称同时满足。
+Fix quality within the selected direction first, without changing chosen fonts, colors, layout direction, or content. For explicitly requested experimental departures, record the intent, scope, and tradeoffs. Vague adjectives are not exemptions, and local exceptions are not global. Explain genuine conflicts, follow current user instructions, and do not claim both conflicting requirements are met.
 
-## 默认应达到的结果
+## Expected outcomes by default
 
-| 基线 ID / 品质 | 相关范围与目标 | 判断线索 |
+| Baseline ID / quality | Applicable scope and goal | Judging cues |
 | --- | --- | --- |
-| `BASE-LAYOUT` | 布局遵守 [LAY-01 至 LAY-08](layout.md)：主次、分组、对齐、比例、空间、顺序、适配与叠层相互一致 | 先看整体重心，再看区域和组件；并列内容可等权，不强造英雄区 |
-| `BASE-READABILITY` | 实际字体、语言、背景及相关状态下，文字和关键视觉标识可辨认；辅助信息可以弱化但不能失去必要辨识 | 查看真实中英文、数字、长短内容与背景配对；具体标准见 [Token 检查](tokens.md#检查方式) |
-| `BASE-SEMANTICS` | 相同角色沿用一致线索，重要的不同角色及状态能区分；视觉、文字与实际含义相容 | 检查选中、禁用、错误、重点是否混淆，不能只看颜色名或组件名 |
-| `BASE-STATE` | 已有或本次明确要求的交互能呈现当前状态、操作响应和结果；适用的焦点、处理中、失败等状态完整 | 实际操作相关状态与叠加；不强制统一通知样式，不为凑状态虚构业务 |
-| `BASE-CONTENT` 清楚与可信 | 内容完整、具体且与真实能力相符；需要做判断时，用户能理解信息、动作后果及重要的不确定性，演示和真实结果不混淆 | 是否有误导标签、虚构成绩、含糊动作或无依据的确定性？结构能说明的关系是否被重复文案淹没？相关表达见 [内容知识](knowledge/content-expression.md) |
-| `BASE-CRAFT` | 排版角色、图标重量、边界、形状、表面、组件比例和资产组合协调，减少无意差异 | 查看同类对象及其组合；光学校正可以不同于数学对齐，不强制单一字体或圆角 |
-| `BASE-MOTION` | 默认动态完成度按 [动效约定](motion.md) 落实，反馈、变化与表达有目的；进入退出、中断和减少动态保持连贯 | 实际播放；Motion 是推荐方案，适配技术栈的实现质量才是要求；尊重用户明确静态要求 |
-| `BASE-FLOW` 省脑与低打扰 | 用户能理解当前情境、找到相关信息与下一步；减少无助于当前任务的记忆、推断、重复操作和打断 | 是否必须记住上一页的信息、猜图标含义或经过无关中转？辅助信息是否在有用时可获得？必要的确认与帮助仍保留 |
-| `BASE-CONTROL` 掌控 | 用户能理解并主导重要变化，按真实能力调整方向、退出或处理失误；后果与控制程度相称 | 是否发生难以预期的提交、跳转或自动改变？用户能否处理不想要的结果？不把“可控”固定等同于撤销按钮、确认弹窗或开关 |
-| `BASE-CONTINUITY` 连续 | 跨步骤、返回、等待或中断后，仍能辨认当前位置并延续有价值的工作，减少无故丢失和重复 | 操作后是否失去仍有效的输入、选择、阅读位置或上下文？哪些确需重置，哪些受隐私、权限和有效期约束？不承诺永久保存一切 |
-| `BASE-RECOVERY` 容错与恢复 | 降低可预见失误的代价；出现问题时能理解发生了什么、什么仍有效，以及如何继续 | 是否把可理解的输入无故判错、失败后抹掉工作，或只留下无法行动的报错？恢复路径是否符合真实能力，不假造重试或成功 |
-| `BASE-PERFORMANCE` 轻快与稳定 | 操作回应及时、等待可理解，内容与操作目标在加载和变化中保持稳定；表现效果不拖累正在进行的任务 | 真实操作中是否迟迟无响应、卡顿、意外跳位或被过渡阻挡？观测当前平台与主要内容，不能只凭动画库、加载图标或跑分判断 |
-| `BASE-ACCESSIBILITY` 基础无障碍 | 用户能通过当前平台相关的输入与辅助方式获取必要信息、辨认状态并完成已有操作；不依赖单一感官或难以完成的动作 | 相关的键盘/辅助技术能否辨认并操作？焦点、语义、感知与操作目标是否造成障碍？方法和数值遵循适用平台与项目标准，不固定某种视觉样式 |
-| `BASE-ADAPTATION` 环境适应 | 在本次涉及的屏幕、内容、语言、输入及系统偏好下，保持必要意义、能力与设计语言 | 是否只在理想截图下成立，换长文、窄屏或输入方式就丢失信息或能力？沿用 [情境适配](knowledge/adaptation.md)，不自动新增多语言、主题或设置功能 |
+| `BASE-LAYOUT` | Follow [LAY-01 through LAY-08](layout.md): priorities, grouping, alignment, proportions, space, order, adaptation, and layers agree | Inspect overall balance, then regions and components; peers may have equal weight, without an artificial hero |
+| `BASE-READABILITY` | Text and important visual cues remain recognizable with actual fonts, languages, backgrounds, and states; secondary information can be quieter without becoming unreadable | Inspect actual CJK/Latin text, numerals, short/long content, and background pairs; see [token checks](tokens.md#checks) for specific standards |
+| `BASE-SEMANTICS` | The same role uses consistent cues; important role/state differences are distinguishable; visuals, words, and actual meaning agree | Check selection, disabled, error, and emphasis cues, not just color or component names |
+| `BASE-STATE` | Existing or explicitly requested interactions show current state, response, and outcome; applicable focus, processing, and failure states are complete | Operate relevant states and combinations; do not impose one notification style or invent business features to fill states |
+| `BASE-CONTENT` Clear and trustworthy | Content is complete, specific, and faithful to real capabilities; users can understand information, action consequences, and important uncertainty when deciding; demonstrations do not masquerade as real results | Are labels misleading, achievements fabricated, actions vague, or certainty unsupported? Does repeated copy obscure relationships the structure could explain? See [content knowledge](knowledge/content-expression.md) |
+| `BASE-CRAFT` | Type roles, icon weight, boundaries, shapes, surfaces, component proportions, and assets form a coherent whole with fewer unintended differences | Compare similar objects and their combinations; optical adjustment may differ from mathematical alignment; do not require one font or radius |
+| `BASE-MOTION` | Apply the [motion agreement](motion.md) by default: feedback, change, and expression have purpose; entry, exit, interruption, and reduced motion remain coherent | Play it; Motion is a recommendation, while quality in the actual stack is the requirement; respect explicit static requests |
+| `BASE-FLOW` Low cognitive effort and interruption | Users can understand the situation, find relevant information and the next step, with less unhelpful memory, inference, repetition, and interruption | Must they remember another page, guess an icon, or take an irrelevant detour? Is help available when useful? Retain necessary confirmation and guidance |
+| `BASE-CONTROL` Control | Users understand and direct important changes and can adjust, exit, or handle mistakes within real capabilities; control matches consequences | Are submissions, navigation, or automatic changes hard to anticipate? Can users handle unwanted outcomes? Control is not synonymous with undo, dialogs, or toggles |
+| `BASE-CONTINUITY` Continuity | Across steps, returns, waits, or interruptions, users can recognize their place and continue valuable work without needless loss or repetition | Are still-valid input, selections, reading position, or context lost? What needs resetting, or is limited by privacy, permissions, or expiry? Do not promise permanent retention of everything |
+| `BASE-RECOVERY` Error tolerance and recovery | Reduce foreseeable mistake costs; when something goes wrong, users understand what happened, what remains valid, and how to continue | Is understandable input rejected unnecessarily, work erased on failure, or an error unactionable? Recovery must reflect real capability, not fabricated retry or success |
+| `BASE-PERFORMANCE` Responsiveness and stability | Actions respond promptly, waits are understandable, and content/action targets remain stable during loading and change; effects do not impede the task | Are actual operations unresponsive, stuttering, shifting unexpectedly, or blocked by transitions? Observe the current platform and main content; libraries, loaders, and scores alone cannot establish quality |
+| `BASE-ACCESSIBILITY` Basic accessibility | Users can obtain necessary information, recognize states, and complete existing actions through relevant input and assistive methods, without relying on one sense or difficult gestures | Can relevant keyboard/assistive methods identify and operate the interface? Do focus, semantics, perception, or targets create barriers? Follow applicable platform/project standards rather than one visual style |
+| `BASE-ADAPTATION` Environmental adaptation | Retain necessary meaning, capability, and design language across the screens, content, languages, inputs, and system preferences involved in this task | Does it work only in an ideal screenshot, losing information or functionality with long text, narrow widths, or another input? Follow [adaptation](knowledge/adaptation.md) without automatically adding languages, themes, or settings |
 
-这些目标会互相支持，允许同一实现同时满足多项；不用按行制造控件或重复规则。内容、宽度、输入方式和已需主题贯穿检查，不为每种设备另建规范，也不凭空增加摄影、图表、弹窗或业务。成本降低支持主动做好品质，不构成增加功能或扩大授权的理由。
+These goals support one another; one implementation may satisfy several. Do not manufacture a control or repeat a rule for each row. Content, width, input methods, and required themes inform checks without separate device specifications or invented photography, charts, dialogs, or business features. Lower implementation cost supports quality; it does not authorize more features or scope.
 
-需要选择具体做法时，按需读取 [体验品质的目的、取舍与案例](knowledge/experience-quality.md)。知识条目提供候选手段；手段可选不代表品质目标可被忽略。真实流程依赖尚未完成的接口或持久化时，区分设计约定、模拟和已实现能力，说明缺口。
+For concrete methods, read [experience-quality goals, tradeoffs, and examples](knowledge/experience-quality.md) as needed. Optional methods do not make quality goals optional. If real flows depend on unfinished APIs or persistence, distinguish agreements, simulations, and implemented capability, and state gaps.
 
-## 来源与数值边界
+## Sources and numerical boundaries
 
-项目规范引用基线 ID 和 ByTaste 版本，写出本项目的实际要求；不伪造用户决定 ID，也不要求用户逐条批准。参数仍在 Token 来源维护。未经用户指定的取值标为实现建议，与基线默认生效分开。
+Project guidelines cite baseline IDs and the ByTaste version and state actual project requirements. Do not fabricate user decision IDs or request approval for every baseline. Values remain in tokens. Unspecified values are implementation recommendations, separate from default baseline applicability.
 
-平台或项目已采用的标准继续按其范围执行。基础无障碍不能省略，但完成若干检查不等于完整可访问性验收；局部响应检查不等于证明生产性能。不能把 8px 网格、固定字号数量、黄金比例、每屏一个重点或统一响应时长等策略当作跨平台底线。正式数值的范围及例外见 [Token 约定](tokens.md#数值与标准边界)。
+Apply adopted platform/project standards within their scope. Basic accessibility cannot be omitted, but a few checks do not establish full accessibility conformance; local responsiveness checks do not prove production performance. An 8px grid, fixed type-size count, golden ratio, one focus per screen, or universal response time is not a cross-platform baseline. See [numerical boundaries](tokens.md#numerical-values-and-standards) for formal scope and exceptions.
 
-这些要求是 ByTaste 对 [NN/g 视觉层级](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/)、[Atlassian 间距](https://atlassian.design/foundations/spacing/)、[Apple 布局](https://developer.apple.com/design/human-interface-guidelines/layout)、[状态反馈](https://www.nngroup.com/articles/visibility-system-status/) 与 [Carbon 动效](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview) 的项目化归纳。采用通用关系及适用条件，不继承来源品牌的皮肤、参数或功能范围。
+These requirements are ByTaste's project-oriented synthesis of [NN/g visual hierarchy](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/), [Atlassian spacing](https://atlassian.design/foundations/spacing/), [Apple layout](https://developer.apple.com/design/human-interface-guidelines/layout), [state feedback](https://www.nngroup.com/articles/visibility-system-status/), and [Carbon motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview). Use general relationships and applicability, not the sources' brand styling, values, or feature scope.
 
-新增体验目标的依据和限制见 [体验品质知识](knowledge/experience-quality.md#来源与证据边界)。默认目标是 ByTaste 的产品选择；外部指南不等于对所有产品、用户或具体实现的效果保证。
+Sources and limits for added experience goals are in [experience-quality knowledge](knowledge/experience-quality.md#sources-and-evidence-boundaries). Making these goals defaults is a ByTaste product choice; external guidance does not guarantee results for every product, user, or implementation.
 
-## 实际检查与完成
+## Actual checks and completion
 
-按 [验证约定](verification.md) 查看当前渲染、代表内容与相关状态。已观察到的基线违背属于本次实现未完成项，先修复；无法完成时明确位置、影响与未完成状态。用户尚未评价不是阻塞项，但不能据 Agent 自评宣称用户喜欢。
+Under the [verification agreement](verification.md), inspect current rendering, representative content, and relevant states. Observed baseline violations are incomplete work to fix first. If unresolved, state location, impact, and incomplete status. Missing user feedback does not block delivery, but agent self-assessment cannot establish that the user likes it.
 
-能运行、Token 引用正确、没有溢出或安装了动画库，都不能单独证明达到基线。无法实际查看时报告未验证范围，不假装视觉检查通过；不为了凑检查次数机械重做，也不用综合审美分掩盖具体问题。
+Running code, correct token references, no overflow, or an installed animation library cannot individually prove baseline quality. If inspection is impossible, state unverified conditions without pretending visual checks passed. Avoid mechanical repetition or a composite aesthetic score that hides concrete issues.
 
-## 质量参考与知识入口
+## Quality reference and knowledge entry points
 
-需要定位原因时使用 [六层概念地图](concepts.md)，按问题读取相关知识。概念回答涉及什么，基线回答至少做到什么，用户决定回答怎样表达。
+Use the [six-layer concept map](concepts.md) and relevant entries to locate causes. Concepts identify what is involved, baselines define the minimum outcome, and user decisions define how it should be expressed.
 
-[随附黑白灰规范预览](../assets/monochrome-preview/index.html) 提供可运行的排版、色彩、布局、组件与动效参考；其整体效果经过作者认可，不代表它已验证所有后续基线或全部场景。可以借鉴其直接展示、参数关联和交互方式，不能把黑白灰、Manrope、历史决定或具体数值当作所有用户偏好。
+The [bundled monochrome preview](../assets/monochrome-preview/index.html) is a runnable reference for typography, color, layout, components, and motion. Its overall result was approved by the author; that does not verify every later baseline or every scenario. You may borrow its direct presentation, parameter relationships, and interactions without treating monochrome, Manrope, historical decisions, or specific values as everyone's preferences.
 
-复制到项目后再修改，替换品牌和来源，按当前方向调整视觉与构图，保留实际使用的第三方许可证。不要修改技能安装目录来承载用户项目。
+Copy it into the project before modifying it, replace branding and sources, and adapt visuals and composition to the current direction. Retain licenses for third-party assets used. Do not use the skill installation directory for a user's project.

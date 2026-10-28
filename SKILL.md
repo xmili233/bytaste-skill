@@ -1,6 +1,6 @@
 ---
 name: bytaste
-description: 从用户喜欢的设计案例或文字描述出发，通过可查看的版本和逐轮反馈形成并维护设计规范、独立 Token 与交互约定，让后续设计持续沿用已确认的方向。用于探索设计、提炼参考、修订偏好及复用风格；不因普通代码修错或纯后端任务重建设计规范。
+description: Develop and maintain design guidelines, a separate token source, and interaction agreements from references or descriptions the user likes, using viewable versions and iterative feedback so later work follows the confirmed direction. Use to explore design, interpret references, revise preferences, or reuse a style; do not rebuild design guidelines for ordinary code fixes or backend-only work.
 license: MIT
 metadata:
   version: "0.5.2"
@@ -8,125 +8,125 @@ metadata:
 
 # ByTaste
 
-帮助用户形成能表达、能修正的设计偏好，并让后续 Agent 持续产出用户喜欢的设计。统一规范的表达方式，保留不同用户和项目的视觉差异。
+Help users develop design preferences they can express and revise, and help subsequent agents consistently produce designs they like. Standardize how guidelines are expressed while preserving visual differences between users and projects.
 
-核心循环是：**喜欢的案例或文字描述 → 可查看的版本 → 询问感受 → 更新决定与规范 → 继续迭代 → 后续页面沿用**。建议用户提供喜欢的案例以减少表达歧义，也支持直接描述、从现有页面开始或先看一版；没有参考不阻塞工作。
+The core loop is: **references or descriptions the user likes → a viewable version → ask how it feels → update decisions and guidelines → iterate → reuse on later pages**. Suggest references to reduce ambiguity, but also accept descriptions, existing pages, or a request to try a first version. Missing references must not block progress.
 
-当前目标是偏好表达、设计匹配与持续复用。任务、内容和平台帮助理解偏好与选择实现。适用的基础品质在当前范围内主动做好；不主动扩展为可用性研究，也不把效率、转化率、任务成功率实验作为完成门槛。保留用户已有的明确功能要求和标准。
+The current goals are expressing preferences, matching the design to those preferences, and sustaining reuse. Tasks, content, and platforms help interpret preferences and choose implementations. Proactively deliver applicable basic quality within the current scope; do not expand the task into usability research or make efficiency, conversion, or task-success experiments a completion requirement. Preserve the user's existing explicit functional requirements and standards.
 
-## 工作开始：恢复当前设计决定
+## Start by restoring current design decisions
 
-处理设计相关任务时，先定位项目 Agent 入口指向的决策记录（默认 `design.decisions.md`）。存在记录时先读取当前有效摘要，再读取与本次页面相关的 `design.md`、覆盖规则和来源；尚无记录时沿用可确认的项目规则，按本次任务建立或接续，不能因缺记录就重新设计。新会话、上下文压缩后、交接后都恢复这一步；当前版本已在上下文中且没有变化时不重复通读历史。
+For design work, first locate the decision record linked from the project's agent instructions (by default, `design.decisions.md`). If it exists, read its current effective summary, then the relevant parts of `design.md`, overrides, and sources. If no record exists, retain verifiable project rules and establish or continue the record as needed for this task. Missing records do not justify redesigning the project. Repeat this recovery after a new session, context compaction, or handoff; do not reread the full history when the current version is already in context and unchanged.
 
-当前用户指令可以修订旧决定。核对作用域和明确的替代关系，不凭文件时间、当前代码或一条新建议覆盖用户已选内容。无法读取记录时明确缺口；不能假装记得或已检查。
+The user's current instructions can revise earlier decisions. Check scope and explicit replacement relationships; neither file timestamps, current code, nor a new suggestion can override a choice the user has made. If the record cannot be read, state the gap. Do not pretend to remember or to have checked it.
 
-建立记录、收到影响后续设计的反馈、处理冲突或更新决定时，读取 [决策记录约定](references/decisions.md)。在项目中维护可发现的读取入口；决策发生后及时落盘，再驱动相关规范、Token、交互与预览更新。
+When creating a record, receiving feedback that affects later design, resolving conflicts, or updating decisions, read the [decision record agreement](references/decisions.md). Maintain a discoverable reading entry point in the project. Save decisions promptly, then update the affected guidelines, tokens, interactions, and preview.
 
-## 先确定本次交付对象
+## Determine the deliverable first
 
-只有感觉、参考、颜色，或用户正在建立设计规范而尚未确定产品用途时，默认交付**设计标准与规范预览**。排版、Token、布局关系、组件状态和动效就是展示内容，不追问完整产品需求，也不发明草稿管理、客户后台或其他业务功能。
+When the user provides only a feeling, references, or colors, or is establishing design guidelines without a product purpose yet, the default deliverable is **design standards and a guidelines preview**. Typography, tokens, layout relationships, component states, and motion are the content. Do not require a complete product brief or invent draft management, customer dashboards, or other business features.
 
-用户明确要求具体页面时，才把设计语言应用到对应内容与功能；关键页面需求确实缺失时只补问必要信息。已有界面的局部修改不触发全套重建。独立研究或术语解释按请求交付。
+Apply the design language to specific content and functionality only when the user explicitly requests a page. Ask only for essential missing page requirements. A local change to an existing interface does not trigger a complete rebuild. Deliver standalone research or terminology explanations as requested.
 
-可以直接提出用于当前规范预览的专业默认值，标为 ByTaste 默认建议；不必逐个询问字号与像素。**暂定只描述认可状态，不扩大任务范围。** “先做一版”在规范讨论中表示规范草案，不自动授权设计产品。
+You may propose professional defaults for the current guidelines preview, labeled as ByTaste recommendations, without asking about every font size or pixel. **Tentative describes approval status; it does not expand scope.** In a guidelines discussion, "make a first version" means a draft of the guidelines, not automatic permission to design a product.
 
-## 工作范围与产物
+## Scope and artifacts
 
-- 用户说不清时，借助内置分类帮助辨认差异，形成用户能复述和修正的偏好描述；已清楚的部分直接复用。
-- 建立规范时，产出 `design.decisions.md`、`design.md`、独立 Token 来源、`interaction.md` 与对应样式预览。已有等价文件和系统时沿用并明确关联，不建立平行维护来源。
-- 按规范做界面时沿用当前决定；用户调整偏好时只影响声明的范围。仅研究、解释术语或讨论时按请求交付，不自动创建整套产物。
+- When users cannot articulate a feeling, use the built-in categories to help distinguish differences and form a preference description they can restate and correct. Reuse what is already clear.
+- When establishing guidelines, produce `design.decisions.md`, `design.md`, a separate token source, `interaction.md`, and a corresponding style preview. Reuse and explicitly connect equivalent existing files and systems instead of creating parallel sources.
+- When implementing an interface from guidelines, follow current decisions. Apply preference changes only within their stated scope. For research, terminology explanations, or discussion alone, deliver what was requested without automatically creating every artifact.
 
-## 按任务调用知识
+## Load knowledge by task
 
-先恢复项目决定并确定本次范围，再选择下列入口。涉及界面或规范预览时执行 [默认质量基线](references/visual-quality.md)；解释术语或独立研究不因此新增界面产物。已读取且没有变化的材料不重复加载。
+Restore project decisions and establish scope first, then choose an entry below. For interfaces and guidelines previews, apply the [default quality baseline](references/visual-quality.md). Terminology explanations and standalone research do not thereby require new interface artifacts. Do not reload unchanged material already read.
 
-| 当前任务 | 读取与使用方式 |
+| Current task | What to read and use |
 | --- | --- |
-| 说不清感觉、辨认参考 | 用 [引导方法](references/discovery.md) 和词库帮助表达；需要解释具体差异时再进入概念及知识条目 |
-| 新建规范、系统调整方向 | 用 [概念地图](references/concepts.md) 检查六层关系，读取相关条目，再按 [规格结构](references/design-spec.md) 落地 |
-| 按规范做页面、局部修改 | 沿用当前规则；只查与本次差异有关的 [知识条目](references/knowledge/index.md)，必要时用概念地图定位，不重新遍历偏好 |
-| 反馈、检查与修正 | 按 [验证约定](references/verification.md) 区分意图变化与实现偏差，检查受影响的概念关系并局部同步 |
+| Articulating a feeling or interpreting references | Use [discovery guidance](references/discovery.md) and the vocabulary; consult concepts and knowledge entries only when a specific difference needs explanation |
+| Establishing guidelines or changing the overall direction | Use the [concept map](references/concepts.md) to check relationships across six layers, read relevant entries, then apply the [specification structure](references/design-spec.md) |
+| Implementing a page or making a local change | Follow existing rules; consult only [knowledge entries](references/knowledge/index.md) related to the difference, using the concept map if needed; do not restart preference discovery |
+| Responding to feedback, checking, or correcting | Use the [verification agreement](references/verification.md) to distinguish changes of intent from implementation deviations, check affected relationships, and synchronize locally |
 
-词库帮助表达，概念地图帮助定位，知识条目支持取舍，规格约定规定产物职责。它们共同服务当前任务，不形成必须全部走完的额外流程。
+Vocabulary helps expression, the concept map locates issues, knowledge entries support tradeoffs, and specification agreements define artifact responsibilities. Together they serve the task, not an additional mandatory process.
 
-## 1. 理解当前设计的上下文
+## 1. Understand the design context
 
-推荐在探索整体感觉与视觉风格前，先了解产品或页面的主要用途、目标用户和使用场景。优先从已有材料获取；信息不足且有助于当前设计时，可简短询问，具体见 [推荐的背景了解](references/discovery.md#推荐先了解用途目标用户与场景)。这是帮助判断设计是否合适的起点，不是必须问完的前置步骤；用户直接提供参考、只想探索风格或希望先看一版时，可以从其输入直接推进。
+Before exploring overall feel and visual style, it is usually useful to understand the product or page's main purpose, intended users, and use context. Prefer existing material. When missing information would help this design, ask briefly; see [recommended background discovery](references/discovery.md#recommended-background-purpose-users-and-context). This is a useful starting point, not a required interview. Proceed directly from references, style exploration, or a request to see a first version when that is the user's starting point.
 
-从用户输入和项目中确定页面范围、内容、平台、已有视觉语言和必须保留的约束。官网、工作台与阅读页可以需要不同的表现；类别不自动决定风格。
+Establish page scope, content, platform, existing visual language, and constraints that must remain. A marketing site, workspace, and reading page may need different treatments; their categories do not automatically determine their styles.
 
-已有界面也构成上下文。区分沿用、局部调整与重新设计，不能因缺少设计文档就重做品牌。仅询问会改变本次方案、且无法从已有信息得到的问题，不重复确认已记录的选择。
+An existing interface is also context. Distinguish reuse, local adjustment, and redesign. Do not rebuild a brand because design documentation is missing. Ask only questions that would change this proposal and cannot be answered from existing information; do not reconfirm recorded choices.
 
-## 2. 读取参考，分清观察与意图
+## 2. Read references and separate observation from intent
 
-参考可以是网址、截图、设计文件、现有页面、描述和反馈。用可用工具查看真实内容；无法访问时保留缺口，不假装研究过。
+References may be URLs, screenshots, design files, existing pages, descriptions, or feedback. Use available tools to inspect actual content. If it is inaccessible, retain the gap rather than claiming to have researched it.
 
-记录有用的局部特征、用户具体喜欢或不喜欢什么，以及希望用在哪里。区分“它看起来怎样”“用户是否喜欢”“是否希望自己的项目采用”。提供一个网站不等于认可整站。
+Record useful local features, what the user specifically likes or dislikes, and where they want to use it. Distinguish "what it looks like," "whether the user likes it," and "whether they want their project to adopt it." Sharing a website does not mean endorsing the entire site.
 
-截图支持外观观察，通常不能证明完整交互、精确 Token 或实现质量。保留观察范围与推测状态。不要因参考受欢迎或获得设计奖，就把它的做法写成项目要求。
+Screenshots support visual observations but usually cannot establish full interaction behavior, exact tokens, or implementation quality. Preserve observation limits and inference status. Popularity or design awards do not make a reference's choices project requirements.
 
-熟悉的结构可以与鲜明的视觉表达并存。用户说“不要 AI 味”时定位具体反例，不自动禁用常见导航、组件、字体或某种效果。
+Familiar structures can coexist with distinctive visual expression. When a user says "avoid the AI look," identify concrete counterexamples instead of automatically banning familiar navigation, components, fonts, or effects.
 
-## 3. 帮助用户辨认并说清感觉
+## 3. Help users recognize and express a feeling
 
-有关键歧义时读取 [逐步引导方法](references/discovery.md)。先判断用户是缺少词语、尚未理解差异、尚未形成偏好，还是在权衡不同目标，再选择合适的帮助方式。
+When important ambiguity remains, read the [discovery guidance](references/discovery.md). Determine whether the user lacks words, does not yet understand the difference, has not formed a preference, or is weighing competing goals. Choose the appropriate help.
 
-按需使用 [体验目标](references/vocabulary/experience.md)、[视觉感受维度](references/vocabulary/visual.md) 与 [风格组合](references/vocabulary/styles.md)。分类提供表达入口，不构成固定审美人格；不得由年龄、性别、地区等属性替用户选择风格。
+Use [experience goals](references/vocabulary/experience.md), [visual dimensions](references/vocabulary/visual.md), and [style combinations](references/vocabulary/styles.md) as needed. Categories are ways to express preferences, not fixed aesthetic personality types. Do not choose styles for users based on age, gender, region, or similar attributes.
 
-Agent 自行决定是否解释、举例、提问、参考对比或尝试草图。视觉对比和固定问卷都不是必经步骤。问题使用中性差异，允许“不确定”“都不是”“介于两者之间”和局部选择；不要通过褒贬措辞把答案引向某种风格。
+The agent decides whether explanations, examples, questions, reference comparisons, or sketches will help. Neither visual comparisons nor fixed questionnaires are mandatory. Describe differences neutrally and allow "not sure," "neither," "somewhere between," and partial choices. Do not steer answers with praise or disparagement.
 
-用用户能理解的一句话整理有效选择，必要时再介绍术语。不要因选择低装饰就顺带确定颜色、字体和密度。尚未形成偏好时允许暂定与修正；用户授权先做一版时以建议状态推进，不把代选伪装成用户认可。
+Summarize valid choices in one understandable sentence, introducing terminology only if useful. Choosing low decoration does not also settle colors, fonts, or density. Allow tentative choices and revisions. When authorized to make a first version, proceed with recommendations without presenting your choices as user approval.
 
-关键差异已足够清楚就进入设计。沉默不是选择，未选不等于拒绝，不为填满分类而追问。把影响后续工作的选择及时写入决策记录，不要求每次复述都获得形式化确认。
+Move into design once the important differences are clear enough. Silence is not a choice, and an unselected option is not a rejection. Do not keep asking to fill every category. Record choices that affect later work promptly; not every restatement needs formal confirmation.
 
-## 4. 按质量基线与偏好制定规则
+## 4. Form rules from quality requirements and preferences
 
-按 [概念地图的落地方法](references/concepts.md#从概念到本次规范) 将当前决定转成关系规则与检查样本。六层用于发现遗漏和关联，不作为用户问卷；概念名称和 Token 列表都不能代替实际规则。
+Use the [concept-to-guidelines method](references/concepts.md#from-concepts-to-the-current-guidelines) to turn current decisions into relationship rules and checking samples. The six layers help reveal omissions and dependencies; they are not a user questionnaire. Concept names and token lists cannot replace actual rules.
 
-[默认质量基线](references/visual-quality.md) 规定当前范围内应达到的视觉与体验结果。Agent 主动追求适用目标，结合用户意图、情境和约束选择实现；不先问用户是否需要清楚、流畅或可控，也不据此规定必须有撤销、弹窗等机制。关键取舍无法从上下文判断时再澄清。先在已选风格内修复，不将通用基线误写为用户偏好或固定皮肤。
+The [default quality baseline](references/visual-quality.md) defines the visual and experiential results required within scope. Proactively pursue applicable goals and choose implementations based on intent, context, and constraints. Do not ask whether the user wants clarity, fluidity, or control, and do not treat those goals as mandates for undo buttons, dialogs, or other specific mechanisms. Clarify only significant tradeoffs that context cannot resolve. Fix issues within the chosen style first; do not mislabel general quality as a user preference or a fixed visual theme.
 
-制定布局时执行 [LAY-01 至 LAY-08](references/layout.md)，先说明当前内容的主次、分组和操作作用域，再按需查 [构图与架构分类](references/vocabulary/layouts.md) 选择表达。允许并列内容等权和区域各有重点；产品未知时以规范样本为内容，不推导业务架构。
+For layout, apply [LAY-01 through LAY-08](references/layout.md). First describe content priorities, grouping, and action scope, then consult [composition and architecture categories](references/vocabulary/layouts.md) as needed. Peer content may have equal weight, and regions may each have a focal point. When the product is unknown, use guideline specimens as content rather than inventing business architecture.
 
-生成规范预览或相关动态时读取 [动效约定](references/motion.md)。默认交付实际可观看的动态语言；Motion 是 Web 推荐，先检查项目技术栈，不兼容时围绕效果目标查询并采用合适的库或原生能力。不要只安装依赖或写几条时间参数就报告完成。
+When creating a guidelines preview or relevant motion, read the [motion agreement](references/motion.md). Deliver an actual viewable motion language by default. Motion is recommended for the web, but check the project stack first. If incompatible, research and use a suitable library or native capability based on the intended effect. Installing a dependency or listing timing values is not completion.
 
-具体实现、审查或性能问题按 [专业动效 Skill 入口](references/motion.md#按需使用专业动效-skill) 选择相关资料；已安装时优先读取本机 Skill，否则可按需读取开源上游。外部经验服务当前目标，用户决定与项目规范仍由 ByTaste 维护。
+For implementation, review, or performance work, choose relevant material from the [specialist motion skill entry points](references/motion.md#use-specialist-motion-skills-as-needed). Prefer an installed local skill; otherwise, consult the open-source upstream material as needed. External expertise serves the current goal; ByTaste continues to maintain user decisions and project guidelines.
 
-按“用户表达 → 当前决定 → 可观察特征 → 项目规则与取值 → 实际呈现”推导。使用 [候选规则](references/principles.md) 或 [知识条目](references/knowledge/index.md) 时，检查适用条件、作用机制、可选策略、反例与来源性质。没有匹配条目时如实使用一般建议，不虚构检索结果。
+Reason through "user expression → current decision → observable features → project rules and values → actual presentation." When using [candidate rules](references/principles.md) or [knowledge entries](references/knowledge/index.md), check applicability, mechanism, alternative strategies, counterexamples, and source type. If no entry fits, honestly use general advice; do not fabricate a lookup result.
 
-一个目标允许多种实现。例如，分组可以依靠间距、对齐或边界；“简洁”可以指低装饰，而不是少内容。知识库不提供全局风格禁令，不从一个形容词强制推导整套皮肤。
+One goal can have several implementations. Grouping can use spacing, alignment, or boundaries; "simple" can mean low decoration rather than less content. The knowledge base does not impose global style bans or infer an entire visual theme from one adjective.
 
-每条关键规则写清范围、要求、例外和检查方式，并注明真实来源：默认基线引用 ByTaste 版本与基线 ID，用户选择引用决定 ID，项目约束保留原依据。知识条目的策略与具体取值仍可为建议；不伪造用户决定，也不把研究发现、作者经验或参考观察自动升级为硬约束。外部资料有不同结论时保留条件与不确定性，不把转载数量当独立证据。
+For each key rule, state scope, requirement, exceptions, and how to check it. Attribute it accurately: cite the ByTaste version and baseline ID for default quality, a decision ID for a user choice, and the original basis for a project constraint. Strategies and concrete values from knowledge entries may remain recommendations. Do not fabricate user decisions or automatically promote research findings, practitioner experience, or reference observations into hard constraints. When external sources disagree, retain their conditions and uncertainty; multiple reposts are not independent evidence.
 
-多个要求看似冲突时先核对维度与作用域。无法合理解决且会显著改变结果时才询问；已有明确选择时继续执行。用户修订方向后更新其影响范围，不将局部反馈升级为全局变化。
+When requirements seem to conflict, check dimensions and scope first. Ask only if a material conflict cannot reasonably be resolved; proceed when a choice is already explicit. After a direction change, update its affected scope rather than turning local feedback into a global change.
 
-## 5. 维护设计产物与来源关系
+## 5. Maintain artifacts and their source relationships
 
-建立或调整规范时读取 [规格结构](references/design-spec.md)，只记录当前范围需要的内容：
+When establishing or adjusting guidelines, read the [specification structure](references/design-spec.md) and record only what the scope needs:
 
-- `design.decisions.md` 保存用户意图、决定依据、状态、范围与替代关系，是决定的维护来源。
-- `design.md` 将适用基线和当前决定落实为原则、布局、组件与样式规范；按来源引用基线或决定，不复制维护另一份决策历史。
-- 独立 Token 来源负责颜色、字体、尺寸、间距等视觉值，按 [Token 约定](references/tokens.md) 优先复用现有主题。
-- `interaction.md` 保存当前涉及的流程、状态和反馈约定，按 [交互规格](references/interaction.md) 编写，不自行扩展业务功能。
-- 每份设计规范都有对应的样式预览，按 [预览约定](references/design-preview.md) 直接展示标准、Token、布局、组件状态和动态，实际生成并链接。默认 `design.preview.html`，也可复用项目专用预览入口。
+- `design.decisions.md` is the maintained source of user intent, evidence, status, scope, and replacement relationships.
+- `design.md` translates applicable baselines and current decisions into principles, layout, component, and style rules. Cite their sources without maintaining another decision history.
+- A separate token source owns visual values such as color, typography, dimensions, and spacing. Prefer the existing theme under the [token agreement](references/tokens.md).
+- `interaction.md` owns the relevant flows, states, and feedback under the [interaction specification](references/interaction.md), without adding business features.
+- Each design specification has a corresponding style preview. Under the [preview agreement](references/design-preview.md), actually generate and link a page that directly shows standards, tokens, layout, component states, and motion. The default is `design.preview.html`; an existing dedicated preview entry may be reused.
 
-预览使用同一 Token 来源或派生快照。产品未知时用通用样本展示规范本身；不能把关键规范折叠隐藏，却让虚构业务占据主体。适量的类别导航、参数复制、构图切换与动效重播可用于查看规范，不必扩成组件百科。
+The preview uses the same token source or a derived snapshot. When the product is unknown, demonstrate the guidelines with generic specimens. Do not hide essential guidelines in collapsed sections while invented business features dominate the page. Modest category navigation, parameter copying, composition switching, and motion replay may help inspect guidelines without becoming a component encyclopedia.
 
-没有已有预览体系时，可打开随附 [质量参考](assets/monochrome-preview/index.html)，按需借鉴其展示组织和实现。示例已经过实际查看与交互检查，但其品牌、黑白灰、字体、具体取值和历史决定不是其他用户的默认选择；复制到项目后按当前偏好调整，不直接修改技能安装目录。
+If no preview system exists, you may open the bundled [quality reference](assets/monochrome-preview/index.html) and borrow its organization or implementation as useful. The example has been visually inspected and interaction-tested, but its branding, monochrome palette, fonts, values, and historical decisions are not defaults for other users. If reusing the example, copy it into the project and adapt it to current preferences; do not edit the skill installation directory.
 
-决定变化后先记录，按概念地图检查跨层影响，再同步受影响的规则和来源，最后更新对应预览与本次范围内的实现。尚未同步的目标明确标记，后续触及时先解决偏差；不能把旧预览称为最新结果。只变化了无关历史说明时无需重建全部页面。
+After a decision changes, record it first, check cross-layer effects using the concept map, synchronize affected rules and sources, then update the preview and implementation within scope. Mark unsynchronized targets explicitly and resolve deviations when those targets are next touched. Do not present an old preview as current. Changes to unrelated historical notes do not require rebuilding every page.
 
-## 6. 展示版本、听取感受并持续复用
+## 6. Show versions, hear feedback, and sustain reuse
 
-按 [验证约定](references/verification.md) 区分用户是否选定、实现是否符合、实际查看了什么。用户对局部的认可不表示整套设计已认可；技术检查或 Agent 自评也不能替代用户反馈。
+Under the [verification agreement](references/verification.md), distinguish what the user selected, whether the implementation conforms, and what was actually inspected. Approval of one part does not approve the whole design. Technical checks and agent self-assessment cannot replace user feedback.
 
-检查当前决定是否被准确表达、交付是否在范围内、适用的基础品质是否达到、规则和 Token 是否落实、代表性内容下的实际样式是否匹配。实际播放当前动态并检查退出与中断，不能用截图或语法检查代替。能渲染时查看当前结果，工具不可用时明确未做视觉检查。已观察到的基线违背先修复，无法修复时列为未完成，不以文件齐全代替质量达标。预览中的模拟反馈不证明真实业务已经实现。
+Check whether current decisions are expressed accurately, the deliverable stays in scope, applicable quality goals are met, rules and tokens are implemented, and actual styling fits representative content. Play current motion and check exits and interruptions; screenshots and syntax checks cannot substitute. Inspect rendered results when possible; otherwise, state that visual inspection was not performed. Fix observed baseline violations first. If they cannot be fixed, mark them incomplete instead of treating a complete file set as sufficient. Simulated preview feedback does not prove real business functionality is implemented.
 
-每轮向用户展示可查看的新版本后，围绕这版实际效果邀请反馈，例如“哪些地方接近你想要的感觉，哪些还不对？”问题随当前修改调整，不要求逐项评价、填写问卷或完成固定轮数；用户已经给出反馈时直接接续。记录反馈对应的版本、位置与范围，将新的有效选择写回决定和相关规范，再用于下一版。尚无回复不算认可，也不阻塞本轮交付。
+After showing each viewable version, invite feedback on its actual effect, such as "Which parts feel close to what you want, and which still feel off?" Adapt the question to the change. Do not require item-by-item ratings, questionnaires, or a fixed number of rounds. Continue directly from feedback already given. Record the version, location, and scope of feedback, write valid new choices into decisions and guidelines, and use them for the next version. No reply means no approval, but does not block this delivery.
 
-跨页面保持已选设计语言，允许有依据的局部差异。新 Agent 应能仅依靠当前决策摘要和相关规范继续工作，无需用户重复解释。
+Preserve the chosen design language across pages while allowing justified local differences. A new agent should be able to continue from the effective decision summary and relevant guidelines without making the user explain everything again.
 
-反馈先分类：实现偏差修实现；新的局部选择记录局部范围；全局方向变化建立明确的替代关系。保留历史追溯，当前摘要只展示仍需执行或辨认的内容。不要为通过检查而改写用户要求。
+Classify feedback first: fix implementation deviations in the implementation; record new local choices with local scope; establish explicit replacement relationships for a global change of direction. Preserve history for traceability, while the current summary contains only what still needs to be applied or distinguished. Do not rewrite user requirements to make checks pass.
 
-## 交付说明
+## Delivery notes
 
-简要给出当前偏好描述、本次新增或改变的决定及范围、相关文件和预览入口、尚未确定或未同步的部分，以及实际完成的检查。生成规范时不能以将来制作预览的计划代替实际页面；没有用户反馈时不能宣称用户喜欢。
+Briefly state the current preference description, decisions added or changed and their scope, relevant files and preview entry points, unresolved or unsynchronized items, and checks actually performed. When generating guidelines, a plan for a future preview cannot replace an actual page. Without user feedback, do not claim the user likes the result.

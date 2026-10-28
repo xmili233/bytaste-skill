@@ -1,33 +1,33 @@
-# 形状、表面与光学细节
+# Shape, surfaces, and optical detail
 
-ID：`knowledge.shape-surface`。所在层：L3。关联：`visual.shape`、`visual.depth`、`visual.texture`、`visual.decoration`。性质：设计系统实践与 ByTaste 推导。
+ID: `knowledge.shape-surface`. Layer: L3. Related: `visual.shape`, `visual.depth`, `visual.texture`, `visual.decoration`. Nature: design-system practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“太像玩具”“卡片很廉价”“想要纸感”“看着不齐”可能来自轮廓、层次、材质或光学重量。几何参数相同不保证视觉协调；装饰多寡也不等于层次是否清楚。
+"Toy-like," "cheap cards," "paper-like," or "it looks misaligned" may concern contour, depth, material, or optical weight. Equal geometric values do not guarantee visual coherence; decoration amount does not establish clarity of depth.
 
-可以区分“更喜欢干净平面的边界，还是能感觉到前后深度的表面？”允许局部组合；不把“有质感”自动解释成阴影或玻璃。
+Distinguish, for example, clean flat boundaries from a perceptible foreground/background relationship. Allow local combinations; "quality" does not automatically mean shadows or glass.
 
-## 子概念与取舍
+## Concepts and tradeoffs
 
-| 概念 | 规范应说明 | 候选与边界 |
+| Concept | What guidelines should explain | Candidates and boundaries |
 | --- | --- | --- |
-| 轮廓语言 | 棱角、圆角、有机轮廓在什么对象上出现 | 控件与大容器可不同；不是所有对象使用同一圆角值 |
-| 嵌套关系 | 外壳、内嵌表面与间距如何协调 | 按实际边界检查圆角关系，不盲套一个减法公式到所有形状 |
-| 边界语言 | 线宽、明暗、分隔线、填色怎样表达分组 | 留白、线条、表面均可分组；按偏好选择而非全部叠加 |
-| 表面与深度 | 哪些是画布、内嵌区、浮起对象或覆盖层 | 平面风格也能表达前后；阴影不等于唯一深度手段 |
-| 叠放顺序 | 哪些对象实际遮挡哪些对象 | 视觉深度与平台叠层机制分别定义，不能只提高 z-index 来增加质感 |
-| 材质与光线 | 纹理尺度、透明度、模糊、明暗方向及使用范围 | 由当前风格需要决定；图像、文字、不同底层上分别检查 |
-| 光学协调 | 图标重量、字面、边缘、基线与视觉中心 | 区分数学对齐和视觉对齐；局部光学校正不演变成随机像素偏移 |
+| Contour language | Which objects have angular, rounded, or organic forms | Controls and large containers may differ; one radius need not fit everything |
+| Nesting | Relationships among outer shells, inner surfaces, and spacing | Inspect actual boundary/radius relationships instead of applying a universal subtraction formula |
+| Boundary language | How line weight, contrast, dividers, and fill group content | Space, lines, and surfaces are alternatives; choose by preference rather than layering everything |
+| Surfaces and depth | Canvas, inset areas, raised objects, and overlays | Flat styles can still convey depth; shadows are not the only method |
+| Stacking order | Which objects actually cover others | Define visual depth separately from platform stacking; raising z-index is not a substitute for refinement |
+| Material and light | Texture scale, transparency, blur, lighting direction, and scope | Follow current style needs and inspect against images, text, and different underlying content |
+| Optical coordination | Icon weight, glyph area, edges, baselines, and visual centers | Distinguish mathematical from optical alignment; local corrections must not become arbitrary pixel shifts |
 
-## 落地与预览
+## Implementation and preview
 
-规范记录轮廓、嵌套、光线和层次的用法；Token 保存采用的圆角、线宽、阴影等值。真实纹理保留资产来源。不同表面上的状态变化与动效引用 interaction.md。
+Guidelines own contour, nesting, light, and depth usage; tokens own radii, line widths, shadows, and other adopted values. Real textures need asset sources. State changes and motion across surfaces reference interaction.md.
 
-用本次需要的平面、嵌套或覆盖组合检查，不要求为了演示材质新增弹窗。缩小看整体重量，再看边缘；有透明效果时换到代表性底层内容，确认效果仍符合选择。
+Inspect relevant flat, nested, or overlapping combinations without adding dialogs merely to demonstrate materials. Zoom out for overall weight, then inspect edges. For transparency, use representative backgrounds and check fit with the choice.
 
-## 来源与反例
+## Sources and counterexamples
 
-[Atlassian Elevation](https://atlassian.design/foundations/elevation/) 区分表面、阴影和叠放顺序，并讨论明暗主题。吸收这组关系，不采用它固定的层级数和用途限制。[IBM 图形使用](https://www.ibm.com/design/language/iconography/pictograms/usage/) 对光学居中有具体示例；不将它的尺寸表移植为全局规则。
+[Atlassian Elevation](https://atlassian.design/foundations/elevation/) distinguishes surfaces, shadows, stacking, and light/dark behavior. Use those relationships without adopting its fixed level count and usage restrictions. [IBM pictogram usage](https://www.ibm.com/design/language/iconography/pictograms/usage/) gives optical-centering examples; its dimensions are not universal rules.
 
-反例：每个面板都加同样阴影来表示高级；嵌套容器机械共用大圆角；暗色背景仍只照搬亮色下的阴影；图标外框相等就断言视觉重量一致。
+Misuse: identical shadows on every panel to look premium; mechanically using large equal radii in nested containers; copying light-theme shadows into dark contexts; declaring equal icon weight from equal bounding boxes.

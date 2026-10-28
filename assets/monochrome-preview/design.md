@@ -1,42 +1,44 @@
-# 黑白灰设计规范 · 预览稿
+# Monochrome design guidelines · preview draft
 
-此目录是 ByTaste v0.2 随附的可运行质量参考，项目作者已认可整体效果。复用其组织与完成度时，仍需按当前使用者的偏好调整。
+This directory is a runnable quality reference introduced with ByTaste v0.2. The project author approved its overall result. Borrow its organization and finish while adapting it to the current user's preferences.
 
-- [决策范围](design.decisions.md)
-- [视觉 Token](tokens.css)
-- [交互与动效](interaction.md)
-- [打开预览](index.html)
+- [Decision scope](design.decisions.md)
+- [Visual tokens](tokens.css)
+- [Interaction and motion](interaction.md)
+- [Open preview](index.html)
 
-## 方向与范围
+## Direction and scope
 
-黑白灰、中性表面、清楚的文字层级、关系化间距和细微动态。具体字体、尺寸、布局和动效参数属于本例；整体效果获得作者认可，不代表适用于所有用户或已经逐项确认每个数值。
+Monochrome, neutral surfaces, clear text hierarchy, relational spacing, and subtle motion. Specific fonts, dimensions, layout, and motion values belong to this example. Approval of the overall result does not establish suitability for every user or individual approval of every value.
 
-页面只展示设计规范。类别导航、复制 Token、布局切换、样本状态和动效播放都服务于查看规范，不构成产品功能。
+The page shows design guidelines only. Category navigation, token copying, layout switching, specimen states, and motion playback support inspection; they are not product features.
 
-## 视觉规则
+## Visual rules
 
-| 规则 | 当前提案 |
+| Rule | Current proposal |
 | --- | --- |
-| 文字 | 拉丁字母使用本地 Manrope 可变字体；中文使用苹方或微软雅黑。正文 16px / 1.7，章节标题 28px。展示样本随宽度缩放。 |
-| 层级 | 样本是主要信息，章节与角色说明为次要信息，参数为辅助信息。参数复制按钮保持弱强调。 |
-| 灰阶 | 墨黑承担主文字和主操作，石墨用于深表面，中灰用于次要文字，银灰与雾灰用于图形和边界，纸白承担画布。 |
-| 间距 | 4px 为基础，按 4、8、12、16、24、32、48、64 等尺度组织。组内紧凑，章节之间留出明确间隔。 |
-| 布局 | 页面最大内容宽度 1216px。示例演示编辑式、主次分栏和模块网格，保持同一批内容以便观察构图变化。 |
-| 表面 | 控件圆角 10px，主要样本面板圆角 18px；层次需要时使用柔和阴影，不把黑白灰等同于无阴影。 |
-| 动态 | 使用本地 Motion 14.6.0；基础反馈 160ms、状态 240ms、进入 420ms、布局 450ms。具体弹簧按演示调整。 |
-| 适配 | 窄屏调整排版尺度、网格列数和内容关系，保留规范样本与可查看参数。 |
+| Text | Latin text uses local Manrope variable font; Chinese uses PingFang or Microsoft YaHei. Body 16px / 1.7, section headings 28px. Display specimens scale with width. |
+| Hierarchy | Specimens are primary, section/role labels secondary, and parameters auxiliary. Copy controls have subdued emphasis. |
+| Grayscale | Ink for primary text/actions; graphite for dark surfaces; medium gray for secondary text; silver/mist for graphics and boundaries; paper white for the canvas. |
+| Spacing | A 4px base, with 4, 8, 12, 16, 24, 32, 48, 64, and related steps. Keep groups compact and sections distinctly separated. |
+| Layout | Maximum content width 1216px. Editorial, primary/secondary split, and modular grid examples reuse the same content to show compositional changes. |
+| Surfaces | Control radius 10px, main specimen panels 18px; use soft shadows where depth is needed. Monochrome does not mean no shadows. |
+| Motion | Local Motion 14.6.0; feedback 160ms, state 240ms, entry 420ms, layout 450ms. Springs are tuned for the demonstrations. |
+| Adaptation | Narrow views adjust type scale, grid columns, and content relationships while retaining specimens and inspectable parameters. |
 
-`tokens.css` 是主要视觉值来源。`styles.css` 负责规范展示与演示组合；动画时间从 Token 读取。布局示例的三种构图均属于规范展示，不代表用户选定某种业务架构。
+`tokens.css` is the main source of visual values. `styles.css` defines presentation and specimen composition; animation timing reads tokens. The three compositions are guideline demonstrations, not selected business architectures.
 
-## 运行与素材
+## Running and assets
 
-直接打开 `index.html` 即可查看；剪贴板能力依赖浏览器权限。也可在此目录执行 `python3 -m http.server 4187 --bind 127.0.0.1`，访问 `http://127.0.0.1:4187/`。
+Open `index.html` directly; clipboard capability depends on browser permission. Alternatively, run `python3 -m http.server 4187 --bind 127.0.0.1` in this directory and visit `http://127.0.0.1:4187/`.
 
-Motion 与 Manrope 已保存为本地资源，预览运行时无需 CDN。各自许可证位于 assets。中文实际字体依系统而异。
+Motion and Manrope are local, with no runtime CDN dependency. Their licenses are in assets. Actual Chinese fallback depends on the system.
 
-## 本轮实际检查
+## Recorded checks from the original preview
 
-- 在浏览器中查看桌面 1440px 与窄屏 390px 的呈现，无横向页面溢出。
-- 实测布局切换、网格显示、按钮反馈、开关、输入、展开收起、动效重播与减少动态设置。
-- 实测色值复制成功，系统减少运动偏好生效；桌面交互检查未捕获脚本错误。
-- JS 语法、本地资源路径与 CSS Token 引用检查通过。尚未进行跨浏览器和真实手机触控测试；项目作者已评价整体效果“这个很不错”，并要求将方法用于 Skill。
+- Viewed at 1440px desktop and 390px narrow widths, with no horizontal page overflow.
+- Tested layout switching, grid display, button feedback, switch, input, disclosure, motion replay, and reduced-motion settings.
+- Tested successful color copying and system reduced motion; desktop interaction checks captured no script errors.
+- JavaScript syntax, local asset paths, and CSS token references passed. Cross-browser and real-phone touch testing were not performed. The author described the overall result as "very good" (translated) and requested applying the method to the skill.
+
+The original approval above applies to the original preview. The English translation was separately inspected at 1440px, 390px, and 320px with no horizontal page overflow. English button feedback, layout switching, disclosure, reduced-motion feedback, and motion replay were checked; tested interactions produced no script errors. These checks do not imply user approval of the translated version, cross-browser coverage, or real-phone touch testing.

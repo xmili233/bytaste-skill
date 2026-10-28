@@ -1,35 +1,35 @@
-# 容器与装饰
+# Containers and decoration
 
-ID：`knowledge.grouping`。性质：有条件的经验建议。分类：`visual.decoration`、`goal.clarity`、`goal.focus`。
+ID: `knowledge.grouping`. Nature: conditional practitioner guidance. Categories: `visual.decoration`, `goal.clarity`, `goal.focus`.
 
-## 辨认与提问
+## Recognition and questions
 
-“干净”“卡片太多”“分组不清”可能分别指装饰负担和结构辨认。可以问：“相同内容与间距下，你更依靠标题和留白分组，还是希望每组有明确的表面边界？”
+"Clean," "too many cards," and "unclear groups" may concern decoration or structural recognition. Ask, for example: "With the same content and spacing, would you prefer headings and whitespace to group it, or a clear surface boundary around each group?"
 
-用户可能不理解“容器”这个词，可以解释为“一组内容有没有自己的背景或边界”；是否需要举例或展示，由 Agent 判断。
+If "container" is unfamiliar, describe it as whether a group has its own background or boundary. The agent decides whether examples or demonstrations help.
 
-## 适用条件与取舍
+## Applicability and tradeoffs
 
-- 内容关系明确时，标题、对齐与空间可能足够表达分组。
-- 模块边界、拖动范围或独立交互需要被识别时，容器处理可能提供有用线索。
-- 选择较少装饰不代表必须移除表单边界、焦点提示或状态反馈。
+- When content relationships are clear, headings, alignment, and space may suffice.
+- Containers can help identify module boundaries, drag regions, or independent interaction scopes.
+- Less decoration does not justify removing form boundaries, focus cues, or state feedback.
 
-## 机制与候选策略
+## Mechanism and candidate strategies
 
-相邻、相似和共同区域都可以形成分组线索。可选择加强对齐与组间距离、保留明确边界，或调整内容关系；哪一种更符合偏好，需要结合实际样式判断。低装饰与明显容器均可成立，不使用“禁止卡片”代替分析。
+Proximity, similarity, and common regions can all signal groups. Strengthen alignment and group gaps, retain explicit boundaries, or adjust content relationships. Actual presentation and preferences determine suitability. Low decoration and visible containers can both work; a blanket card ban is not analysis.
 
-## 参考与反例
+## References and counterexamples
 
-[Wagemans 等的知觉综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3482144/) 讨论相邻、相似和共同区域的分组作用；其不同实验条件不能直接推导某个固定间距。[Refactoring UI 的公开示例](https://refactoringui.com/) 给出减少边框和使用其他分组方式的战术建议，属于作者实践，不是普遍禁令。
+[Wagemans and colleagues' perception review](https://pmc.ncbi.nlm.nih.gov/articles/PMC3482144/) discusses proximity, similarity, and common regions; differing experimental conditions do not yield one fixed spacing value. [Refactoring UI's public examples](https://refactoringui.com/) suggest reducing borders and using alternative grouping cues as practitioner tactics, not universal prohibitions.
 
-误用反例：为所有段落增加独立卡片；为了低装饰删除唯一的交互提示；同时减少内容、改变间距后将选择归因于卡片样式。
+Misuse: putting every paragraph in a card; removing the only interaction cue to reduce decoration; changing content and spacing simultaneously and attributing the choice solely to card styling.
 
-## 落地关联
+## Implementation relationships
 
-可影响表面、边界、圆角等 Token 角色，以及哪些内容需要独立容器的规则。按实际任务决定适用范围，卡片、渐变、阴影均不默认禁止。
+May affect surface, border, and radius roles and rules about which content needs an independent container. Decide scope from the task; cards, gradients, and shadows are not banned by default.
 
-## 验证
+## Verification
 
-查看真实内容中的分组、边界与装饰强度是否落实当前决定，结合用户反馈判断是否喜欢；用户尚未评价时保留未确认状态。已约定的焦点和状态样式仍需呈现，不因追求低装饰而删除。
+Inspect actual grouping, boundaries, and decorative intensity against current decisions and hear whether the user likes it. Without feedback, approval remains unconfirmed. Preserve agreed focus and state cues even when reducing decoration.
 
-证据状态：知觉研究提供机制背景，作者实践提供候选手段；本项目中的偏好匹配尚待用户反馈，不额外开展可用性测试。
+Evidence status: perception research supplies mechanism background and practitioner examples supply methods. Project preference fit needs feedback, without additional usability testing.

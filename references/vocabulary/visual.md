@@ -1,42 +1,42 @@
-# 可辨认的视觉感受维度
+# Recognizable visual dimensions
 
-用于将用户的感受拆成可观察的差异。这里的 16 个维度是 ByTaste 的初始分类，不是经过量表验证的心理特征或行业统一分类。
+Use these dimensions to translate feelings into observable differences. These 16 dimensions are ByTaste's initial classification, not a validated psychological scale or a universal industry taxonomy.
 
-每行的描述点供辨认，不是必须选择的一端或固定的三个档位。允许中间状态、局部组合与用户自己的词。根据当前歧义选择相关维度，不将表格直接作为问卷。
+Each row offers descriptive points, not mandatory endpoints or three fixed levels. Allow intermediate positions, local combinations, and the user's own words. Choose dimensions relevant to the ambiguity instead of presenting the table as a questionnaire.
 
-| ID / 维度 | 可用来辨认的描述点 | 具体看什么 | 对规格的影响 |
+| ID / dimension | Descriptive points | What to observe | Effect on guidelines |
 | --- | --- | --- | --- |
-| `visual.density` 信息密度 | 疏朗、适中、紧凑 | 相同内容与视口中同时能看到多少信息，组内与组间留白 | 布局、行高、间距与信息组织 |
-| `visual.decoration` 装饰程度 | 很少装饰、局部点缀、丰富装饰 | 去掉装饰后是否影响功能；边框、背景图形等出现范围 | 表面、边界、图形与资产规则 |
-| `visual.emphasis` 视觉强调 | 平缓有序、重点分明、强烈对比 | 标题、正文和主操作之间的尺寸、色彩与位置差异 | 层级、重点数量与强调方式 |
-| `visual.palette` 色彩范围 | 单一色系、有限色相、多色表达 | 使用多少不同色相，各承担什么角色 | 色彩角色与语义区分 |
-| `visual.saturation` 色彩鲜明度 | 柔和低饱和、适中、鲜明高饱和 | 相同色相是否灰柔或鲜艳 | 色板与强调色强度；仍检查对比度 |
-| `visual.temperature` 色彩温度 | 偏冷、中性、偏暖 | 主导背景、文字与图像的整体色感 | 色板及图像调性 |
-| `visual.brightness` 画面明暗 | 明亮底色、中间调、深色底色 | 主表面的明暗关系；是否确有多主题需求 | 表面、文字及状态的配对 |
-| `visual.typography` 字体气质 | 功能秩序、书刊阅读、展示个性 | 字形与内容角色，是否让字体成为表达主体 | 字体角色、回退、字号与排版关系 |
-| `visual.scale` 视觉尺度 | 小尺度细致、均衡、大字大图 | 关键标题与图像相对视口占比 | 文字与资产尺度、空间比例 |
-| `visual.shape` 形状 | 棱角分明、轻圆角、圆润有机 | 控件、容器和图形的边缘及几何特征 | 圆角与形状规则，不改变命中能力 |
-| `visual.depth` 空间层次 | 平面、轻层次、明显空间感 | 阴影、遮罩、表面差异与前后关系 | 层级、阴影、叠层规则 |
-| `visual.geometry` 构图秩序 | 规整网格、灵活模块、自由构图 | 是否严格对齐，何处打破秩序，阅读路径如何保持 | 网格、比例、对齐与例外 |
-| `visual.imagery` 图像占比 | 文字数据主导、图文均衡、图像主导 | 图片在讲什么，是否主导页面的理解与节奏 | 内容结构、资产选择与裁切 |
-| `visual.texture` 材质 | 均匀数字表面、少量材质、明显材料感 | 颗粒、纸感、玻璃、金属等是否承担表达 | 资产、表面处理与可读性约束 |
-| `visual.motion` 动态表达 | 少量状态反馈、明显过渡、表达性动效 | 运动用于反馈、关系解释还是品牌表达 | 动效目的、强度、时机与减少动效策略 |
-| `visual.voice` 语言表达 | 简练直接、自然对话、个性叙事 | 标题、操作和说明用怎样的语气传达内容 | 文案规则、术语与内容长度 |
+| `visual.density` Information density | Spacious, moderate, compact | Visible information with the same content/viewport; within-group and between-group space | Layout, row height, spacing, information organization |
+| `visual.decoration` Decoration | Minimal, local accents, rich | Whether removing decoration affects function; scope of borders and background graphics | Surfaces, boundaries, graphics, assets |
+| `visual.emphasis` Emphasis | Quiet order, clear focus, strong contrast | Size, color, and position differences among headings, body, and main actions | Hierarchy, focal points, emphasis methods |
+| `visual.palette` Color range | One color family, limited hues, multicolor | Number of hues and their roles | Color roles and semantic distinctions |
+| `visual.saturation` Color intensity | Muted, moderate, vivid | Whether the same hue feels gray/soft or bright | Palette and accent intensity, while retaining contrast |
+| `visual.temperature` Color temperature | Cool, neutral, warm | Overall feeling of dominant backgrounds, text, and images | Palette and image tone |
+| `visual.brightness` Overall lightness | Light, mid-tone, dark | Main-surface lightness and actual need for multiple themes | Surface, text, and state pairs |
+| `visual.typography` Type character | Functional order, editorial reading, expressive display | Letterforms, content roles, and whether type leads expression | Font roles, fallback, scale, typographic relationships |
+| `visual.scale` Visual scale | Small and detailed, balanced, large type/images | Key headings/images relative to viewport | Type and asset scale, spatial proportions |
+| `visual.shape` Shape | Angular, lightly rounded, organic/soft | Edges and geometry of controls, containers, graphics | Radius and shape rules without reducing operability |
+| `visual.depth` Depth | Flat, subtle layers, pronounced depth | Shadows, scrims, surfaces, foreground/background | Layering, shadows, stacking |
+| `visual.geometry` Compositional order | Regular grid, flexible modules, free composition | Alignment, intentional departures, retained reading paths | Grid, proportion, alignment, exceptions |
+| `visual.imagery` Image share | Text/data-led, balanced, image-led | What imagery conveys and whether it leads comprehension/rhythm | Content structure, asset selection, cropping |
+| `visual.texture` Material | Uniform digital surfaces, light texture, pronounced material | Whether grain, paper, glass, metal, or other cues carry expression | Assets, surface treatment, readability constraints |
+| `visual.motion` Motion expression | Limited state feedback, clear transitions, expressive motion | Feedback, relationship explanation, or brand expression | Purpose, intensity, timing, reduced-motion strategy |
+| `visual.voice` Language expression | Concise/direct, conversational, distinctive narrative | Tone of headings, actions, and explanations | Copy rules, terminology, content length |
 
-## 维度独立与组合
+## Independence and combination
 
-- 低装饰和高密度可以并存，“简洁”不能自动映射为大间距。
-- 深色和科技感不是同一个维度；暖色也不自动说明亲切。
-- 大标题可以与局部密集数据并存，记录各自范围。
-- 平面风格仍可清楚表达浮层、焦点和交互状态。
-- 自由构图不代表随意降低阅读与操作可用性。
+- Low decoration can coexist with high density; "simple" does not automatically mean large gaps.
+- Dark styling and technological character are different dimensions; warm color does not automatically mean approachability.
+- Large headings can coexist with dense local data; record each scope.
+- Flat style can still clearly convey overlays, focus, and interaction state.
+- Free composition does not justify weaker readability or operability.
 
-维度用来描述决策，不要求在数学上互相独立。一个选择会影响其他维度时，说明关联后局部调整；不要据一项选择填满所有未涉及的维度。
+Dimensions describe decisions without claiming mathematical independence. Explain relationships when a choice affects another dimension and adjust locally. Do not fill all untouched dimensions from one choice.
 
-## 从描述落到数值
+## From descriptions to values
 
-“紧凑”只确定方向，不能直接等于某个行高或间距。结合真实内容、设备、字体、命中区域与现有组件，形成候选值，并通过代表性页面检验。
+"Compact" establishes direction, not an exact row height or gap. Choose candidate values using real content, devices, fonts, targets, and existing components, then inspect representative pages.
 
-数据中保留用户原话、维度 ID、选择依据、适用范围和采用状态。不要把这些描述点编码为未经解释的审美分数。
+Retain user wording, dimension ID, choice evidence, scope, and adoption status. Do not encode descriptions as unexplained taste scores.
 
-需要进一步理解与落地时，先用 [六层概念地图](../concepts.md) 定位问题，按需读取 [知识条目](../knowledge/index.md)。词库描述可辨认的差异，条目解释条件、关系、落地与检查；二者都不携带用户的采用状态。没有合适条目时，使用已有知识和项目参考并标记推导依据，不伪造命中。
+For implementation, locate the issue with the [six-layer map](../concepts.md), then read relevant [knowledge entries](../knowledge/index.md). Vocabulary describes differences; entries explain conditions, relationships, implementation, and checks. Neither carries user adoption status. If no entry fits, use existing knowledge and project references with honest attribution; do not fabricate a match.

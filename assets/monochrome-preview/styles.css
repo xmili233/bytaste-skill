@@ -14,3 +14,7 @@
 @media(max-width:370px){.hero h1{font-size:48px}.hero h1 span{font-size:21px;margin-left:10px}.palette-grid{gap:7px}.color-swatch{padding:14px 10px}.button-examples{gap:7px}.button{padding:10px;font-size:11px}.type-display{font-size:34px}.layout-tab{padding:8px 11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0ms!important}.color-swatch:hover{transform:none}.text-link:hover svg{transform:none}}
 html.reduce-motion{scroll-behavior:auto}html.reduce-motion *,html.reduce-motion *::before,html.reduce-motion *::after{transition-duration:0ms!important}html.reduce-motion .color-swatch:hover,html.reduce-motion .text-link:hover svg{transform:none}
+
+/* Keep the longer English heading within the narrow-screen content column. */
+@media(max-width:760px){html[lang=en] .hero h1 span{display:block;margin-left:0;margin-top:10px}}
+@media(max-width:370px){html[lang=en] .header-inner nav{gap:6px}}

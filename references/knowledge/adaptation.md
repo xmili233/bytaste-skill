@@ -1,34 +1,34 @@
-# 情境适配与设计延续
+# Context adaptation and design continuity
 
-ID：`knowledge.adaptation`。所在层：L5。关联：`visual.geometry`、`visual.density`、`visual.typography`、`visual.brightness`、`visual.motion`。性质：设计系统实践与 ByTaste 推导。
+ID: `knowledge.adaptation`. Layer: L5. Related: `visual.geometry`, `visual.density`, `visual.typography`, `visual.brightness`, `visual.motion`. Nature: design-system practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“只有首页好看”“缩小就变味”“内容一长就崩”“换暗色后像别的产品”说明规范可能只描述了一个静止样本。应区分需要保持的视觉关系与随情境变化的实现参数。
+"Only the homepage looks good," "it loses its character when smaller," "long content breaks it," or "dark mode looks like another product" may indicate guidelines for only one static specimen. Separate visual relationships that must persist from implementation values that change with context.
 
-可用“换到窄屏后，最想保留的是大图的存在感、文字的疏密，还是两者的主次？”解释确实存在的取舍；没有明确冲突时按当前方向继续，不要求用户逐个决定断点。
+For a real tradeoff, ask which should survive a narrow view: image presence, text density, or their relative priority. Without a clear conflict, follow the current direction rather than asking the user to decide every breakpoint.
 
-## 子概念与处理
+## Concepts and handling
 
-| 情境 | 应保持什么 | 可以怎样变化 |
+| Context | Preserve | Possible changes |
 | --- | --- | --- |
-| 视口与容器 | 内容主次、阅读顺序、关键图像焦点 | 换行、重新分栏、堆叠、调整宽度或裁切；断点由内容关系决定 |
-| 内容长度与数量 | 已有内容完整性和角色区分 | 伸长、分组、允许适当换行；不靠虚构或删除内容维持样稿 |
-| 语言与字体 | 品牌性格、角色层级、必要意义 | 调整回退、字面尺度、行距；相关语言才建立变体 |
-| 已需主题 | 语义角色和强调关系 | 重新配对明度、表面与边界；不等于色值反相 |
-| 输入与运动偏好 | 状态含义和主要反馈 | 触控/键盘替代、减少运动；复用已定义交互，不改变业务 |
-| 页面与区域 | 当前已选的设计语言 | 依内容采用不同布局；局部例外带范围和依据，不全局复制 |
+| Viewport and container | Content priority, reading order, important image focus | Wrap, change columns, stack, resize, or crop; derive breakpoints from relationships |
+| Content length and count | Content completeness and role distinctions | Grow, group, and wrap; do not invent or remove content to fit a specimen |
+| Language and fonts | Brand character, role hierarchy, necessary meaning | Adjust fallbacks, apparent glyph scale, leading; add variants only for relevant languages |
+| Required themes | Semantic roles and emphasis relationships | Remap lightness, surfaces, and boundaries rather than invert colors |
+| Input and motion preferences | State meaning and primary feedback | Touch/keyboard alternatives and reduced motion; reuse defined interactions without changing business behavior |
+| Pages and regions | Currently selected design language | Use content-appropriate layouts; local exceptions need scope/evidence instead of global copying |
 
-## 写法与预览
+## Documentation and preview
 
-在现有 `design.md` 中写“保持项 → 触发条件 → 变化 → 检查样本”。具体取值引用 Token，行为引用 interaction.md。不为每个设备、语言和主题建立一份独立规范，也不提前制造全部组合。
+In existing `design.md`, describe "invariant → trigger condition → change → checking sample." Values reference tokens; behavior references interaction.md. Do not create a separate specification per device, language, and theme, or prebuild every combination.
 
-示例建议：“排版样本始终是主信息；当样本与参数不能并排完整显示时，参数移至下一行。保留角色顺序与字号层级，允许调整行长和区域间距。”具体断点通过实际字体与长参数判断。
+Example recommendation: "Type specimens remain primary; when specimens and parameters no longer fit side by side, parameters move below. Preserve role order and hierarchy while allowing line-length and spacing changes." Determine actual breakpoints with fonts and long parameters.
 
-采用风险样本检查当前变更：换字体就看中文/回退和长标题，调整主图就看关键宽度裁切，改状态就看相关叠加。只检查已需情境，不设一个通用设备矩阵或自动多语言项目。
+Choose samples affected by the change: CJK/fallback and long headings for a font change, key crop widths for a new hero image, combined states for state changes. Check required contexts, not a universal device matrix or an automatically multilingual project.
 
-## 来源与反例
+## Sources and counterexamples
 
-[Material 的布局示例](https://m3.material.io/foundations/layout/canonical-examples/overview) 展示同一种内容关系在不同空间下的配置；[Spectrum 排版](https://spectrum.adobe.com/foundations/typography/typography-system) 明确语言和平台差异；[Atlassian 表面层次](https://atlassian.design/foundations/elevation/) 讨论明暗主题下不同的深度表达。ByTaste 借鉴适配关系，不照搬平台断点或品牌样式。
+[Material canonical layouts](https://m3.material.io/foundations/layout/canonical-examples/overview) show arrangements of the same content relationships in different spaces; [Spectrum typography](https://spectrum.adobe.com/foundations/typography/typography-system) addresses language/platform differences; [Atlassian elevation](https://atlassian.design/foundations/elevation/) discusses depth across themes. ByTaste uses adaptation relationships without copying platform breakpoints or brand styling.
 
-反例：手机上只缩小字号；为了统一把所有页面做成首页；添加未要求的暗色开关；把一次局部紧凑反馈升级为全局密度变化。
+Misuse: only shrinking type on mobile; making every page the homepage for consistency; adding an unrequested dark-mode toggle; turning one local compactness comment into a global density change.

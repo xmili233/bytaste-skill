@@ -57,9 +57,9 @@
         field.remove();
         if (!copied) throw new Error('Clipboard unavailable');
       }
-      notify(`已复制 ${text.startsWith('#') ? text : '样式参数'}`);
+      notify(`Copied ${text.startsWith('#') ? text : 'style parameters'}`);
     } catch {
-      notify(`暂时无法复制，请手动选择：${text}`);
+      notify(`Could not copy. Select manually: ${text}`);
     }
   }
   $$('[data-copy]').forEach(button => button.addEventListener('click', () => copy(button.dataset.copy)));
@@ -73,9 +73,9 @@
 
   const canvas = $('#layout-canvas');
   const descriptions = {
-    editorial: '让主标题与正文形成错落的阅读节奏。',
-    split: '主要与辅助区域分开，建立清楚的空间关系。',
-    modular: '共同的网格之中，保留不同的信息权重。',
+    editorial: 'Vary the placement of headings and body text to create reading rhythm.',
+    split: 'Separate primary and supporting regions to clarify spatial relationships.',
+    modular: 'Keep distinct content priorities within a shared grid.',
   };
   $$('.layout-tab').forEach(button => button.addEventListener('click', () => {
     if (canvas.dataset.layout === button.dataset.layout) return;
@@ -103,16 +103,16 @@
   $('#sample-button').addEventListener('click', () => {
     clearTimeout(buttonTimer);
     const button = $('#sample-button');
-    $('span', button).textContent = '已触发';
+    $('span', button).textContent = 'Activated';
     $('use', button).setAttribute('href', '#i-check');
-    buttonTimer = setTimeout(() => { $('span', button).textContent = '主要按钮'; $('use', button).setAttribute('href', '#i-arrow'); }, 1500);
+    buttonTimer = setTimeout(() => { $('span', button).textContent = 'Primary'; $('use', button).setAttribute('href', '#i-arrow'); }, 1500);
   });
-  $('#secondary-button').addEventListener('click', () => notify('这是次要按钮的反馈样式'));
+  $('#secondary-button').addEventListener('click', () => notify('This is the secondary button feedback'));
   $('#sample-switch').addEventListener('click', event => {
     const button = event.currentTarget;
     const enabled = button.getAttribute('aria-checked') !== 'true';
     button.setAttribute('aria-checked', String(enabled));
-    $('#switch-description').textContent = enabled ? '已开启' : '已关闭';
+    $('#switch-description').textContent = enabled ? 'On' : 'Off';
     animate($('span', button), { transform: `translateX(${enabled ? 18 : 0}px)` }, { type: 'spring', duration: 0.35, bounce: 0.18 });
   });
   $$('.selection').forEach(button => button.addEventListener('click', () => {
@@ -179,7 +179,7 @@
       finishValues($('#enter-demo'), { opacity: 1, transform: 'none' });
       finishValues(press, { transform: 'none' });
     }
-    status.textContent = !engine ? '动效资源未能加载。当前显示静态样式。' : value ? '已减少位移与弹簧动态，保留状态反馈。' : '';
+    status.textContent = !engine ? 'Motion could not load. Showing static styles.' : value ? 'Movement and spring motion reduced; state feedback retained.' : '';
   }
   reduceInput.addEventListener('change', () => updateReduced(reduceInput.checked));
   media.addEventListener('change', event => updateReduced(event.matches));

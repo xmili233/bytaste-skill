@@ -1,75 +1,75 @@
-# 设计原则与候选规则
+# Design principles and candidate rules
 
-用于把体验偏好转成项目规则。这是一份供选择与情境化的起点，不是每个项目自动启用的检查清单。
+Use to translate experience preferences into project rules. This is a starting point for selection and contextualization, not an automatically enabled checklist for every project.
 
-分类词库负责帮助用户说清想要什么，本文件负责将已辨认的偏好变成规则。若“精简、专业”等词仍有关键歧义，先使用 [引导方法](discovery.md)，不要直接用下面的规则替用户定义偏好。一个体验词可以对应多种实现，不存在固定的一词一规则映射。
+Vocabulary helps users articulate what they want; this document turns recognized preferences into rules. If words such as "simple" or "professional" remain materially ambiguous, use [discovery guidance](discovery.md) first rather than defining preferences on the user's behalf. One experience word can have several implementations; there is no fixed one-word-to-one-rule mapping.
 
-需要具体对比材料、适用条件与检查步骤时，读取相关 [知识条目](knowledge/index.md)。其中的策略按条件选择；[默认质量基线](visual-quality.md) 则在相关范围直接执行，不能因本文件列出候选策略就变成可选质量。
+For concrete comparisons, applicability, and checks, consult relevant [knowledge entries](knowledge/index.md). Choose their strategies conditionally. The [default quality baseline](visual-quality.md) still applies within scope; candidate strategies do not make quality optional.
 
-这些词帮助辨认用户希望强调的表达与组织方式。清楚、省脑、可控等基础品质已由基线覆盖，不因用户未选择某个词而省略；用户选择影响表现方式与侧重。既有明确功能要求与标准继续保留，未被采用的具体策略不得变成硬约束，也不自动触发效果研究。
+These terms identify the expression and organization the user wants to emphasize. Clarity, low cognitive effort, control, and other basic qualities are already covered by the baseline and must not be omitted because the user did not select a word. Their choices affect expression and emphasis. Preserve explicit functional requirements and standards. Unadopted strategies are not hard constraints and do not automatically trigger outcome research.
 
-## 按来源处理要求
+## Handle requirements by source
 
-| 类型 | 来源 | 使用方式 |
+| Type | Source | Use |
 | --- | --- | --- |
-| ByTaste 默认质量 | 当前版本基线及适用条件 | 在本次范围默认落实；不伪造用户选择，不固定表达风格 |
-| 产品与使用要求 | 真实任务、必须保留的行为、项目采用的可访问性标准 | 记录适用范围，不能为装饰或表面简洁而静默牺牲 |
-| 用户设计选择 | 明确的偏好、品牌要求、对样稿的反馈 | 转成项目内的规则；用户改变方向时可以修订 |
-| 经验建议 | 参考归纳、设计系统指南、启发式原则 | 作为有条件的候选，检查是否适用于任务与用户 |
+| ByTaste default quality | Current baseline version and applicability | Apply within scope without fabricating user choices or fixing one style |
+| Product and usage requirements | Actual tasks, behavior to preserve, adopted accessibility standards | Record scope; do not silently sacrifice them for decoration or surface simplicity |
+| User design choices | Explicit preferences, brand requirements, sample feedback | Form project rules, revisable when the user changes direction |
+| Practitioner recommendations | Reference synthesis, design-system guidance, heuristics | Treat as conditional candidates and check fit with task and user |
 
-一般启发式能帮助发现问题，但不能证明某个页面可用，也不能代替用户选择。Nielsen Norman Group 的 [可用性启发式](https://www.nngroup.com/articles/ten-usability-heuristics/) 可用于检查反馈、一致性、错误恢复等方面；不要把它们当作固定的视觉风格。
+General heuristics help find problems, but cannot prove a page is usable or replace user choice. Nielsen Norman Group's [usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) can guide checks of feedback, consistency, and recovery; they are not a fixed visual style.
 
-## 从偏好到规则
+## From preferences to rules
 
-| 偏好 / 意图 | 可以采用的具体规则 | 适用边界与检验方式 |
+| Preference / intent | Possible rule | Applicability and checking |
 | --- | --- | --- |
-| 精简：减少无关负担 | 删除不帮助理解、决定或操作的装饰、重复标签和说明；先用分组、命名和层级改善理解 | 保留必要标签、风险后果与恢复入口；逐项说明元素服务的任务 |
-| 专注：当前任务明确 | 在一个任务视图内建立清晰的焦点，辅助内容围绕当前目标组织 | 需要比较或联动的信息可以并列；检查是否引入额外切换和记忆负担 |
-| 高效：高频操作顺手 | 高频操作易发现，相关判断信息邻近呈现；复用已输入内容 | 只有真实重复任务需要时才提供批量或快捷路径；核对已选组织方式与状态呈现，不额外计时 |
-| 清晰：容易理解 | 通过对齐、分组、文字层级和明确名称表达关系；动作名称说明结果 | 不用长段解释弥补模糊结构；核对分组、命名与提示是否符合选定的表达方式 |
-| 一致：可预测 | 相同语义使用相同组件、Token、术语和交互行为 | 不同任务可以采用不同结构；检查是否只是外观相同却行为不同 |
-| 紧凑：信息密度高 | 将需要同时比较的信息组织成对齐的行列，区分组内与组间间距 | 不靠压缩可读字号、隐藏列名或缩小命中区域达成；用真实长内容检查 |
-| 安静：减少干扰 | 限制与主任务竞争的视觉强调；让动效服务状态和空间关系 | 关键警告仍需醒目；检查弱化处理是否影响可读性和反馈可见性 |
-| 亲切：降低陌生感 | 使用自然、具体的措辞和可预测的操作；出错时明确指出问题与补救方式 | 不自动等于圆角、插画或卡通；分别辨认措辞、交互呈现和视觉偏好 |
-| 精致：细节有秩序 | 统一排版角色、对齐、间距关系和资产质量，减少无意差异 | 不预设大留白、黑金配色或细小文字；使用真实内容检查细节是否稳定 |
-| 鲜明：有表现力 | 将品牌色、图像、排版或动效用于有意义的重点与叙事 | 表达强度取决于页面任务；核对表达强度、内容呈现和用户反馈 |
+| Simple: reduce irrelevant burden | Remove decoration, repeated labels, and explanations that do not help understanding, decisions, or action; improve grouping, naming, and hierarchy first | Preserve necessary labels, consequences, and recovery; identify the task each element serves |
+| Focused: clear current task | Establish a clear focus in a task view, with supporting content organized around it | Keep information needed for comparison or coordination together; check added switching and memory demands |
+| Efficient: frequent actions are convenient | Make frequent actions discoverable, put decision information nearby, and reuse entered information | Add batch/shortcut paths only for real repeated tasks; check chosen organization and states without adding timing studies |
+| Clear: easy to understand | Express relationships through alignment, grouping, typography, and explicit names; action labels state outcomes | Do not patch unclear structure with long explanations; check grouping, naming, and hints against chosen expression |
+| Consistent: predictable | Use the same components, tokens, terms, and behavior for the same semantics | Different tasks may use different structures; check for identical appearances with different behavior |
+| Compact: high information density | Align information needed for simultaneous comparison in rows/columns; distinguish within-group and between-group spacing | Do not shrink readable type/hit areas or hide column labels; inspect real long content |
+| Quiet: less distraction | Limit emphasis competing with the task; make motion explain state and spatial relationships | Important warnings still need visibility; check readability and feedback after reducing emphasis |
+| Approachable: less unfamiliarity | Use natural, specific wording and predictable actions; explain errors and remedies | This does not automatically mean rounded corners, illustrations, or cartoons; distinguish language, interaction, and visual preference |
+| Refined: ordered detail | Coordinate type roles, alignment, spacing relationships, and asset quality; reduce unintended differences | Do not assume large whitespace, black/gold, or tiny text; inspect stability with real content |
+| Expressive: distinctive presentation | Use brand color, imagery, typography, or motion for meaningful emphasis and narrative | Intensity depends on the page task; check expression, content, and user feedback |
 
-不要从“专业、科技感、年轻、高级”等词直接推出唯一配色、字体或布局。先结合参考和任务把解释具体化，再标注哪些是建议、哪些已采用。
+Do not derive one palette, font, or layout directly from "professional," "technological," "youthful," or "premium." Interpret it through references and the task, then distinguish recommendations from adopted choices.
 
-## 先分清“简洁”指什么
+## First establish what "simple" means
 
-用户可能想减少装饰、让主次更明显、保留更多同屏信息，或让文字更容易理解。这些可以分别选择，不统一归成少内容、大留白。知识条目应提供不同手段及其条件，让用户决定当前表达，而非按固定选项数量或统一风格限制方案。
+The user may want less decoration, clearer priorities, more information in one view, or easier language. These are independently selectable, not synonyms for less content and more whitespace. Knowledge entries should offer different methods and their conditions, allowing the user to determine current expression without fixed option counts or universal style restrictions.
 
-## “每屏一个内容”应该怎样处理
+## How to handle "one thing per screen"
 
-先确定“屏”指什么：一段任务、一个页面还是一个物理视口。不要因为这句话就使用固定全屏高度、强制分页或滚动吸附。
+Establish whether "screen" means a task segment, page, or physical viewport. The phrase alone does not justify fixed full-height sections, forced pagination, or scroll snapping.
 
-对于逐步回答问题的流程，可以从“一页处理一个主要问题”开始；需要一起理解的相关问题可合并。GOV.UK 的 [Question pages](https://design-system.service.gov.uk/patterns/question-pages/) 同时说明了这两种情况。
+For a sequential question flow, "one main question per page" may be a starting point; related questions that need to be understood together may be combined. [GOV.UK Question pages](https://design-system.service.gov.uk/patterns/question-pages/) describes both cases.
 
-对于对账、分析和批量处理，保留并列信息通常更符合任务。Carbon 的 [Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines) 包含不同密度、选择、展开和批量处理模式，说明紧凑的信息呈现有明确使用场景。
+For reconciliation, analysis, and batch work, retaining information side by side often better fits the task. [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines) includes density, selection, expansion, and batch-action patterns, illustrating concrete uses for compact information.
 
-可辨认的主次和内容关系属于 [默认布局要求](layout.md)。在明确的产品任务中，内容围绕当前判断与操作组织；仅建立规范时，样本、参数和查看操作就是内容。是否拆分页面，由实际内容关系决定。多个独立区域可以各有主操作，不能机械限制整个页面只有一个按钮或内容块。
+Recognizable priorities and content relationships are [default layout requirements](layout.md). For an explicit product task, organize content around current decisions and actions; for guidelines alone, specimens, parameters, and inspection controls are the content. Actual relationships determine whether pages should split. Independent regions may each have a primary action; do not mechanically limit a whole page to one button or content block.
 
-## 把候选改写成能检查的项目规则
+## Rewrite candidates as checkable project rules
 
-避免只写“保持简洁”“减少认知负担”。例如，对于用户每天处理大量订单的工作台：
+Avoid vague rules such as "keep it simple" or "reduce cognitive load." For a workspace where the user handles many orders daily, for example:
 
 ```text
 UX-EFFICIENCY-01
-适用：订单列表中的重复筛选与批量处理。
-要求：保留当前筛选条件；常用筛选直接可见；选中记录后显示清晰的批量操作。
-例外：低频筛选可以按需展开，但展开入口应能被识别。
-检查：筛选、打开详情、返回列表后，用户是否仍可在原位置继续处理？
-依据：重复任务需要保持上下文；具体筛选项由真实使用需求决定。
-状态：建议，不能仅凭“用户喜欢高效”就擅自增加批量业务功能。
+Applies to: Repeated filtering and batch operations in the order list.
+Requirement: Retain current filters; keep frequent filters visible; show clear batch actions after record selection.
+Exception: Infrequent filters may expand on demand, with a recognizable entry.
+Check: After filtering, opening details, and returning, can the user continue from the previous position?
+Basis: Repeated tasks need context; actual usage determines specific filters.
+Status: Recommendation. A preference for efficiency alone does not authorize new batch business features.
 ```
 
-按用户请求和现有能力写规则；设计建议不会自动授权增加功能。
+Write rules from user requests and existing capabilities. A design recommendation does not automatically authorize new functionality.
 
-## 防止常见误用
+## Avoid common misuse
 
-- 精简不等于图标替代所有文字、隐藏错误、删掉关键说明。
-- 高效不等于点击次数越少越好；恢复成本、错误率、等待和记忆负担也需要考虑。
-- 一致不等于所有页面套同一种卡片网格。
-- 规则数量不代表规范质量。优先保留能解决实际取舍的规则。
-- 数值门槛应有标准、项目约束或验证依据；不要把个人经验写成行业强制要求。
+- Simplicity does not mean replacing all text with icons, hiding errors, or deleting essential explanations.
+- Efficiency is not simply fewer clicks; consider recovery cost, error rate, waiting, and memory demands.
+- Consistency does not mean the same card grid on every page.
+- Rule count is not guideline quality. Prefer rules that resolve actual tradeoffs.
+- Numerical thresholds need a standard, project constraint, or validation basis; personal experience is not a mandatory industry requirement.

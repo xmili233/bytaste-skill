@@ -1,37 +1,37 @@
-# 信息密度
+# Information density
 
-ID：`knowledge.density`。性质：有条件的经验建议。分类：`visual.density`、`goal.comparison`、`goal.efficiency`。
+ID: `knowledge.density`. Nature: conditional practitioner guidance. Categories: `visual.density`, `goal.comparison`, `goal.efficiency`.
 
-## 辨认与提问
+## Recognition and questions
 
-用户可能说“太空”“太挤”“一眼看得少”。先区分内容不足、空间太大、层级不清和操作区域不足。它们不都是密度问题。
+Users may say "too empty," "too cramped," or "I cannot see enough at once." Distinguish insufficient content, excess space, weak hierarchy, and inadequate action areas. They are not all density problems.
 
-可以用“同样信息是集中呈现，还是留更大的行间空间”解释密度差异。用户仍不理解时，由 Agent 决定怎样进一步帮助，例如结合实际使用场景说明。
+Explain density as the same information arranged more tightly or with more space between rows. If unclear, the agent chooses further help, such as a specific usage example.
 
-紧凑和疏朗都是有效候选。选紧凑只表达当前内容区的密度偏向，不代表接受更小的字或点击区域。
+Compact and spacious are both valid. Selecting compactness applies to current content density; it does not accept smaller text or targets.
 
-## 适用条件与取舍
+## Applicability and tradeoffs
 
-- 多条记录需要频繁比较时，可以考虑较紧凑的呈现。
-- 内容较长、逐项阅读或触控操作占比高时，需要为阅读和操作留出空间。
-- 行间空间、内容数量与分组方式共同影响感受，判断问题时注意区分它们。
+- Frequent comparison across records may benefit from a more compact presentation.
+- Long content, item-by-item reading, or frequent touch use needs adequate reading and action space.
+- Row spacing, content count, and grouping jointly affect perceived density; distinguish them.
 
-## 机制与候选策略
+## Mechanism and candidate strategies
 
-内容数量、空间分配、视觉强调与分组共同影响疏密感。“看着乱”未必需要减少信息，可以先调整层级和分组；“太空”也不需要自动添加装饰。候选包括紧凑行列、疏朗间距或局部密度变化，保持未被用户要求改变的维度，以便理解其反馈。
+Content count, space, emphasis, and grouping jointly determine density. A messy appearance may need clearer hierarchy and grouping rather than less information; emptiness does not automatically call for decoration. Candidates include compact rows/columns, more generous spacing, and local density differences. Retain dimensions the user did not request changing so feedback remains interpretable.
 
-## 参考与反例
+## References and counterexamples
 
-[Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines) 展示了不同表格密度的使用场景，但不证明某个行高适合当前项目。
+[Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines) presents contexts for different densities; it does not prove a particular row height fits this project.
 
-误用反例：为了显得简洁删除必要记录；为了紧凑同时缩小字号和命中区域；把局部的密度偏好扩大到所有页面。
+Misuse: deleting necessary records to look simple; shrinking both type and hit areas for compactness; expanding a local density choice to every page.
 
-## 落地关联
+## Implementation relationships
 
-可影响列表行间距、组间距、表格行高等 Token 角色，以及内容显露策略。先复用项目已有密度变体，必要时再定义候选值。不要凭密度选择增加分页、隐藏字段或虚拟滚动等未获支持的功能。
+May affect list gaps, group spacing, table row heights, and content-reveal strategies. Reuse existing density variants first, adding candidate values only when necessary. A density choice alone does not justify pagination, hidden fields, virtualization, or other unsupported features.
 
-## 验证
+## Verification
 
-使用典型、长内容及相关宽度查看密度、换行、留白与溢出，核对是否符合已选方向。用户对一个区域的反馈只更新相应范围，不推断操作效率有所提升。
+Inspect density, wrapping, whitespace, and overflow with typical content, long content, and relevant widths, checking the selected direction. Feedback on one region updates only that scope; do not infer improved task efficiency.
 
-证据状态：指南支持情境化候选；是否喜欢由用户反馈判断，不把效率收益作为当前验证目标。
+Evidence status: guidelines support contextual candidates; user feedback determines whether the result is liked. Efficiency gains are not the current verification goal.

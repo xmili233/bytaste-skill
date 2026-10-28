@@ -1,32 +1,32 @@
-# 排版系统
+# Typography system
 
-ID：`knowledge.typography`。所在层：L3。关联：`visual.typography`、`visual.scale`、`visual.density`、`knowledge.hierarchy`。性质：设计系统实践与 ByTaste 推导。
+ID: `knowledge.typography`. Layer: L3. Related: `visual.typography`, `visual.scale`, `visual.density`, `knowledge.hierarchy`. Nature: design-system practice and ByTaste interpretation.
 
-## 入口与机制
+## Entry points and mechanism
 
-“有书刊感”“字体很贵但还是粗糙”“中文显得挤”“数字不整齐”涉及的可能是字体性格，也可能是排版关系。字体不是完整排版；同一字体在不同角色、行长和节奏下会呈现不同感觉。
+"Editorial feel," "an expensive font but rough typography," "cramped Chinese text," and "unaligned numbers" may concern font character or typographic relationships. A font is not a complete typography system; roles, line length, and rhythm change its feeling.
 
-可用“喜欢字形本身的个性，还是标题与正文的大小和疏密关系？”帮助定位。用户选择字体不等于同时选择密度、字距和标题大小。
+Ask, for example: "Do you like the letterforms themselves, or the size and spacing relationships between headings and body text?" A font choice does not also select density, tracking, or heading size.
 
-## 子概念与取舍
+## Concepts and tradeoffs
 
-| 概念 | 规范应说清 | 选择与误用边界 |
+| Concept | What guidelines should establish | Choice and misuse boundaries |
 | --- | --- | --- |
-| 字体角色 | 展示、标题、正文、注释、控件、数字/代码使用什么角色 | 角色可共用字体，不要求为了专业而混用多套字体 |
-| 字形与光学尺度 | 字面大小、宽窄、笔画重量、衬线及可用的光学尺寸 | 相同字号不保证看起来同大；切换字体后检查真实渲染 |
-| 尺度与对比 | 标题、正文、辅助内容如何产生层级 | 强层级可来自字重或位置；不强制某个比例尺或最大字号 |
-| 行长与纵向节奏 | 文本宽度、行高、段距、标题与下一段的距离 | 短标题和长正文可有不同节奏；不要把一套行高用于所有角色 |
-| 字距与换行 | 哪些角色允许字距调整，如何处理长词、标题换行 | 不把拉大英文全大写字距的办法机械用于中文正文 |
-| 中英混排与数字 | CJK 回退、标点、基线、金额/单位、是否需等宽数字 | 使用真实语言与数字；数字对齐需求不意味着全文等宽 |
+| Font roles | Display, heading, body, caption, control, numeric/code roles | Roles may share fonts; multiple families are not required for professionalism |
+| Glyphs and optical scale | Apparent size, width, stroke weight, serifs, available optical sizes | Equal nominal sizes may not appear equal; inspect actual rendering after a font change |
+| Scale and contrast | How headings, body, and supporting text create hierarchy | Strong hierarchy may come from weight or position; no mandatory scale ratio or maximum size |
+| Line length and vertical rhythm | Text width, leading, paragraph spacing, heading-to-content gaps | Short headings and long body text may need different rhythm; do not use one line height for every role |
+| Tracking and wrapping | Where tracking varies and how long words/headings wrap | Do not mechanically apply spaced uppercase Latin styling to Chinese body text |
+| Mixed scripts and numerals | CJK fallback, punctuation, baselines, amounts/units, tabular figures where needed | Use actual languages and numbers; numeric alignment does not require monospaced text throughout |
 
-## 落地方式
+## Implementation
 
-`design.md` 定义角色、搭配、行长与换行规则；Token 保存字体、字重、字号、行高、字距等已采用值。字体文件与许可证属于资产来源，不在 Token 中复制文件。
+`design.md` defines roles, combinations, line length, and wrapping. Tokens own adopted families, weights, sizes, leading, and tracking. Font files and licenses are assets, not files to copy into token data.
 
-示例建议：“正文采用连续阅读的行距；参数使用独立数字角色，与标签共用基线。标题允许自然换行，辅助文字不为维持一行而无限缩小。”具体取值按当前字体和用户偏好确定。
+Example recommendation: "Use leading suited to continuous reading for body text; give parameters a numeric role aligned with their labels. Let headings wrap, and do not shrink auxiliary text indefinitely to force one line." Choose values with the actual font and preferences.
 
-## 预览与检查
+## Preview and checks
 
-在已采用角色中展示短标题、长标题、段落、中英混排及真实数字；需回退的字体检查实际回退结果。先看一组组合，再看字号列表，避免一排漂亮的英文字母掩盖中文问题。检查角色、换行与节奏，不以未溢出替代视觉判断。
+Show short/long headings, paragraphs, mixed CJK/Latin text, and actual numerals for adopted roles. Inspect actual fallback where needed. Examine combinations before the size list; attractive Latin glyphs must not conceal Chinese typography problems. Check roles, wrapping, and rhythm rather than equating no overflow with quality.
 
-[Adobe Spectrum 排版系统](https://spectrum.adobe.com/foundations/typography/typography-system) 将角色、参数、非拉丁文字及平台差异一起定义。ByTaste 吸收这些维度，不照搬 Adobe 字体、字号比例或字重禁用规则。具体效果仍需当前项目预览与用户反馈。
+[Adobe Spectrum typography](https://spectrum.adobe.com/foundations/typography/typography-system) combines roles, parameters, non-Latin scripts, and platform differences. ByTaste adopts these dimensions without copying Adobe fonts, scale ratios, or weight restrictions. Concrete results still need project preview and user feedback.
