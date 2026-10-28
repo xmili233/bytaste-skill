@@ -2,11 +2,31 @@
 
 Read this when a user has only a vague feeling, lacks design terminology, cannot explain what they like in a reference, or gives descriptions that seem to conflict. The aim is to help them express what they want and then form guidelines.
 
-The approaches below are optional, not mandatory stages. The agent decides what the user has yet to understand and what help would be useful. Visual comparisons, sample creation, and a fixed number of questions are not required.
+Obtaining a user-provided aesthetic basis before design and explicitly asking for feedback after showing each version are required. The explanation and comparison methods below are optional: choose what helps, without a fixed questionnaire or number of questions.
 
-Suggest starting with references the user likes and identifying the parts to retain. Descriptions, existing pages, and counterexamples also work. Without references, use available information to make a viewable version rather than making reference collection a prerequisite. Preferences can become clearer after seeing results; they need not be complete before work begins.
+Start from a description of what the user likes or dislikes, a screenshot, or a design link they want to draw from. Relevant effective project decisions also count. Images are not mandatory when the user has supplied a useful description, but some user-provided aesthetic basis is mandatory. If none exists, ask for it and wait instead of choosing a style and making a version. Preferences can become more precise after seeing results; they need not specify every implementation value in advance.
 
-When the product and pages are unknown and the task is to establish guidelines, proceed with viewable standards and tokens. Missing business context is not a reason to require further interviewing. When the user explicitly requests a product or page, obtain only requirements essential to that task. Professional defaults within scope can be recommendations without individual approval.
+When the product and pages are unknown but an aesthetic basis has been supplied, proceed with viewable standards and tokens. Missing business context is not the same as missing style input and does not require a full interview. For an explicit product or page request, obtain only essential requirements. Professional implementation defaults within the supplied direction can remain recommendations without individual approval.
+
+## Required style input before design
+
+First check existing conversation and effective project decisions. Do not ask for material the user has already provided. If the current direction is not grounded in their input, ask them to do any one of the following:
+
+- Describe the feeling or observable features they like or dislike, in their own words.
+- Share a screenshot or design file they like, optionally pointing to the relevant part.
+- Share a website or design-example link they want the design to draw from.
+
+In the first question, offer two or three relevant [free-browsing platforms](reference-platforms.md) when the user needs somewhere to look. Select them by the task: website galleries for pages, UI/project galleries for app interfaces or brand expression. Browsing a platform is optional; a useful description or their own reference is sufficient.
+
+A concise example, adapted to the user's language and task:
+
+> Before I design this, what kind of look do you like? You can describe it, share a screenshot, or send a website/design link. If you need ideas, [Lapa Ninja](https://www.lapa.ninja/) and [Siteinspire](https://www.siteinspire.com/) have large website galleries you can browse for free. One example is enough to start; tell me what you like about it, or whether you mean the overall feel.
+
+For an app or dashboard, substitute the relevant UI entries from the platform guide. Do not require paid access, registration, a download, or all three formats. If a site is inaccessible, offer another free entry or accept a description/screenshot; do not bypass access controls or pretend to have viewed it.
+
+Wait for the answer before generating visual guidelines, tokens, a style preview, or a page that assumes a new direction. While waiting, code inspection, content clarification, and helping locate existing references may continue. Do not make your own style candidates as a substitute for the missing input. A blank "you decide" or "show me a first version" alone is not an aesthetic preference.
+
+Input is sufficient when you can state the intended visual direction or chosen reference and its scope without inventing the user's taste. A concrete description such as "compact, low decoration, with clear type hierarchy" is enough; exact fonts and colors can remain recommendations. If all you have is "beautiful/professional," or an unexplained image that may be a bug report rather than inspiration, ask a focused follow-up. Do not demand exhaustive preferences or a formal confirmation when the user's intent is already clear.
 
 ## Recommended background: purpose, users, and context
 
@@ -18,7 +38,7 @@ Before deciding overall feel and visual style, it is usually worth understanding
 | Intended users | Who will use it, and how familiar are they with this type of task? |
 | Use context | In what circumstances and on what devices will they use it: occasional browsing or sustained work? |
 
-Reuse answers already available in project descriptions, conversation, or the interface. Ask selectively only when missing information would help the current design. If the user is unsure, does not want to elaborate, or wants to see references or a version first, proceed while retaining unknowns. Do not invent personas.
+Reuse answers already available in project descriptions, conversation, or the interface. Ask selectively only when missing background would help the current design. The user may leave product background unknown and start with visual preferences or references. This does not waive required style input. Do not invent personas.
 
 With relevant context, explore the desired overall feeling and visual expression through references or descriptions. Purpose and users help judge suitability, but do not determine a font, palette, or style. Do not infer aesthetic preferences from age, gender, industry, or similar labels. Adapt the order to the user's input, and do not restart a full background interview for a local edit.
 
@@ -35,7 +55,7 @@ Difficulty expressing a preference is not always a lack of vocabulary. These are
 
 Questions and candidate sets can influence answers. Do not assume a complete preference is waiting to be "measured." Do not steer with labels such as "sophisticated" versus "tacky," or infer attitudes toward every other option from a limited selection.
 
-Vocabulary lowers the expression barrier; it does not classify people by demographic attributes or measure a fixed aesthetic personality. When the user wants a first version, try one within their authorization and retain tentative status.
+Vocabulary lowers the expression barrier; it does not classify people by demographic attributes or measure a fixed aesthetic personality. A first version can use tentative implementation choices within the user's supplied direction. If that direction is absent, first help them express it or choose a reference.
 
 ## How to use the categories
 
@@ -83,13 +103,13 @@ Ask again only if meaningful ambiguity remains. Do not require formal confirmati
 
 ### 5. Make a version when enough is clear, then hear how it feels
 
-You can write guidelines once the current task, main experience goals, and differences that affect this proposal are clear enough. Leave untouched dimensions blank or unknown; do not continue questioning just to complete a profile.
+You can write guidelines once the user-provided aesthetic basis and current scope are clear enough to ground this proposal. Leave untouched dimensions blank or unknown; do not continue questioning just to complete a profile.
 
-If the user delegates decisions or wants results first, offer a justified tentative direction and continue. Label it as a recommendation, not a selected preference. While a key choice awaits an answer, proceed only with independent work.
+Delegation of implementation details or a request for quick results does not supply missing style input. Once an aesthetic basis exists, make justified tentative implementation choices within it and label them as recommendations. While required input or a key choice awaits an answer, proceed only with independent work.
 
-Apply the guidelines to a real preview or authorized page, then ask about that version. Listen to the user's own words before locating specific relationships in typography, density, hierarchy, or interaction. Do not lead with "isn't this more sophisticated?" If they only say "not right," use the indicated area and current changes to narrow the ambiguity instead of assigning the cause to a token without evidence.
+Apply the guidelines to a real preview or authorized page, show that version, and explicitly ask about its effect in the delivery message: for example, "Which parts feel right to you, and which would you change?" This question is required, not a generic offer to help later. Listen to the user's own words before locating specific relationships in typography, density, hierarchy, or interaction. Do not lead with "isn't this more sophisticated?" If they only say "not right," use the indicated area and current changes to narrow the ambiguity instead of assigning the cause to a token without evidence.
 
-Record the version and scope of feedback in the [decision record](decisions.md), update affected guidelines, and use them for the next version. Give the user a chance to respond to actual results each round, without requiring scores, fixed rounds, or repeated confirmation of clear choices.
+Record the version and scope of feedback in the [decision record](decisions.md), update affected guidelines, and use them for the next version. If the user has already evaluated this exact version, process that feedback instead of asking again. Otherwise, ask and leave the version awaiting feedback. Delivering it does not require an immediate reply, but silence does not authorize an inferred preference or another aesthetic iteration. Scores, fixed rounds, and repeated confirmation of clear choices are not required.
 
 ## Match the explanation to the user's understanding
 
@@ -97,7 +117,7 @@ Prefer the user's own references and ask about specific parts. A reference is a 
 
 "This reference looks lively" is an observation, not necessarily "I want my product to look lively." Distinguish what the user is describing from what they want to retain or change; do not turn reaction words directly into target preferences.
 
-Text explanations, situational examples, existing references, visual comparisons, and sketches can all help. The agent chooses based on user response, task, and tools. Discovery can continue without visual tools.
+Text explanations, situational examples, existing references, and comparisons can help collect the required input. Sketches can help refine a direction after it has a user-provided basis. The agent chooses methods based on user response, task, and tools; discovery can continue without visual tools.
 
 Whatever method you use, record only preferences actually expressed. Partial feedback on an example does not approve the whole design. State what you inspected in references; do not present self-made material as a real external example. Preference discovery does not automatically authorize a complete website implementation or publication.
 

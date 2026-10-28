@@ -2,9 +2,9 @@
 
 Turn your taste into design standards for AI.
 
-ByTaste starts with design references or descriptions you like. Through viewable versions and iterative feedback, it develops and maintains project design guidelines so later pages continue the confirmed direction.
+ByTaste requires your style input before choosing a visual direction: describe what you like, share a screenshot, or send a design link. It reuses established project choices when available; otherwise, it asks and waits instead of guessing. After showing each viewable version, it explicitly asks how it feels and uses your feedback to maintain guidelines that later pages can follow.
 
-Current version: **v0.5.2**. For AI development tools that support Agent Skills, including Claude Code and Codex.
+Current version: **v0.6.0**. For AI development tools that support Agent Skills, including Claude Code and Codex.
 
 ## Install
 
@@ -22,9 +22,13 @@ Give the AI screenshots, websites, or design files you like, or describe the fee
 
 > Use ByTaste to help clarify this project's design direction. I want a clean interface with clear emphasis, but not too much empty space. Use my references to create guidelines and a viewable preview, then adjust them from my feedback. Save confirmed choices for later pages to follow.
 
-It is usually helpful to understand purpose, intended users, and context before exploring overall feel and visual style. Reuse existing information; references or a trial version are also valid starting points. No fixed questionnaire is required.
+It is usually helpful to understand purpose, intended users, and context, but a full product interview is not required. Your aesthetic input is required: one useful description or reference can be enough, and existing choices are reused. Asking for a first version without any style input does not make the agent choose your taste.
 
-The core loop: **reference or description → viewable version → user feedback → updated guidelines → continued iteration and reuse**.
+If you need ideas, the first question can suggest [free-browsing galleries](references/reference-platforms.md): Lapa Ninja and Siteinspire for websites, Behance and Dribbble for UI or brand references. You do not have to use a platform, register, pay, or collect a fixed number of examples.
+
+The core loop: **required style input → viewable version → explicit feedback question → your response → updated guidelines → continued iteration and reuse**.
+
+The current version can be delivered while awaiting your reply, but silence is not approval. Feedback already provided for that exact version is used without asking again.
 
 ## What you get
 

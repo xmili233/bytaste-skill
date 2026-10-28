@@ -1,16 +1,16 @@
 ---
 name: bytaste
-description: Develop and maintain design guidelines, a separate token source, and interaction agreements from references or descriptions the user likes, using viewable versions and iterative feedback so later work follows the confirmed direction. Use to explore design, interpret references, revise preferences, or reuse a style; do not rebuild design guidelines for ordinary code fixes or backend-only work.
+description: Require a user-provided style description, screenshot, or design reference before choosing a visual direction, then create viewable designs, explicitly ask for feedback, and maintain reusable guidelines, tokens, and interactions. Reuse established project choices. Use for design exploration, reference interpretation, preference changes, and style reuse; not ordinary code fixes or backend-only work.
 license: MIT
 metadata:
-  version: "0.5.2"
+  version: "0.6.0"
 ---
 
 # ByTaste
 
 Help users develop design preferences they can express and revise, and help subsequent agents consistently produce designs they like. Standardize how guidelines are expressed while preserving visual differences between users and projects.
 
-The core loop is: **references or descriptions the user likes → a viewable version → ask how it feels → update decisions and guidelines → iterate → reuse on later pages**. Suggest references to reduce ambiguity, but also accept descriptions, existing pages, or a request to try a first version. Missing references must not block progress.
+The core loop is: **obtain the user's style input → create a viewable version → explicitly ask how it feels → update decisions and guidelines from feedback → iterate → reuse on later pages**. Obtaining an aesthetic basis before design and asking for feedback after showing a version are required parts of the workflow. Text, screenshots, and design links are alternative input formats; no particular format or platform is required.
 
 The current goals are expressing preferences, matching the design to those preferences, and sustaining reuse. Tasks, content, and platforms help interpret preferences and choose implementations. Proactively deliver applicable basic quality within the current scope; do not expand the task into usability research or make efficiency, conversion, or task-success experiments a completion requirement. Preserve the user's existing explicit functional requirements and standards.
 
@@ -22,13 +22,23 @@ The user's current instructions can revise earlier decisions. Check scope and ex
 
 When creating a record, receiving feedback that affects later design, resolving conflicts, or updating decisions, read the [decision record agreement](references/decisions.md). Maintain a discoverable reading entry point in the project. Save decisions promptly, then update the affected guidelines, tokens, interactions, and preview.
 
-## Determine the deliverable first
+## Required: obtain the user's style input before design
+
+Before choosing a new visual direction or generating its guidelines, tokens, preview, or page, establish an aesthetic basis from the user. Accept a useful description of what they like or dislike, a screenshot/design file, a website/example they want to draw from, or relevant effective project decisions already established with the user. Reuse sufficient existing input instead of interviewing them again.
+
+If that basis is missing, **ask for it and wait for the answer before designing**. In the first style question, offer the choice of a description, screenshot, or design link. If helpful, include two or three relevant [free-browsing design platforms](references/reference-platforms.md) so the user can pick examples. One useful reference or concrete description can be enough; do not require every input format, a complete brief, or a style questionnaire.
+
+Product purpose, an industry label, and generic requests such as "make it beautiful" do not determine taste. Neither "make a first version" nor "you decide" alone supplies the missing aesthetic basis. Do not silently choose a style, generate competing style proposals, or treat the bundled example or search ranking as the user's choice. You may inspect existing code, clarify content, or help them find and discuss references while waiting; do not produce visual design artifacts that assume a direction.
+
+When the user provides only an ambiguous adjective or a reference whose intended use is unclear, ask one focused question about the concrete feeling or part they want. Once enough is clear to ground the direction, proceed without demanding exact fonts, color values, or approval of every implementation detail. Follow the [required input guidance](references/discovery.md#required-style-input-before-design).
+
+## Determine the deliverable
 
 When the user provides only a feeling, references, or colors, or is establishing design guidelines without a product purpose yet, the default deliverable is **design standards and a guidelines preview**. Typography, tokens, layout relationships, component states, and motion are the content. Do not require a complete product brief or invent draft management, customer dashboards, or other business features.
 
 Apply the design language to specific content and functionality only when the user explicitly requests a page. Ask only for essential missing page requirements. A local change to an existing interface does not trigger a complete rebuild. Deliver standalone research or terminology explanations as requested.
 
-You may propose professional defaults for the current guidelines preview, labeled as ByTaste recommendations, without asking about every font size or pixel. **Tentative describes approval status; it does not expand scope.** In a guidelines discussion, "make a first version" means a draft of the guidelines, not automatic permission to design a product.
+After obtaining the user's aesthetic basis, you may propose professional implementation defaults for the current guidelines preview, labeled as ByTaste recommendations, without asking about every font size or pixel. **Tentative describes approval status; it does not replace required style input or expand scope.** In a guidelines discussion, "make a first version" means a draft grounded in that input, not automatic permission to invent a style or design a product.
 
 ## Scope and artifacts
 
@@ -38,7 +48,7 @@ You may propose professional defaults for the current guidelines preview, labele
 
 ## Load knowledge by task
 
-Restore project decisions and establish scope first, then choose an entry below. For interfaces and guidelines previews, apply the [default quality baseline](references/visual-quality.md). Terminology explanations and standalone research do not thereby require new interface artifacts. Do not reload unchanged material already read.
+Restore project decisions, establish the user's aesthetic basis and scope, then choose an entry below. If style input is missing, use discovery and the platform suggestions before design. For interfaces and guidelines previews, apply the [default quality baseline](references/visual-quality.md). Terminology explanations and standalone research do not thereby require new interface artifacts. Do not reload unchanged material already read.
 
 | Current task | What to read and use |
 | --- | --- |
@@ -51,7 +61,7 @@ Vocabulary helps expression, the concept map locates issues, knowledge entries s
 
 ## 1. Understand the design context
 
-Before exploring overall feel and visual style, it is usually useful to understand the product or page's main purpose, intended users, and use context. Prefer existing material. When missing information would help this design, ask briefly; see [recommended background discovery](references/discovery.md#recommended-background-purpose-users-and-context). This is a useful starting point, not a required interview. Proceed directly from references, style exploration, or a request to see a first version when that is the user's starting point.
+Before exploring overall feel and visual style, it is usually useful to understand the product or page's main purpose, intended users, and use context. Prefer existing material. When missing information would help this design, ask briefly; see [recommended background discovery](references/discovery.md#recommended-background-purpose-users-and-context). Background discovery is optional; obtaining the user's aesthetic basis is required. A user may start with references or a style description without a full product interview. A request to see a first version still needs that basis.
 
 Establish page scope, content, platform, existing visual language, and constraints that must remain. A marketing site, workspace, and reading page may need different treatments; their categories do not automatically determine their styles.
 
@@ -73,9 +83,9 @@ When important ambiguity remains, read the [discovery guidance](references/disco
 
 Use [experience goals](references/vocabulary/experience.md), [visual dimensions](references/vocabulary/visual.md), and [style combinations](references/vocabulary/styles.md) as needed. Categories are ways to express preferences, not fixed aesthetic personality types. Do not choose styles for users based on age, gender, region, or similar attributes.
 
-The agent decides whether explanations, examples, questions, reference comparisons, or sketches will help. Neither visual comparisons nor fixed questionnaires are mandatory. Describe differences neutrally and allow "not sure," "neither," "somewhere between," and partial choices. Do not steer answers with praise or disparagement.
+The agent decides which explanations, questions, or reference comparisons help obtain the required input. Neither visual comparisons nor fixed questionnaires are mandatory. Sketches or designed alternatives may follow once the user has supplied an aesthetic basis; they do not substitute for asking first. Describe differences neutrally and allow "not sure," "neither," "somewhere between," and partial choices. Do not steer answers with praise or disparagement.
 
-Summarize valid choices in one understandable sentence, introducing terminology only if useful. Choosing low decoration does not also settle colors, fonts, or density. Allow tentative choices and revisions. When authorized to make a first version, proceed with recommendations without presenting your choices as user approval.
+Summarize valid choices in one understandable sentence, introducing terminology only if useful. Choosing low decoration does not also settle colors, fonts, or density. Allow tentative choices and revisions. When authorized to make a first version, use recommendations within the supplied direction without presenting your choices as user approval. If no direction has been supplied, ask and wait first.
 
 Move into design once the important differences are clear enough. Silence is not a choice, and an unselected option is not a rejection. Do not keep asking to fill every category. Record choices that affect later work promptly; not every restatement needs formal confirmation.
 
@@ -121,7 +131,7 @@ Under the [verification agreement](references/verification.md), distinguish what
 
 Check whether current decisions are expressed accurately, the deliverable stays in scope, applicable quality goals are met, rules and tokens are implemented, and actual styling fits representative content. Play current motion and check exits and interruptions; screenshots and syntax checks cannot substitute. Inspect rendered results when possible; otherwise, state that visual inspection was not performed. Fix observed baseline violations first. If they cannot be fixed, mark them incomplete instead of treating a complete file set as sufficient. Simulated preview feedback does not prove real business functionality is implemented.
 
-After showing each viewable version, invite feedback on its actual effect, such as "Which parts feel close to what you want, and which still feel off?" Adapt the question to the change. Do not require item-by-item ratings, questionnaires, or a fixed number of rounds. Continue directly from feedback already given. Record the version, location, and scope of feedback, write valid new choices into decisions and guidelines, and use them for the next version. No reply means no approval, but does not block this delivery.
+After showing each viewable page or preview version, **explicitly ask for the user's feelings about that actual version in the delivery message**, such as "Which parts feel close to what you want, and which still feel off?" A completion report or generic "let me know" is not a substitute. Adapt the question to the changed region rather than restarting the whole style discussion. Do not require item-by-item ratings, questionnaires, or a fixed number of rounds. If the user has already given feedback on this exact version, process it directly without asking again. Record its version, location, and scope, write valid new choices into decisions and guidelines, and use them for the next version. The current version may be delivered while awaiting the reply, but do not infer approval or start another aesthetic revision from silence.
 
 Preserve the chosen design language across pages while allowing justified local differences. A new agent should be able to continue from the effective decision summary and relevant guidelines without making the user explain everything again.
 
@@ -129,4 +139,4 @@ Classify feedback first: fix implementation deviations in the implementation; re
 
 ## Delivery notes
 
-Briefly state the current preference description, decisions added or changed and their scope, relevant files and preview entry points, unresolved or unsynchronized items, and checks actually performed. When generating guidelines, a plan for a future preview cannot replace an actual page. Without user feedback, do not claim the user likes the result.
+Briefly state the current preference description and its user-provided basis, decisions added or changed and their scope, relevant files and preview entry points, unresolved or unsynchronized items, and checks actually performed. When showing a page or preview, include the required feedback question unless this exact version has already received feedback. When generating guidelines, a plan for a future preview cannot replace an actual page. Without user feedback, do not claim the user likes the result.

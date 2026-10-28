@@ -6,7 +6,7 @@ Read when defining layout rules or creating/modifying previews and product inter
 
 - Guidelines preview: fonts, colors, parameters, rules, component states, and motion are the content; generic specimens explain relationships.
 - Explicit product page: use existing or requested content and functionality; ask only about essential gaps.
-- Unknown product: guidelines can proceed while page architecture remains unknown; do not invent business features or require a full product interview.
+- Unknown product: once the [required style input](discovery.md#required-style-input-before-design) exists, guidelines can proceed while page architecture remains unknown; do not invent business features or require a full product interview.
 
 Before layout, briefly describe primary information, supporting information, auxiliary notes, grouping, and action scope in the relevant guidelines. A guidelines overview foregrounds styling; a parameter inspection area may foreground parameters. Branding, version numbers, and decoration do not automatically deserve the strongest emphasis.
 

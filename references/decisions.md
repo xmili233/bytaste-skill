@@ -20,9 +20,11 @@ When a user specifies an exact color or font, retain their statement in the deci
 
 Before the effective summary, state the deliverable: design guidelines and preview, or a specific product/page. If the product's purpose is unknown, say "Unknown; does not block the guidelines preview." Record the functionality the user has actually requested, rather than leaving unmentioned business features for the agent to invent.
 
+Identify the user's aesthetic basis: their description, chosen reference and relevant part, or existing effective decisions. If it is missing, follow the [required style-input step](discovery.md#required-style-input-before-design) and wait before visual design. Missing product background may remain unknown; missing style input cannot be replaced by agent defaults. Record the pending question in an existing record if useful, without creating the whole artifact set just to ask it.
+
 In `design.md`, cite default quality as "ByTaste baseline + version + baseline ID." Do not invent a user decision or request approval for every requirement. Concrete professional values may remain "ByTaste implementation recommendations." Keep reference observations, agent recommendations, and user choices separate. Defaults can complete the current specimens, but cannot establish a need for a business feature or imply approval of the implementation.
 
-The meaning of "make a first version" comes from the current task. A guidelines draft may show generic components and layouts; it does not automatically authorize creating, editing, or saving business objects. Approval of an overall visual reference does not settle every page's architecture.
+The meaning of "make a first version" comes from the current task and the user's supplied aesthetic basis. The phrase alone does not specify a style. A guidelines draft may show generic components and layouts; it does not automatically authorize creating, editing, or saving business objects. Approval of an overall visual reference does not settle every page's architecture.
 
 ## Make decisions discoverable and recoverable
 
@@ -81,7 +83,7 @@ Keep version-specific feedback in this record rather than a separate rating or f
 | Superseded | Replaced by a new explicit decision; retain it in history, link the new ID, and stop applying it in the replaced scope |
 | Withdrawn | Retracted by the user without a replacement; do not automatically restore an earlier decision |
 
-Tentative choices do not automatically override selected decisions in the same scope. When the user delegates a choice, implement and show a tentative proposal within authorization without adding an approval gate. If a key choice is still awaiting an answer, proceed only with independent work. When trying a proposal that differs from the selected direction, preserve the official guidelines and tokens and use a distinguishable draft or preview version. A trial must not silently replace the official source.
+Tentative choices do not automatically override selected decisions in the same scope. Once the user has supplied an aesthetic basis, delegated implementation choices may be shown as tentative proposals within it, without approval of every parameter. Delegation alone does not replace the required style input. If that input or a key choice is awaiting an answer, proceed only with independent work. A trial direction also needs a basis in the user's description or chosen reference; preserve official guidelines and tokens and use a distinguishable draft or preview version. A trial must not silently replace the official source.
 
 Interpret "this version works" within what was actually shown and discussed. Feedback on a heading font is not approval of the whole page; "this reference is lively" is not a request to adopt it; not selecting something is not exclusion. Do not turn age, gender, region, or third-party suggestions into user choices.
 

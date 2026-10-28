@@ -49,7 +49,7 @@ Record the project's leading relationships and exceptions, not a permanent label
 
 ## From concepts to the current guidelines
 
-1. **Locate the subject and sources.** Restore effective decisions; establish whether this is a guidelines preview, an explicit page request, or a local change. Separate user choices, existing constraints, default quality, and unknowns.
+1. **Locate the subject and sources.** Restore effective decisions; establish whether this is a guidelines preview, an explicit page request, or a local change. Check the [required aesthetic basis](discovery.md#required-style-input-before-design) before inventing a direction. Separate user choices, existing constraints, default quality, and unknowns.
 2. **Choose relevant layers.** Check important omissions across six layers for complete guidelines; enter relevant branches from symptoms for local tasks. Reuse sufficient existing rules and leave unknown business architecture undecided.
 3. **Form relationship rules.** Choose applicable strategies from entries and state objects, relationships, conditions, and exceptions. Identify leading and supporting expression when helpful. Concrete values within a chosen direction can be recommendations; changes to user direction cannot masquerade as implementation details.
 4. **Connect sources and samples.** Use rule IDs in design.md to link real bases (baseline, user decision, or project constraint) and knowledge sources to actual tokens, assets, or interactions. Check representative combinations. Use the [specification format](design-spec.md), without a separate concept archive or duplicate decision statuses.

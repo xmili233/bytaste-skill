@@ -2,7 +2,7 @@
 
 Use when establishing or revising project guidelines. The goal is to express user choices accurately and guide actual styling while meeting applicable quality goals. Do not require every category to be filled, proof of efficiency gains, or a complete usability study.
 
-When the product is unknown, the guidelines themselves are the subject: show typography, color, layout rules, component states, and motion without inventing a business to fill the preview. Concrete values may be clearly labeled default recommendations; product architecture remains unknown.
+First establish the [required user-provided aesthetic basis](discovery.md#required-style-input-before-design). If it is missing, ask and wait instead of producing a speculative specification. When that basis exists but the product is unknown, the guidelines themselves are the subject: show typography, color, layout rules, component states, and motion without inventing a business to fill the preview. Concrete values within the supplied direction may be clearly labeled recommendations; product architecture remains unknown.
 
 ## Five companion artifacts
 

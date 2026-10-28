@@ -14,12 +14,14 @@ Decision status comes from the [decision record](decisions.md), not a second sta
 
 ## 1. Is expression and recording faithful?
 
+- Before design, was there a user-provided style description, chosen screenshot/link, or relevant effective project direction? If not, the required action is to ask and wait, not generate a tentative style.
+- Did the first missing-input question offer description, screenshot, and link as alternatives, with useful free-browsing platforms when needed? No paid account or fixed reference count should be required.
 - Can the user describe or correct key preferences in their own words? Judge effective expression, not a required count of questions, labels, or comparisons.
 - Were observations mistaken for intent, unselected options for rejection, silence for approval, or local feedback for a global choice?
 - Does the current summary expose relevant selected, explicitly excluded, tentative, undecided, and local override decisions? Have old choices correctly left their replaced scope?
 - Can agent instructions locate the record? Was it actually read after a new session or context recovery rather than presumed from memory?
 
-Without user feedback, deliver recommendations and actual results without claiming approval. Do not require users to reconfirm clear choices merely to verify their expression.
+Once the initial aesthetic basis exists, a version may be delivered while awaiting feedback without claiming approval. This does not waive the initial input step or the feedback question. Do not require users to reconfirm clear choices merely to verify their expression.
 
 ## 2. Deliverable scope and default quality
 
@@ -65,11 +67,11 @@ Use rendering tools when available. Otherwise, distinguish source checks from un
 
 ## 5. Show a version and invite the next round of feedback
 
-Provide a current version the user can open or view, then invite feedback about its actual effect. Ask which parts are close and which are not, or focus on the current changes. Avoid leading praise/disparagement, fixed scoring, or a full category questionnaire. Act directly on feedback already provided instead of requesting confirmation again.
+Provide a current page or preview version the user can open or view, and explicitly ask for their feelings about it in the same delivery message. This is a required workflow step: a status report or generic "let me know" is insufficient. Ask which parts feel close and which still feel wrong, or focus on the current changes. Avoid leading praise/disparagement, fixed scoring, or a full category questionnaire. If feedback on this exact version has already been provided, act on it directly instead of asking again.
 
 Record the version, region, wording, and scope. Separate the user's feeling, the agent's causal interpretation, and actual implementation deviations. A direction change updates decisions and guidelines; local feedback stays local. Keep uncertain explanations as hypotheses, distinguishing them through necessary clarification or the next version. One approval does not confirm the entire design, all parameters, or every future page.
 
-If the user has not replied, this round can still be delivered, but recommendations remain unselected. Iteration follows feedback; do not automatically generate more directions to reach a round count.
+If the user has not replied to the feedback question, this round can still be delivered as awaiting feedback, but recommendations remain unselected. Do not interpret silence as approval or start another aesthetic revision on that basis. Iteration follows actual feedback, not a fixed round count.
 
 ## 6. Can subsequent work continue the direction?
 
@@ -94,6 +96,6 @@ This is a format example, not an actual finding. Report only real evidence; do n
 
 ## Completion and updates
 
-Report completion only when relevant decisions and applicable baselines are implemented and the inspection scope is stated. Qualify conclusions honestly when known deviations or unverified conditions remain. Missing user feedback does not block delivery, but do not claim approval or demand formal confirmation. Preview, implementation, and approval are separate results; none substitutes for another.
+Report implementation completion only when the initial user-provided aesthetic basis, relevant decisions, and applicable baselines are respected and inspection scope is stated. A page/preview delivery must include the feedback question unless that exact version has already received feedback; omitting it leaves the ByTaste workflow incomplete. Qualify conclusions honestly when known deviations or unverified conditions remain. A reply is not required to deliver the current version, but mark it awaiting feedback rather than approved. Preview, implementation, and approval are separate results; none substitutes for another.
 
 When feedback changes intent, update decisions before synchronizing affected artifacts. Implementation deviations require implementation fixes only. Recheck only what the change affects, without adding a requirement to prove improved usability.

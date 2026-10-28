@@ -2,7 +2,7 @@
 
 Use when establishing or changing visual parameters. Tokens express reusable values; layout intent, component choices, and interaction rules remain in design guidelines.
 
-An unknown product purpose does not prevent establishing visual tokens. Offer viewable default recommendations based on the current direction, distinguishing primitive values, semantics, and layout rules without assuming business architecture.
+An unknown product purpose does not prevent establishing visual tokens once the [required user-provided aesthetic basis](discovery.md#required-style-input-before-design) exists. If style input is missing, ask and wait; do not invent a palette or type system. Offer viewable implementation recommendations within the supplied direction, distinguishing primitive values, semantics, and layout rules without assuming business architecture.
 
 Recognizing "warm, low-saturation, compact" establishes a preference direction, not selected numerical values. Label derived values as candidates and validate with content. Untouched dimensions cannot automatically become adopted values through classification.
 

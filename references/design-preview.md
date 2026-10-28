@@ -2,6 +2,8 @@
 
 Read when generating or updating guidelines. The preview directly shows their visual language, tokens, layout, component states, and motion. An unrequested product demo must not substitute for it.
 
+Before generating a new visual direction, obtain the [required style input](discovery.md#required-style-input-before-design) or restore relevant effective project decisions. A preview is not a way to bypass missing user preferences. After showing it, explicitly ask how that version feels under the [feedback agreement](verification.md#5-show-a-version-and-invite-the-next-round-of-feedback).
+
 ## Deliverable boundaries
 
 When product purpose, pages, and business requirements are unknown, the guidelines themselves are the content. Use generic text, glyphs, colors, regions, and component states to demonstrate relationships. Do not create invented draft management, authentication, order lists, or other business features. Calling them "examples" or "tentative" does not make scope expansion necessary.
